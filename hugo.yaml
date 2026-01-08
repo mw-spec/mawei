@@ -1,7 +1,7 @@
 baseurl: https://mawei.org.cn/
-languageCode: en-us
+languageCode: zh-cn
 theme: hugo-theme-stack
-title: Example Site
+title: mawei-blog
 copyright: mawei-blog
 
 # Theme i18n support
@@ -31,7 +31,7 @@ services:
         id:
 
 pagination:
-    pagerSize: 3
+    pagerSize: 10
 
 permalinks:
     post: /p/:slug/
