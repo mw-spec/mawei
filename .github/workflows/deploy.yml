@@ -1,0 +1,40 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 确保这里是你的默认分支名（有的旧仓库是 master）
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 赋予写入权限，以便推送到 gh-pages 分支
+
+    steps:
+      # 1. 检出代码 (加入了 submodules: recursive 以防主题丢失)
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # 2. 安装 Hugo (与你本地版本保持一致)
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.154.3'
+          extended: true
+
+      # 3. 构建网站
+      - name: Build Hugo site
+        run: hugo --minify
+
+      # 4. 部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: mawei.org.cn  # <---【重要】强制指定域名，防止 Action 覆盖时域名失效
