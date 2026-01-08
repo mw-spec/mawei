@@ -7,3 +7,4 @@ menu:
             icon: user
 ---
 
+我是新手小白
