@@ -62,7 +62,7 @@ params:
             src: img/avatar.png
 
     article:
-        math: false
+        math: true
         toc: true
         readingTime: false
         license:
@@ -216,9 +216,6 @@ related:
     threshold: 60
     toLower: false
     indices:
-        - name: tags
-          weight: 100
-
         - name: categories
           weight: 100
 
