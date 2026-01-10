@@ -1,8 +1,8 @@
 ---
 title: 友链
 links:
-  - title: GitHub
-    website: https://github.com
+  - title: 江鄢川
+    website: https://jiangyanchuan.github.io
     
 menu:
     main: 
