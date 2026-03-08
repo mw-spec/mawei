@@ -1,0 +1,139 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="目录 栈与函数调用机制 中断与系统调用 条件跳转与循环 字符串与内存操作 Shellcode 编写基础 寄存器状态与标志位 常见反汇编技巧 调试技巧 常用 CTF 汇编套路 栈与函数调用机制 栈结构 1 2 3 4 5 6 高地址 ↑ | | | 参数 | | 返回地址 | | 保存的 EBP | 低地址 ↓ 栈由 ESP/RSP 指向栈顶 PUSH：压入栈 POP：弹出栈 CALL：将返回地址压入栈 RET：弹出返回地址并跳转 函数调用示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ; 参数通过栈传递，32位 x86 global _start _start: push 5 ; 参数 push 10 ; 参数 call add_nums add esp, 8 ; 清理栈 ; 返回值在 EAX mov eax, 1 xor ebx, ebx int 0x80 add_nums: push ebp mov ebp, esp mov eax, [ebp+8] ; 参数1 add eax, [ebp+12]; 参数2 pop ebp ret 小技巧：CTF 中 stack smashing、ret overwrite、ROP 技巧都是基于栈结构的。\n"><title>汇编语言进阶学习笔记</title><link rel=canonical href=https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/><link rel=stylesheet href=/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css><meta property='og:title' content="汇编语言进阶学习笔记"><meta property='og:description' content="目录 栈与函数调用机制 中断与系统调用 条件跳转与循环 字符串与内存操作 Shellcode 编写基础 寄存器状态与标志位 常见反汇编技巧 调试技巧 常用 CTF 汇编套路 栈与函数调用机制 栈结构 1 2 3 4 5 6 高地址 ↑ | | | 参数 | | 返回地址 | | 保存的 EBP | 低地址 ↓ 栈由 ESP/RSP 指向栈顶 PUSH：压入栈 POP：弹出栈 CALL：将返回地址压入栈 RET：弹出返回地址并跳转 函数调用示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ; 参数通过栈传递，32位 x86 global _start _start: push 5 ; 参数 push 10 ; 参数 call add_nums add esp, 8 ; 清理栈 ; 返回值在 EAX mov eax, 1 xor ebx, ebx int 0x80 add_nums: push ebp mov ebp, esp mov eax, [ebp+8] ; 参数1 add eax, [ebp+12]; 参数2 pop ebp ret 小技巧：CTF 中 stack smashing、ret overwrite、ROP 技巧都是基于栈结构的。\n"><meta property='og:url' content='https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'><meta property='og:site_name' content='mawei'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2026-03-08T00:00:00+00:00'><meta property='article:modified_time' content='2026-03-08T00:00:00+00:00'><meta name=twitter:title content="汇编语言进阶学习笔记"><meta name=twitter:description content="目录 栈与函数调用机制 中断与系统调用 条件跳转与循环 字符串与内存操作 Shellcode 编写基础 寄存器状态与标志位 常见反汇编技巧 调试技巧 常用 CTF 汇编套路 栈与函数调用机制 栈结构 1 2 3 4 5 6 高地址 ↑ | | | 参数 | | 返回地址 | | 保存的 EBP | 低地址 ↓ 栈由 ESP/RSP 指向栈顶 PUSH：压入栈 POP：弹出栈 CALL：将返回地址压入栈 RET：弹出返回地址并跳转 函数调用示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 ; 参数通过栈传递，32位 x86 global _start _start: push 5 ; 参数 push 10 ; 参数 call add_nums add esp, 8 ; 清理栈 ; 返回值在 EAX mov eax, 1 xor ebx, ebx int 0x80 add_nums: push ebp mov ebp, esp mov eax, [ebp+8] ; 参数1 add eax, [ebp+12]; 参数2 pop ebp ret 小技巧：CTF 中 stack smashing、ret overwrite、ROP 技巧都是基于栈结构的。\n"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_6faad56a2de73f11.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>mawei</a></h1><h2 class=site-description>轻者无敌，快者不破。</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/446969727 target=_blank title=Bilibili rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 014-4h10a4 4 0 014 4v6a4 4 0 01-4 4H7a4 4 0 01-4-4v-6"/><path d="M8 3l2 3"/><path d="M16 3l-2 3"/><path d="M9 13v-2"/><path d="M15 11v2"/></svg></a></li><li><a href=https://github.com/mw-spec target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/%E5%85%B3%E4%BA%8E/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/%E5%8F%8B%E9%93%BE/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#目录>目录</a></li><li><a href=#栈与函数调用机制>栈与函数调用机制</a><ol><li><a href=#栈结构>栈结构</a></li><li><a href=#函数调用示例>函数调用示例</a></li></ol></li><li><a href=#中断与系统调用>中断与系统调用</a><ol><li><a href=#x86-linux-系统调用-32-bit>x86 Linux 系统调用 (32-bit)</a></li><li><a href=#x86-64-linux-系统调用>x86-64 Linux 系统调用</a></li><li><a href=#常用系统调用号>常用系统调用号</a></li></ol></li><li><a href=#条件跳转与循环>条件跳转与循环</a></li><li><a href=#字符串与内存操作>字符串与内存操作</a><ol><li><a href=#字符串指令>字符串指令</a></li><li><a href=#内存扫描技巧>内存扫描技巧</a></li></ol></li><li><a href=#shellcode-编写基础>Shellcode 编写基础</a><ol><li><a href=#shellcode-特性>Shellcode 特性</a></li><li><a href=#简单-32-bit-linux-shellcode-示例>简单 32-bit Linux shellcode 示例</a></li></ol></li><li><a href=#寄存器状态与标志位>寄存器状态与标志位</a></li><li><a href=#常见反汇编技巧>常见反汇编技巧</a></li><li><a href=#调试技巧>调试技巧</a></li><li><a href=#常用-ctf-汇编套路>常用 CTF 汇编套路</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E7%AC%94%E8%AE%B0/>笔记</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>汇编语言进阶学习笔记</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-03-08T00:00:00Z>2026-03-08</time></div></footer></div></header><section class=article-content><h2 id=目录>目录</h2><ol><li>栈与函数调用机制</li><li>中断与系统调用</li><li>条件跳转与循环</li><li>字符串与内存操作</li><li>Shellcode 编写基础</li><li>寄存器状态与标志位</li><li>常见反汇编技巧</li><li>调试技巧</li><li>常用 CTF 汇编套路</li></ol><hr><h2 id=栈与函数调用机制>栈与函数调用机制</h2><h3 id=栈结构>栈结构</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>高地址 ↑
+</span></span><span class=line><span class=cl>       |           |
+</span></span><span class=line><span class=cl>       |  参数      |
+</span></span><span class=line><span class=cl>       | 返回地址   |
+</span></span><span class=line><span class=cl>       | 保存的 EBP |
+</span></span><span class=line><span class=cl>低地址 ↓
+</span></span></code></pre></td></tr></table></div></div><ul><li>栈由 ESP/RSP 指向栈顶</li><li>PUSH：压入栈</li><li>POP：弹出栈</li><li>CALL：将返回地址压入栈</li><li>RET：弹出返回地址并跳转</li></ul><h3 id=函数调用示例>函数调用示例</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>; 参数通过栈传递，32位 x86
+</span></span><span class=line><span class=cl>global _start
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>_start:
+</span></span><span class=line><span class=cl>    push 5          ; 参数
+</span></span><span class=line><span class=cl>    push 10         ; 参数
+</span></span><span class=line><span class=cl>    call add_nums
+</span></span><span class=line><span class=cl>    add esp, 8      ; 清理栈
+</span></span><span class=line><span class=cl>    ; 返回值在 EAX
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    mov eax, 1
+</span></span><span class=line><span class=cl>    xor ebx, ebx
+</span></span><span class=line><span class=cl>    int 0x80
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>add_nums:
+</span></span><span class=line><span class=cl>    push ebp
+</span></span><span class=line><span class=cl>    mov ebp, esp
+</span></span><span class=line><span class=cl>    mov eax, [ebp+8] ; 参数1
+</span></span><span class=line><span class=cl>    add eax, [ebp+12]; 参数2
+</span></span><span class=line><span class=cl>    pop ebp
+</span></span><span class=line><span class=cl>    ret
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>小技巧：CTF 中 stack smashing、ret overwrite、ROP 技巧都是基于栈结构的。</p></blockquote><hr><h2 id=中断与系统调用>中断与系统调用</h2><h3 id=x86-linux-系统调用-32-bit>x86 Linux 系统调用 (32-bit)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mov eax, SYS_write ; 系统调用号
+</span></span><span class=line><span class=cl>mov ebx, 1         ; 文件描述符 stdout
+</span></span><span class=line><span class=cl>mov ecx, msg       ; 消息地址
+</span></span><span class=line><span class=cl>mov edx, len       ; 消息长度
+</span></span><span class=line><span class=cl>int 0x80
+</span></span></code></pre></td></tr></table></div></div><h3 id=x86-64-linux-系统调用>x86-64 Linux 系统调用</h3><ul><li>参数通过寄存器传递：</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>RDI, RSI, RDX, R10, R8, R9
+</span></span><span class=line><span class=cl>mov rax, 1         ; sys_exit
+</span></span><span class=line><span class=cl>xor rdi, rdi       ; exit code 0
+</span></span><span class=line><span class=cl>syscall
+</span></span></code></pre></td></tr></table></div></div><h3 id=常用系统调用号>常用系统调用号</h3><div class=table-wrapper><table><thead><tr><th>系统调用</th><th>x86</th><th>x86-64</th></tr></thead><tbody><tr><td>exit</td><td>1</td><td>60</td></tr><tr><td>write</td><td>4</td><td>1</td></tr><tr><td>read</td><td>3</td><td>0</td></tr><tr><td>execve</td><td>11</td><td>59</td></tr></tbody></table></div><hr><h2 id=条件跳转与循环>条件跳转与循环</h2><ul><li>标志位：<ul><li>ZF（零标志）、SF（符号标志）、CF（进位标志）、OF（溢出标志）</li></ul></li><li>条件跳转示例：</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cmp eax, ebx
+</span></span><span class=line><span class=cl>je equal_label
+</span></span><span class=line><span class=cl>jne notequal_label
+</span></span><span class=line><span class=cl>jg greater
+</span></span><span class=line><span class=cl>jl less
+</span></span></code></pre></td></tr></table></div></div><ul><li>循环示例：</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mov ecx, 5
+</span></span><span class=line><span class=cl>loop_start:
+</span></span><span class=line><span class=cl>    ; do something
+</span></span><span class=line><span class=cl>    loop loop_start  ; 自动 dec ecx, jnz
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>CTF 逆向中，判断条件通常通过 cmp + j* 指令实现。</p></blockquote><hr><h2 id=字符串与内存操作>字符串与内存操作</h2><h3 id=字符串指令>字符串指令</h3><ul><li><code>MOVSB</code> / <code>MOVSW</code> / <code>MOVSD</code>：复制字节/字/双字</li><li><code>STOSB</code> / <code>STOSD</code>：将 AL/EAX 存入内存</li><li><code>LODSB</code> / <code>LODSD</code>：加载 AL/EAX 从内存</li></ul><h3 id=内存扫描技巧>内存扫描技巧</h3><ul><li>可以通过 REP 指令实现批量操作</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>rep movsb ; 将 ECX 个字节从 [ESI] 复制到 [EDI]
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=shellcode-编写基础>Shellcode 编写基础</h2><h3 id=shellcode-特性>Shellcode 特性</h3><ul><li>无 NULL 字节（避免字符串结束）</li><li>精简指令</li><li>常见功能：<ul><li>execve("/bin/sh")</li><li>bind shell / reverse shell</li><li>read / write 文件</li></ul></li></ul><h3 id=简单-32-bit-linux-shellcode-示例>简单 32-bit Linux shellcode 示例</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>section .text
+</span></span><span class=line><span class=cl>global _start
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>_start:
+</span></span><span class=line><span class=cl>    xor eax, eax
+</span></span><span class=line><span class=cl>    push eax
+</span></span><span class=line><span class=cl>    push 0x68732f2f ; //sh
+</span></span><span class=line><span class=cl>    push 0x6e69622f ; /bin
+</span></span><span class=line><span class=cl>    mov ebx, esp
+</span></span><span class=line><span class=cl>    push eax
+</span></span><span class=line><span class=cl>    push ebx
+</span></span><span class=line><span class=cl>    mov ecx, esp
+</span></span><span class=line><span class=cl>    xor edx, edx
+</span></span><span class=line><span class=cl>    mov al, 11       ; sys_execve
+</span></span><span class=line><span class=cl>    int 0x80
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=寄存器状态与标志位>寄存器状态与标志位</h2><ul><li>EFLAGS 标志位：<ul><li>CF：进位</li><li>ZF：零</li><li>SF：符号</li><li>OF：溢出</li></ul></li><li>寄存器常用分工：<ul><li>EAX：返回值</li><li>EBX/ECX/EDX：参数/临时</li><li>EBP/ESP：栈管理</li></ul></li></ul><hr><h2 id=常见反汇编技巧>常见反汇编技巧</h2><ol><li><strong>函数入口识别</strong><ul><li><code>push ebp / mov ebp, esp</code> → 函数开始</li></ul></li><li><strong>循环识别</strong><ul><li><code>dec/jnz</code> 或 <code>cmp/j*</code> → 循环结构</li></ul></li><li><strong>系统调用识别</strong><ul><li><code>mov eax, sys_XXX / int 0x80</code> 或 <code>syscall</code></li></ul></li><li><strong>字符串/数据引用</strong><ul><li><code>[ebp+X]</code> 或 <code>[esp+X]</code> → 参数</li><li><code>[label]</code> → 全局变量/数据段</li></ul></li></ol><hr><h2 id=调试技巧>调试技巧</h2><ul><li>使用 GDB<ul><li><code>break main</code>：设置断点</li><li><code>disas</code>：查看汇编</li><li><code>x/s address</code>：查看字符串</li><li><code>info registers</code>：查看寄存器</li></ul></li><li>观察 ESP/EBP，分析栈帧</li><li>在 CTF 中常结合 pwntools 自动化调试</li></ul><hr><h2 id=常用-ctf-汇编套路>常用 CTF 汇编套路</h2><ol><li><strong>栈溢出</strong><ul><li>利用 <code>ret</code> 地址覆盖，ROP 链</li></ul></li><li><strong>格式化字符串漏洞</strong><ul><li><code>%x</code>, <code>%n</code> → 内存读写</li></ul></li><li><strong>shellcode 注入</strong><ul><li>精简无 NULL 字节</li><li>可直接写入栈或 heap 执行</li></ul></li><li><strong>函数跳转分析</strong><ul><li>找到关键函数调用 → 解密/解码</li></ul></li><li><strong>循环/条件逆向</strong><ul><li>cmp + j* 组合 → 分析逻辑</li></ul></li></ol></section><footer class=article-footer></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=[".main-article",".widget--toc"];e.forEach(e=>{const t=document.querySelector(e);t&&renderMathInElement(t,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/%E4%BB%8A%E5%A4%A9%E6%88%90%E5%8A%9F%E6%90%AD%E5%A5%BD%E4%BA%86blog/><div class=article-details><h2 class=article-title>今天成功搭好了blog</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2026 mawei-blog</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.33.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
