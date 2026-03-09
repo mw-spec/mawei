@@ -1,5 +1,5 @@
 ---
-title: "汇编语言进阶学习笔记"
+title: "汇编语言"
 date: 2026-03-08
 draft: false
 categories: ["笔记"]

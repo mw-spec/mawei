@@ -1,5 +1,5 @@
 ---
-title: "流量抓包学习笔记（Wireshark）"
+title: "流量抓包（Wireshark）"
 date: 2026-03-08
 draft: false
 categories: ["笔记"]
