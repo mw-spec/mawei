@@ -4,8 +4,6 @@ date: 2026-03-08
 draft: false
 categories: ["笔记"]
 ---
-# 流量抓包学习笔记（Wireshark）
-
 ## 一、什么是流量抓包
 
 流量抓包（Packet Capture）是指通过工具捕获网络中传输的数据包，并对其进行分析。
