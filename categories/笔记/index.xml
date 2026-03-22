@@ -1,4 +1,249 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on mawei</title><link>https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sun, 08 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>汇编语言</title><link>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link><pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid><description>&lt;hr&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on mawei</title><link>https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>CTF MISC（杂项）学习方案</title><link>https://mawei.org.cn/p/ctf-misc%E6%9D%82%E9%A1%B9%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/ctf-misc%E6%9D%82%E9%A1%B9%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/</guid><description>&lt;p&gt;MISC 的核心在于：&lt;strong&gt;隐写术、流量分析、压缩包分析、磁盘取证和脚本编写。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="一-环境与基础工具准备"&gt;一、 环境与基础工具准备
+&lt;/h2&gt;&lt;p&gt;Windows 是 MISC 赛道的“神器库”，请先准备好以下工具：&lt;/p&gt;
+&lt;h2 id="1-基础查看与十六进制编辑器"&gt;1. 基础查看与十六进制编辑器
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;010 Editor (必备)&lt;/strong&gt;：MISC 灵魂工具。用于查看文件二进制结构，它自带的“Template”功能可以自动解析 PNG、ZIP 等文件格式，帮你快速定位非法修改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Notepad++&lt;/strong&gt;：查看代码、Base64 编码等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-图片隐写类"&gt;2. 图片隐写类
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;StegSolve&lt;/strong&gt;：Java 开发（需装 JRE），用于切换图片色阶，查看隐藏位。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TweakPNG&lt;/strong&gt;：检查 PNG 文件的数据块（Chunk）是否异常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-流量分析类"&gt;3. 流量分析类
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Wireshark (必备)&lt;/strong&gt;：分析 &lt;code&gt;.pcapng&lt;/code&gt; 或 &lt;code&gt;.pcap&lt;/code&gt; 流量包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="4-压缩包分析"&gt;4. 压缩包分析
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Archpr (Advanced Archive Password Recovery)&lt;/strong&gt;：暴力破解或掩码破解加密压缩包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="5-编程环境"&gt;5. 编程环境
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;**Python 3 **：用于编写自动化脚本（如爆破、批量处理数据）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="二-核心知识点与专项练习"&gt;二、 核心知识点与专项练习
+&lt;/h2&gt;&lt;h2 id="1-图片隐写最常见"&gt;1. 图片隐写（最常见）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文件头修复&lt;/strong&gt;：用 010 Editor 修复被损坏的文件头（如 PNG 的 &lt;code&gt;89 50 4E 47&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LSB 隐写&lt;/strong&gt;：利用最低有效位隐藏信息，学会用 StegSolve 提取。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;宽高隐写&lt;/strong&gt;：通过修改十六进制数值改变图片显示高度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exif 隐写&lt;/strong&gt;：查看图片“属性”里的备注、GPS 等隐藏信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-压缩包隐写"&gt;2. 压缩包隐写
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;伪加密&lt;/strong&gt;：修改 ZIP 文件的标志位，让压缩包显示“已加密”但实际无需密码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字典/暴力破解&lt;/strong&gt;：利用 Archpr 进行破解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;明文攻击&lt;/strong&gt;：如果你有压缩包内的某个原文件，可以利用明文攻击直接获取密码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-流量分析关键点"&gt;3. 流量分析（关键点）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;过滤语句&lt;/strong&gt;：学会用 &lt;code&gt;http&lt;/code&gt;、&lt;code&gt;tcp.port == 80&lt;/code&gt;、&lt;code&gt;ip.addr == ...&lt;/code&gt; 筛选流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据提取&lt;/strong&gt;：从流量包中导出文件（File -&amp;gt; Export Objects -&amp;gt; HTTP）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;键盘/鼠标流量&lt;/strong&gt;：学习如何从 USB 流量中还原出键盘敲击记录或鼠标轨迹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="4-编码与加解密"&gt;4. 编码与加解密
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基础编码&lt;/strong&gt;：Base64, Base32, Base16, ASCII。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;古典密码&lt;/strong&gt;：凯撒密码、栅栏密码、维吉尼亚密码（常用在线工具解决）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心思维&lt;/strong&gt;：看到一串奇怪的字符，先判断它属于哪种编码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="三-实战练习路径"&gt;三、 实战练习路径
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;入门：Bugku / CTFshow&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;直接去 MISC 专项区，从“签到题”开始。&lt;/li&gt;
+&lt;li&gt;重点做：图片隐写、压缩包伪加密。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶：攻防世界 (XCTF)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;练习流量分析（Wireshark）和磁盘取证（可以使用 FTK Imager）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;看 Writeup (WP)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;MISC 的脑洞很大，做不出来很正常。看 WP 的重点是学习：&lt;strong&gt;这道题用到了什么新工具？作者是怎么想到这个脑洞的？&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="四-给-windows-用户的建议"&gt;四、 给 Windows 用户的建议
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;善用 WSL (Windows Subsystem for Linux)&lt;/strong&gt;： 虽然你用 Windows，但有些 MISC 脚本（如 &lt;code&gt;binwalk&lt;/code&gt; 分离文件，&lt;code&gt;foremost&lt;/code&gt;）在 Linux 环境下运行更顺畅。建议在 Windows 上开启 WSL 备用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件扩展名&lt;/strong&gt;： 在 Windows 文件夹选项中开启**“显示已知文件类型的扩展名”**，这是基础中的基础。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;积累脚本&lt;/strong&gt;： 把常用的 Python 脚本（如处理二进制转换、Base64 批量解码）分类存好，下次遇到同类题直接改参数就能用。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>CTF Web 学习方案（mac）</title><link>https://mawei.org.cn/p/ctf-web-%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88mac/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/ctf-web-%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88mac/</guid><description>&lt;h2 id="一-环境配置"&gt;一、 环境配置
+&lt;/h2&gt;&lt;p&gt;Mac 自带的终端（Terminal）和 Unix 内核是你的核心优势。&lt;/p&gt;
+&lt;h2 id="1-终端增强"&gt;1. 终端增强
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;：Mac 必备包管理器。安装后可一键安装各类安全工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Oh My Zsh&lt;/strong&gt;：提升终端操作效率，方便查看路径和命令历史。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iTerm2&lt;/strong&gt;：比自带终端更好用的终端工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-核心安服工具"&gt;2. 核心安服工具
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Burp Suite (Community/Professional)&lt;/strong&gt;：Web 渗透核心，Mac 运行非常流畅。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Desktop&lt;/strong&gt;：&lt;strong&gt;极其重要&lt;/strong&gt;。Mac 建议通过 Docker 运行漏洞环境（如 Vulhub），避免直接在物理机上安装复杂的后端服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python 3&lt;/strong&gt;：Mac 自带或通过 Brew 安装。用于编写自动化脚本（如 SQL 盲注脚本）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-编辑器"&gt;3. 编辑器
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：安装 PHP、SQL、JSON 相关插件，用于代码审计。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sublime Text&lt;/strong&gt;：极其轻量，适合快速查看大型日志或源码文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="二-基础学习路径由浅入深"&gt;二、 基础学习路径（由浅入深）
+&lt;/h2&gt;&lt;h2 id="1-http-协议与抓包-第-1-2-周"&gt;1. HTTP 协议与抓包 (第 1-2 周)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;学习重点&lt;/strong&gt;：理解 Header、Method、Cookie、Session。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mac 实操&lt;/strong&gt;：开启 Burp Suite，配置浏览器代理（建议用 Firefox 配合 HTTP Proxy），尝试截获、修改并重发自己的请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-php-特性与代码审计-第-3-5-周"&gt;2. PHP 特性与代码审计 (第 3-5 周)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;学习重点&lt;/strong&gt;：PHP 弱类型（&lt;code&gt;==&lt;/code&gt; 绕过）、反序列化漏洞、常用危险函数（&lt;code&gt;eval&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mac 实操&lt;/strong&gt;：利用 Mac 自带的 PHP 环境进行简单测试。学习使用 &lt;code&gt;php -S localhost:8000&lt;/code&gt; 快速启动本地 Web 服务验证 Payload。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-经典漏洞专项-第-6-10-周"&gt;3. 经典漏洞专项 (第 6-10 周)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SQL 注入&lt;/strong&gt;：手动练习 Union 注入、盲注。熟练后学习使用 &lt;code&gt;sqlmap&lt;/code&gt; (Brew 可安装)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件上传/包含&lt;/strong&gt;：理解一句话木马，掌握 PHP 伪协议读取系统文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RCE (远程命令执行)&lt;/strong&gt;：学习如何在 Unix 环境下绕过命令过滤（如使用 &lt;code&gt;${IFS}&lt;/code&gt; 代替空格）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="三-针对-mac-硬件的学习策略"&gt;三、 针对 Mac 硬件的学习策略
+&lt;/h2&gt;&lt;h2 id="1-充分利用-docker"&gt;1. 充分利用 Docker
+&lt;/h2&gt;&lt;p&gt;不要在 Mac 上直接配置复杂的 LAMP/WAMP 环境。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;docker pull&lt;/code&gt; 拉取 CTF 题目镜像。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;docker-compose&lt;/code&gt; 搭建本地漏洞实验室。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-熟练使用-unix-命令行"&gt;2. 熟练使用 Unix 命令行
+&lt;/h2&gt;&lt;p&gt;CTF Web 经常涉及对 Linux 服务器的操作。由于 Mac 终端命令与 Linux 高度一致：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;练习使用 &lt;code&gt;grep&lt;/code&gt;, &lt;code&gt;awk&lt;/code&gt;, &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;base64&lt;/code&gt; 等命令处理数据。&lt;/li&gt;
+&lt;li&gt;掌握 SSH 连接远程服务器的方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-虚拟机补充"&gt;3. 虚拟机补充
+&lt;/h2&gt;&lt;p&gt;虽然 Docker 能解决 90% 的问题，但某些特定环境（如复杂的 Windows Web 服务）可能需要安装 &lt;strong&gt;Parallels Desktop&lt;/strong&gt; 或 &lt;strong&gt;VMware Fusion&lt;/strong&gt; 来运行 Win 虚拟机。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="四-推荐练习资源"&gt;四、 推荐练习资源
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本地练习&lt;/strong&gt;：下载 &lt;strong&gt;DVWA&lt;/strong&gt; 或 &lt;strong&gt;sqli-labs&lt;/strong&gt;，通过 Docker 在本地运行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在线平台&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BUUCTF&lt;/strong&gt;：国内最全的真题库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CTFshow&lt;/strong&gt;：适合从 0 开始刷专项题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;必备书单&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;《白帽子讲 Web 安全》（吴翰清著）：经典入门，建立宏观视野。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="五-朴素建议"&gt;五、 朴素建议
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;保持干净&lt;/strong&gt;：所有的实验环境尽量放在 Docker 里，保持 Mac 物理系统的整洁。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要过度依赖工具&lt;/strong&gt;：在入门阶段，尽量手写 Payload，不要一上来就用 sqlmap 等全自动工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重视原理&lt;/strong&gt;：Web 安全本质上是“信息不对称”和“逻辑严密性”的博弈。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>CTF Web 学习系统方案</title><link>https://mawei.org.cn/p/ctf-web-%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%A1%88/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/ctf-web-%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%A1%88/</guid><description>&lt;h2 id="一-基础知识储备"&gt;一、 基础知识储备
+&lt;/h2&gt;&lt;p&gt;在动手做题前，必须掌握 Web 运作的底层逻辑。&lt;/p&gt;
+&lt;h2 id="1-网络协议"&gt;1. 网络协议
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTTP 协议&lt;/strong&gt;：请求方法（GET, POST, PUT, OPTIONS）、请求头/响应头含义、状态码（200, 302, 403, 500）、Cookie 与 Session 机制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;：基础的加密传输原理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-前端技术"&gt;2. 前端技术
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML&lt;/strong&gt;：能看懂表单（Form）、隐藏输入框（Hidden）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;：理解 DOM 树，掌握常用的前端加解密函数（Base64, MD5），会使用浏览器控制台（F12）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-后端环境"&gt;3. 后端环境
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PHP (核心)&lt;/strong&gt;：CTF Web 的主力语言。重点看：变量覆盖、弱类型比较（&lt;code&gt;==&lt;/code&gt; vs &lt;code&gt;===&lt;/code&gt;）、反序列化（&lt;code&gt;serialize&lt;/code&gt;/&lt;code&gt;unserialize&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库&lt;/strong&gt;：MySQL 语法，重点是查询语句（&lt;code&gt;SELECT&lt;/code&gt;）、联合查询（&lt;code&gt;UNION&lt;/code&gt;）、注释符（&lt;code&gt;#&lt;/code&gt;, &lt;code&gt;-- &lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt;：常用命令（&lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;find&lt;/code&gt;）、文件读取权限、Web 容器（Apache/Nginx）的基础配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="二-核心漏洞详解"&gt;二、 核心漏洞详解
+&lt;/h2&gt;&lt;p&gt;这是 CTF Web 的加分项，需逐一攻克原理并能手写 Payload。&lt;/p&gt;
+&lt;h2 id="1-注入类"&gt;1. 注入类
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SQL 注入&lt;/strong&gt;：从联合查询（Union）开始，进阶到盲注（布尔/时间）、报错注入、堆叠注入。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令执行 (RCE)&lt;/strong&gt;：在服务器上执行系统命令。学习如何绕过空格（&lt;code&gt;${IFS}&lt;/code&gt;）、黑名单（拼接、编码）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-文件操作"&gt;2. 文件操作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文件上传&lt;/strong&gt;：绕过后缀检查（&lt;code&gt;.php5&lt;/code&gt;, &lt;code&gt;.phtml&lt;/code&gt;）、内容检查（&lt;code&gt;GIF89a&lt;/code&gt;）、配置文件包含（&lt;code&gt;.htaccess&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件包含 (LFI)&lt;/strong&gt;：读取系统敏感文件（&lt;code&gt;/etc/passwd&lt;/code&gt;）。&lt;strong&gt;必须掌握 PHP 伪协议&lt;/strong&gt;：&lt;code&gt;php://filter&lt;/code&gt; 读源码，&lt;code&gt;php://input&lt;/code&gt; 写命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-逻辑与高级漏洞"&gt;3. 逻辑与高级漏洞
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;反序列化&lt;/strong&gt;：理解魔法函数触发链。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSRF (服务端请求伪造)&lt;/strong&gt;：利用服务器去请求它内部的网络。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;XXE (XML 实体注入)&lt;/strong&gt;：通过 XML 读文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;变量覆盖&lt;/strong&gt;：如 &lt;code&gt;extract()&lt;/code&gt;、&lt;code&gt;$$&lt;/code&gt; 导致的变量篡改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="三-必备工具集"&gt;三、 必备工具集
+&lt;/h2&gt;&lt;p&gt;工具是辅助，原理是基础。建议先手动复现，再使用工具。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Burp Suite (核心)&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Proxy&lt;/strong&gt;：拦截并修改数据包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repeater&lt;/strong&gt;：重发数据包，调试 Payload。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intruder&lt;/strong&gt;：爆破目录、文件名或参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器插件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HackBar&lt;/strong&gt;：快速构造 GET/POST 请求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Proxy SwitchyOmega&lt;/strong&gt;：快速切换代理（配合 Burp 使用）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本/扫描器&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python (必学)&lt;/strong&gt;：用来编写自动化的盲注脚本。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dirsearch&lt;/strong&gt;：扫描网站目录和隐藏文件（如 &lt;code&gt;.git&lt;/code&gt;, &lt;code&gt;.svn&lt;/code&gt;, &lt;code&gt;.DS_Store&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQLmap&lt;/strong&gt;：自动化 SQL 注入工具（建议原理搞懂后再用）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="四-实战练习路径"&gt;四、 实战练习路径
+&lt;/h2&gt;&lt;p&gt;不要只看书，直接上平台做题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;入门级&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bugku / CTFshow&lt;/strong&gt;：题目很细，适合练习单一漏洞点（如“PHP特性”、“SQL注入”专项）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶级&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;攻防世界 (XCTF)&lt;/strong&gt;：题目综合性更强，接近真实比赛。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BUUCTF&lt;/strong&gt;：收录了国内各大比赛的原题，含金量极高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复现要求&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;做不出题时，搜索“题目名 + Writeup”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重点看思路&lt;/strong&gt;：别人是怎么发现这个漏洞点的？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;必须复现&lt;/strong&gt;：关掉题解，自己把 Flag 跑出来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="五-学习建议"&gt;五、 学习建议
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多读源码&lt;/strong&gt;：遇到给源码的题是好事，学会搜索敏感函数（如 &lt;code&gt;eval()&lt;/code&gt;, &lt;code&gt;system()&lt;/code&gt;, &lt;code&gt;include()&lt;/code&gt;, &lt;code&gt;unserialize()&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;记笔记&lt;/strong&gt;：建立自己的 Payload 库，比如“绕过空格的 10 种方法”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;坚持&lt;/strong&gt;：Web 的知识点很碎，前期挫败感很强，复现完 50 道典型题后会有质变。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>汇编语言</title><link>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link><pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid><description>&lt;hr&gt;
 &lt;h2 id="栈与函数调用机制"&gt;栈与函数调用机制
 &lt;/h2&gt;&lt;h3 id="栈结构"&gt;栈结构
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
