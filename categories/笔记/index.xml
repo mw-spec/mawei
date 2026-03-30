@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on mawei</title><link>https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h1 id="web1"&gt;web1
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on mawei</title><link>https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Mon, 30 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h1 id="web1"&gt;web1
 &lt;/h1&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
 &lt;p&gt;CTF的web入门——flag的含义与简单使用理解（一） flag相当于题目的答案凭证，是需要自己攻破题目获取的秘密字符串。这道题目比较简单，flag直接藏在源码或者注释里面，利用右键检查网页源代码，可以明显看到ctfshow{&amp;hellip;} 这一明显的flag&lt;/p&gt;
 &lt;h1 id="web2"&gt;web2
@@ -33,8 +33,7 @@
 &lt;/h1&gt;&lt;p&gt;通过dns检查查询flag &lt;a class="link" href="https://zijian.aliyun.com/" target="_blank" rel="noopener"
 &gt;https://zijian.aliyun.com/&lt;/a&gt; TXT 记录，一般指为某个主机名或域名设置的说明。&lt;/p&gt;
 &lt;p&gt;查找flag.ctfshow.com域名下的txt记录&lt;/p&gt;
-&lt;h6 id="由于动态更新txt记录会变"&gt;由于动态更新，txt记录会变
-&lt;/h6&gt;&lt;p&gt;最终flag flag{just_seesee}&lt;/p&gt;
+&lt;p&gt;由于动态更新，txt记录会变，最终flag flag{just_seesee}&lt;/p&gt;
 &lt;h1 id="web12"&gt;web12
 &lt;/h1&gt;&lt;p&gt;查看robots.txt文件&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
