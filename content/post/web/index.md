@@ -1,7 +1,7 @@
 ---
 title: "web（CTFshow知识点)"
 date: 2026-03-23
-lastUpdated: 2026-03-30
+lastmod: 2026-03-30
 draft: false
 categories: ["笔记"]
 ---
@@ -72,9 +72,7 @@ CTF的web入门——flag的含义与简单使用理解（信息搜集）（十�
 
 查找flag.ctfshow.com域名下的txt记录
 
-###### 由于动态更新，txt记录会变
-
-最终flag flag{just_seesee}
+由于动态更新，txt记录会变，最终flag flag{just_seesee}
 
 # web12
 
