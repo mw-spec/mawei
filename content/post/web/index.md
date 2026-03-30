@@ -1,7 +1,6 @@
 ---
 title: "web（CTFshow知识点)"
 date: 2026-03-23
-lastmod: 2026-03-30
 draft: false
 categories: ["笔记"]
 ---
