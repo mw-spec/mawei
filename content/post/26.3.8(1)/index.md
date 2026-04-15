@@ -2,7 +2,7 @@
 title: "流量抓包（Wireshark）"
 date: 2026-03-08
 draft: false
-categories: ["笔记"]
+categories: ["web笔记"]
 ---
 ## 一、什么是流量抓包
 

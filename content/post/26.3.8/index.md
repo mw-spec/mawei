@@ -2,7 +2,7 @@
 title: "汇编语言"
 date: 2026-03-08
 draft: false
-categories: ["笔记"]
+categories: ["pwn笔记"]
 ---
 
 ------
