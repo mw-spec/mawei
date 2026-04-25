@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on mawei</title><link>https://mawei.org.cn/categories/web/</link><description>Recent content in Web on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/web/index.xml" rel="self" type="application/rss+xml"/><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on mawei</title><link>https://mawei.org.cn/categories/web/</link><description>Recent content in Web on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/web/index.xml" rel="self" type="application/rss+xml"/><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
 &lt;/h2&gt;&lt;h3 id="web1"&gt;web1
 &lt;/h3&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
 &lt;h3 id="web2"&gt;web2
@@ -275,8 +275,15 @@
 &lt;/ol&gt;
 &lt;h4 id="payload"&gt;Payload
 &lt;/h4&gt;&lt;p&gt;可以尝试使用 &lt;strong&gt;PHP 伪协议配合数据流&lt;/strong&gt; 或者 &lt;strong&gt;包含 &lt;code&gt;/proc/self/fd&lt;/code&gt;&lt;/strong&gt; 等技巧。但最简单且最经典的方法是利用 &lt;code&gt;include&lt;/code&gt; 结合 &lt;code&gt;$_GET&lt;/code&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;构造 URL：&lt;/strong&gt; &lt;code&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
 &lt;ul&gt;
@@ -383,7 +390,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="web37"&gt;Web37
+&lt;h3 id="web37"&gt;web37
 &lt;/h3&gt;&lt;h4 id="核心代码审计"&gt;核心代码审计
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 屏蔽所有报错信息。这意味着即使包含失败，页面也不会显示路径错误或权限错误，增加了盲测的难度。&lt;/li&gt;
@@ -406,4 +413,73 @@
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZionKTs/Pg==
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
+&gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="web38"&gt;web38
+&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;这个正则表达式会检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含关键字 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;php&lt;/code&gt; 或 &lt;code&gt;file&lt;/code&gt;（不区分大小写）。&lt;/li&gt;
+&lt;li&gt;如果匹配到这些词，代码就不会执行 &lt;code&gt;include($c)&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;漏洞点&lt;/strong&gt;：&lt;code&gt;include($c)&lt;/code&gt;。这是一个文件包含函数，如果能绕过过滤并成功包含 &lt;code&gt;flag.php&lt;/code&gt;，由于代码最后有一句 &lt;code&gt;echo $flag;&lt;/code&gt;，变量 &lt;code&gt;$flag&lt;/code&gt;（通常定义在 &lt;code&gt;flag.php&lt;/code&gt; 中）就会被打印出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;做法和37差不多&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhKicpOyA/Pg==
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="web39"&gt;web39
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;$c = $_GET['c'];&lt;/code&gt;&lt;/strong&gt;：从 URL 参数 &lt;code&gt;c&lt;/code&gt; 获取输入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;第一道防线&lt;/strong&gt;。正则表达式检查输入中是否含有 &lt;code&gt;flag&lt;/code&gt;（不区分大小写）。如果你的输入里有这四个字母，直接出局。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;include($c.&amp;quot;.php&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;核心漏洞点 &amp;amp; 第二道防线&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这里存在文件包含漏洞（LFI）。&lt;/li&gt;
+&lt;li&gt;它强制在你的输入后面加上 &lt;code&gt;.php&lt;/code&gt; 后缀。这意味着如果你直接输入 &lt;code&gt;index&lt;/code&gt;，它会包含 &lt;code&gt;index.php&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 读取 &lt;code&gt;flag.php&lt;/code&gt; 的内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;挑战：&lt;/strong&gt; 不能输入 &lt;code&gt;flag&lt;/code&gt;，且要处理掉尾部的 &lt;code&gt;.php&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了绕过上述限制，我们使用 &lt;strong&gt;&lt;code&gt;data://&lt;/code&gt; 协议&lt;/strong&gt;。它允许我们将输入的数据当作“文件内容”让 PHP 去解析执行。&lt;/p&gt;
+&lt;p&gt;步骤一：绕过 &lt;code&gt;flag&lt;/code&gt; 关键字过滤&lt;/p&gt;
+&lt;p&gt;由于正则只检查变量 &lt;code&gt;$c&lt;/code&gt; 的内容，我们不能直接写 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技巧：使用通配符&lt;/strong&gt;。在 Linux Shell 指令中，&lt;code&gt;*&lt;/code&gt; 可以匹配任意字符。&lt;/li&gt;
+&lt;li&gt;我们将 &lt;code&gt;flag.php&lt;/code&gt; 写成 &lt;code&gt;fla*.php&lt;/code&gt; 或 &lt;code&gt;f*&lt;/code&gt;。这样在匹配正则时，字符串里没有 &lt;code&gt;flag&lt;/code&gt;，可以成功绕过。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;步骤二：处理强制添加的 &lt;code&gt;.php&lt;/code&gt; 后缀&lt;/p&gt;
+&lt;p&gt;题目代码是 &lt;code&gt;include($c.&amp;quot;.php&amp;quot;)&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你输入 &lt;code&gt;?c=data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;最终包含的语句变成了：&lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;.php&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关键原理：&lt;/strong&gt; PHP 在执行 &lt;code&gt;include&lt;/code&gt; 包含的代码时，一旦遇到 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; (PHP 闭合标签)&lt;/strong&gt;，就会认为 PHP 代码段已经结束。之后的任何内容（包括自动拼接的 &lt;code&gt;.php&lt;/code&gt;）都会被当作 &lt;strong&gt;普通字符串/HTML&lt;/strong&gt; 直接显示在页面上，而不会被当作 PHP 代码解析执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;payload&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain,&amp;lt;?php system(&amp;#34;tac fla*.php&amp;#34;)?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;注入参数&lt;/strong&gt;： URL 变为 &lt;code&gt;index.php?c=data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则校验&lt;/strong&gt;： &lt;code&gt;preg_match&lt;/code&gt; 检查字符串 &lt;code&gt;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;。 由于使用的是 &lt;code&gt;fla*&lt;/code&gt;，字符串中不包含完整的 &lt;code&gt;flag&lt;/code&gt;，&lt;strong&gt;校验通过&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码拼接&lt;/strong&gt;： PHP 执行 &lt;code&gt;include&lt;/code&gt; 语句： &lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伪协议解析&lt;/strong&gt;： PHP 解释器读取 &lt;code&gt;data://&lt;/code&gt; 流中的内容：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码部分&lt;/strong&gt;：&lt;code&gt;&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令执行&lt;/strong&gt;：&lt;code&gt;system&lt;/code&gt; 调用系统 Shell。&lt;code&gt;tac&lt;/code&gt; 命令反向读取文件（常用于绕过对 &lt;code&gt;cat&lt;/code&gt; 的过滤，且效果一致）。&lt;code&gt;fla*.php&lt;/code&gt; 被 Shell 解析为 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行结果&lt;/strong&gt;：&lt;code&gt;flag.php&lt;/code&gt; 的内容被打印到页面源码中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后续忽略&lt;/strong&gt;： 最后的 &lt;code&gt;.php&lt;/code&gt; 位于 &lt;code&gt;?&amp;gt;&lt;/code&gt; 之后，PHP 引擎将其视为纯文本直接输出，不影响代码逻辑。&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>

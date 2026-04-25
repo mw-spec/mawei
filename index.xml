@@ -1,98 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mawei</title><link>https://mawei.org.cn/</link><description>Recent content on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
-&lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; 协议允许开发者在网页中直接嵌入小型数据，而不是引用外部资源。它将资源转换为字符串形式，随 HTML/CSS 一起下载。&lt;/p&gt;
-&lt;h2 id="2-标准语法结构"&gt;2. 标准语法结构
-&lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; URL 的组成非常严谨，公式如下：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;data:[&amp;lt;mediatype&amp;gt;][;base64],&amp;lt;data&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;组成部分&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;data:&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;协议前缀（必须）。&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;data:&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;mediatype&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;MIME 类型，标识数据种类。缺省默认为 &lt;code&gt;text/plain;charset=US-ASCII&lt;/code&gt;。&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;image/png&lt;/code&gt;, &lt;code&gt;text/html&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;;base64&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;可选。标识数据是否经过 Base64 编码。二进制数据通常必须使用。&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;;base64&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;data&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;实际内容。Base64 字符串或经过 URL 编码的文本。&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;iVBORw...&lt;/code&gt; 或 &lt;code&gt;%3Ch1%3E...&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id="3-常见应用场景"&gt;3. 常见应用场景
-&lt;/h2&gt;&lt;h3 id="31-嵌入图片-base64"&gt;3.1 嵌入图片 (Base64)
-&lt;/h3&gt;&lt;p&gt;常用于小图标（Icons）以减少 HTTP 请求数。&lt;/p&gt;
-&lt;p&gt;HTML&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;img src=&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==&amp;#34; alt=&amp;#34;Red dot&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="32-嵌入-svg-url-编码"&gt;3.2 嵌入 SVG (URL 编码)
-&lt;/h3&gt;&lt;p&gt;SVG 是文本格式，通常不使用 Base64，直接对特殊字符进行转义（如 &lt;code&gt;#&lt;/code&gt; 变为 &lt;code&gt;%23&lt;/code&gt;）效率更高。&lt;/p&gt;
-&lt;p&gt;HTML&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;div style=&amp;#34;background-image: url(&amp;amp;quot;data:image/svg+xml,%3Csvg xmlns=&amp;#39;http://www.w3.org/2000/svg&amp;#39; width=&amp;#39;10&amp;#39; height=&amp;#39;10&amp;#39;%3E%3Ccircle cx=&amp;#39;5&amp;#39; cy=&amp;#39;5&amp;#39; r=&amp;#39;5&amp;#39; fill=&amp;#39;red&amp;#39;/%3E%3C/svg%3E&amp;amp;quot;);&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="33-嵌入-html"&gt;3.3 嵌入 HTML
-&lt;/h3&gt;&lt;p&gt;可用于测试或在 &lt;code&gt;iframe&lt;/code&gt; 中快速加载内容。&lt;/p&gt;
-&lt;p&gt;Plaintext&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data:text/html;charset=utf-8,&amp;lt;h1&amp;gt;Hello!&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;This is a data URI page.&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id="4-核心优缺点对比"&gt;4. 核心优缺点对比
-&lt;/h2&gt;&lt;h3 id="-优点"&gt;✅ 优点
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;减少 HTTP 请求&lt;/strong&gt;：合并小资源到主文档，减少 TCP 握手开销。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;离线可用&lt;/strong&gt;：整个页面是一个独立的文件，不依赖外部服务器上的图片。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;解决跨域&lt;/strong&gt;：在某些 Canvas 绘图场景下，可以避免跨域图片污染画布的问题。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="-缺点"&gt;❌ 缺点
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;体积膨胀&lt;/strong&gt;：Base64 编码会使原始二进制数据体积增加约 &lt;strong&gt;33%&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;浏览器缓存失效&lt;/strong&gt;：数据随 HTML 加载，无法像独立资源那样被浏览器单独缓存。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;阻塞渲染&lt;/strong&gt;：若在 CSS 中嵌入过大的 Data URI，会显著延迟页面的首次渲染（First Paint）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;安全隐患&lt;/strong&gt;：容易被利用进行 XSS 注入，现代 CSP（内容安全策略）常对其进行限制。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id="5-开发建议与技巧"&gt;5. 开发建议与技巧
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;大小限制&lt;/strong&gt;：建议仅对 &lt;strong&gt;4KB&lt;/strong&gt; 以下的资源使用 Data URI。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;编码工具&lt;/strong&gt;：可以使用 Linux 命令 &lt;code&gt;base64&lt;/code&gt; 或在线工具进行转换。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CSS 预处理器&lt;/strong&gt;：Sass/Less 有插件可以自动将小图转换为 Data URI，提高开发效率。&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mawei</title><link>https://mawei.org.cn/</link><description>Recent content on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
 &lt;/h2&gt;&lt;h3 id="web1"&gt;web1
 &lt;/h3&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
 &lt;h3 id="web2"&gt;web2
@@ -369,8 +275,15 @@
 &lt;/ol&gt;
 &lt;h4 id="payload"&gt;Payload
 &lt;/h4&gt;&lt;p&gt;可以尝试使用 &lt;strong&gt;PHP 伪协议配合数据流&lt;/strong&gt; 或者 &lt;strong&gt;包含 &lt;code&gt;/proc/self/fd&lt;/code&gt;&lt;/strong&gt; 等技巧。但最简单且最经典的方法是利用 &lt;code&gt;include&lt;/code&gt; 结合 &lt;code&gt;$_GET&lt;/code&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;构造 URL：&lt;/strong&gt; &lt;code&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
 &lt;ul&gt;
@@ -477,7 +390,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="web37"&gt;Web37
+&lt;h3 id="web37"&gt;web37
 &lt;/h3&gt;&lt;h4 id="核心代码审计"&gt;核心代码审计
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 屏蔽所有报错信息。这意味着即使包含失败，页面也不会显示路径错误或权限错误，增加了盲测的难度。&lt;/li&gt;
@@ -500,7 +413,170 @@
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZionKTs/Pg==
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>汇编语言</title><link>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link><pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid><description>&lt;hr&gt;
+&lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
+&gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="web38"&gt;web38
+&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;这个正则表达式会检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含关键字 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;php&lt;/code&gt; 或 &lt;code&gt;file&lt;/code&gt;（不区分大小写）。&lt;/li&gt;
+&lt;li&gt;如果匹配到这些词，代码就不会执行 &lt;code&gt;include($c)&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;漏洞点&lt;/strong&gt;：&lt;code&gt;include($c)&lt;/code&gt;。这是一个文件包含函数，如果能绕过过滤并成功包含 &lt;code&gt;flag.php&lt;/code&gt;，由于代码最后有一句 &lt;code&gt;echo $flag;&lt;/code&gt;，变量 &lt;code&gt;$flag&lt;/code&gt;（通常定义在 &lt;code&gt;flag.php&lt;/code&gt; 中）就会被打印出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;做法和37差不多&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhKicpOyA/Pg==
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="web39"&gt;web39
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;$c = $_GET['c'];&lt;/code&gt;&lt;/strong&gt;：从 URL 参数 &lt;code&gt;c&lt;/code&gt; 获取输入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;第一道防线&lt;/strong&gt;。正则表达式检查输入中是否含有 &lt;code&gt;flag&lt;/code&gt;（不区分大小写）。如果你的输入里有这四个字母，直接出局。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;include($c.&amp;quot;.php&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;核心漏洞点 &amp;amp; 第二道防线&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这里存在文件包含漏洞（LFI）。&lt;/li&gt;
+&lt;li&gt;它强制在你的输入后面加上 &lt;code&gt;.php&lt;/code&gt; 后缀。这意味着如果你直接输入 &lt;code&gt;index&lt;/code&gt;，它会包含 &lt;code&gt;index.php&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 读取 &lt;code&gt;flag.php&lt;/code&gt; 的内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;挑战：&lt;/strong&gt; 不能输入 &lt;code&gt;flag&lt;/code&gt;，且要处理掉尾部的 &lt;code&gt;.php&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了绕过上述限制，我们使用 &lt;strong&gt;&lt;code&gt;data://&lt;/code&gt; 协议&lt;/strong&gt;。它允许我们将输入的数据当作“文件内容”让 PHP 去解析执行。&lt;/p&gt;
+&lt;p&gt;步骤一：绕过 &lt;code&gt;flag&lt;/code&gt; 关键字过滤&lt;/p&gt;
+&lt;p&gt;由于正则只检查变量 &lt;code&gt;$c&lt;/code&gt; 的内容，我们不能直接写 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技巧：使用通配符&lt;/strong&gt;。在 Linux Shell 指令中，&lt;code&gt;*&lt;/code&gt; 可以匹配任意字符。&lt;/li&gt;
+&lt;li&gt;我们将 &lt;code&gt;flag.php&lt;/code&gt; 写成 &lt;code&gt;fla*.php&lt;/code&gt; 或 &lt;code&gt;f*&lt;/code&gt;。这样在匹配正则时，字符串里没有 &lt;code&gt;flag&lt;/code&gt;，可以成功绕过。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;步骤二：处理强制添加的 &lt;code&gt;.php&lt;/code&gt; 后缀&lt;/p&gt;
+&lt;p&gt;题目代码是 &lt;code&gt;include($c.&amp;quot;.php&amp;quot;)&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你输入 &lt;code&gt;?c=data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;最终包含的语句变成了：&lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;.php&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关键原理：&lt;/strong&gt; PHP 在执行 &lt;code&gt;include&lt;/code&gt; 包含的代码时，一旦遇到 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; (PHP 闭合标签)&lt;/strong&gt;，就会认为 PHP 代码段已经结束。之后的任何内容（包括自动拼接的 &lt;code&gt;.php&lt;/code&gt;）都会被当作 &lt;strong&gt;普通字符串/HTML&lt;/strong&gt; 直接显示在页面上，而不会被当作 PHP 代码解析执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;payload&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain,&amp;lt;?php system(&amp;#34;tac fla*.php&amp;#34;)?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;注入参数&lt;/strong&gt;： URL 变为 &lt;code&gt;index.php?c=data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则校验&lt;/strong&gt;： &lt;code&gt;preg_match&lt;/code&gt; 检查字符串 &lt;code&gt;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;。 由于使用的是 &lt;code&gt;fla*&lt;/code&gt;，字符串中不包含完整的 &lt;code&gt;flag&lt;/code&gt;，&lt;strong&gt;校验通过&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码拼接&lt;/strong&gt;： PHP 执行 &lt;code&gt;include&lt;/code&gt; 语句： &lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伪协议解析&lt;/strong&gt;： PHP 解释器读取 &lt;code&gt;data://&lt;/code&gt; 流中的内容：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码部分&lt;/strong&gt;：&lt;code&gt;&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令执行&lt;/strong&gt;：&lt;code&gt;system&lt;/code&gt; 调用系统 Shell。&lt;code&gt;tac&lt;/code&gt; 命令反向读取文件（常用于绕过对 &lt;code&gt;cat&lt;/code&gt; 的过滤，且效果一致）。&lt;code&gt;fla*.php&lt;/code&gt; 被 Shell 解析为 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行结果&lt;/strong&gt;：&lt;code&gt;flag.php&lt;/code&gt; 的内容被打印到页面源码中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后续忽略&lt;/strong&gt;： 最后的 &lt;code&gt;.php&lt;/code&gt; 位于 &lt;code&gt;?&amp;gt;&lt;/code&gt; 之后，PHP 引擎将其视为纯文本直接输出，不影响代码逻辑。&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; 协议允许开发者在网页中直接嵌入小型数据，而不是引用外部资源。它将资源转换为字符串形式，随 HTML/CSS 一起下载。&lt;/p&gt;
+&lt;h2 id="2-标准语法结构"&gt;2. 标准语法结构
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; URL 的组成非常严谨，公式如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;data:[&amp;lt;mediatype&amp;gt;][;base64],&amp;lt;data&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;组成部分&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;data:&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;协议前缀（必须）。&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;data:&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;mediatype&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MIME 类型，标识数据种类。缺省默认为 &lt;code&gt;text/plain;charset=US-ASCII&lt;/code&gt;。&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;image/png&lt;/code&gt;, &lt;code&gt;text/html&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;;base64&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;可选。标识数据是否经过 Base64 编码。二进制数据通常必须使用。&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;;base64&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;data&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;实际内容。Base64 字符串或经过 URL 编码的文本。&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;iVBORw...&lt;/code&gt; 或 &lt;code&gt;%3Ch1%3E...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="3-常见应用场景"&gt;3. 常见应用场景
+&lt;/h2&gt;&lt;h3 id="31-嵌入图片-base64"&gt;3.1 嵌入图片 (Base64)
+&lt;/h3&gt;&lt;p&gt;常用于小图标（Icons）以减少 HTTP 请求数。&lt;/p&gt;
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;img src=&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==&amp;#34; alt=&amp;#34;Red dot&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="32-嵌入-svg-url-编码"&gt;3.2 嵌入 SVG (URL 编码)
+&lt;/h3&gt;&lt;p&gt;SVG 是文本格式，通常不使用 Base64，直接对特殊字符进行转义（如 &lt;code&gt;#&lt;/code&gt; 变为 &lt;code&gt;%23&lt;/code&gt;）效率更高。&lt;/p&gt;
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;div style=&amp;#34;background-image: url(&amp;amp;quot;data:image/svg+xml,%3Csvg xmlns=&amp;#39;http://www.w3.org/2000/svg&amp;#39; width=&amp;#39;10&amp;#39; height=&amp;#39;10&amp;#39;%3E%3Ccircle cx=&amp;#39;5&amp;#39; cy=&amp;#39;5&amp;#39; r=&amp;#39;5&amp;#39; fill=&amp;#39;red&amp;#39;/%3E%3C/svg%3E&amp;amp;quot;);&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="33-嵌入-html"&gt;3.3 嵌入 HTML
+&lt;/h3&gt;&lt;p&gt;可用于测试或在 &lt;code&gt;iframe&lt;/code&gt; 中快速加载内容。&lt;/p&gt;
+&lt;p&gt;Plaintext&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data:text/html;charset=utf-8,&amp;lt;h1&amp;gt;Hello!&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;This is a data URI page.&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="4-核心优缺点对比"&gt;4. 核心优缺点对比
+&lt;/h2&gt;&lt;h3 id="-优点"&gt;✅ 优点
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;减少 HTTP 请求&lt;/strong&gt;：合并小资源到主文档，减少 TCP 握手开销。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;离线可用&lt;/strong&gt;：整个页面是一个独立的文件，不依赖外部服务器上的图片。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决跨域&lt;/strong&gt;：在某些 Canvas 绘图场景下，可以避免跨域图片污染画布的问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="-缺点"&gt;❌ 缺点
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;体积膨胀&lt;/strong&gt;：Base64 编码会使原始二进制数据体积增加约 &lt;strong&gt;33%&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器缓存失效&lt;/strong&gt;：数据随 HTML 加载，无法像独立资源那样被浏览器单独缓存。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阻塞渲染&lt;/strong&gt;：若在 CSS 中嵌入过大的 Data URI，会显著延迟页面的首次渲染（First Paint）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全隐患&lt;/strong&gt;：容易被利用进行 XSS 注入，现代 CSP（内容安全策略）常对其进行限制。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="5-开发建议与技巧"&gt;5. 开发建议与技巧
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;大小限制&lt;/strong&gt;：建议仅对 &lt;strong&gt;4KB&lt;/strong&gt; 以下的资源使用 Data URI。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编码工具&lt;/strong&gt;：可以使用 Linux 命令 &lt;code&gt;base64&lt;/code&gt; 或在线工具进行转换。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS 预处理器&lt;/strong&gt;：Sass/Less 有插件可以自动将小图转换为 Data URI，提高开发效率。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>汇编语言</title><link>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link><pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid><description>&lt;hr&gt;
 &lt;h2 id="栈与函数调用机制"&gt;栈与函数调用机制
 &lt;/h2&gt;&lt;h3 id="栈结构"&gt;栈结构
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
