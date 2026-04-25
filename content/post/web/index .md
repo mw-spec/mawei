@@ -1,6 +1,6 @@
 ---
 title: "web（CTFshow知识点)"
-date: 2026-04-15
+date: 2026-04-25
 draft: false
 categories: ["web"]
 ---
@@ -361,7 +361,9 @@ burpsuit爆破，学生学籍信息查询系统可以查询学号，录取名单
 
 可以尝试使用 **PHP 伪协议配合数据流** 或者 **包含 `/proc/self/fd`** 等技巧。但最简单且最经典的方法是利用 `include` 结合 `$_GET`：
 
-**构造 URL：** `?c=include$_GET[1]?>&1=php://filter/read=convert.base64-encode/resource=flag.php`
+```
+?c=include$_GET[1]?>&1=php://filter/read=convert.base64-encode/resource=flag.php
+```
 
 **代码解析：**
 
@@ -474,7 +476,7 @@ Payload 示例：
    - 后端脚本只检查 `$_GET['c']`，不检查 `$_GET['a']`。
    - 我们在 `a` 中构造完整的读取逻辑：利用 `php://filter` 将 `flag.php` 的内容转为 Base64 编码输出（直接包含 `.php` 文件会被执行而看不到源码，所以需要编码）。
 
-### Web37
+### web37
 
 #### 核心代码审计
 
@@ -492,3 +494,69 @@ Payload 示例：
 ?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZionKTs/Pg==
 ```
 
+看[ Data URI Scheme (data: 协议)](https://mawei.org.cn/p/data-uri-scheme-data-协议/)
+
+### web38
+
+##### 代码逻辑分析
+
+1. **目标**：注释提示 `flag in flag.php`，说明我们的目标是读取或包含 `flag.php`。
+2. **输入控制**：通过 `$_GET['c']` 接收参数。
+3. **正则过滤**：`preg_match("/flag|php|file/i", $c)`。
+   - 这个正则表达式会检查变量 `$c` 中是否包含关键字 `flag`、`php` 或 `file`（不区分大小写）。
+   - 如果匹配到这些词，代码就不会执行 `include($c)`。
+4. **漏洞点**：`include($c)`。这是一个文件包含函数，如果能绕过过滤并成功包含 `flag.php`，由于代码最后有一句 `echo $flag;`，变量 `$flag`（通常定义在 `flag.php` 中）就会被打印出来。
+
+做法和37差不多
+
+```
+?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhKicpOyA/Pg==
+```
+
+### web39
+
+**`$c = $_GET['c'];`**：从 URL 参数 `c` 获取输入。
+
+**`if(!preg_match("/flag/i", $c))`**：**第一道防线**。正则表达式检查输入中是否含有 `flag`（不区分大小写）。如果你的输入里有这四个字母，直接出局。
+
+**`include($c.".php");`**：**核心漏洞点 & 第二道防线**。
+
+1. 这里存在文件包含漏洞（LFI）。
+2. 它强制在你的输入后面加上 `.php` 后缀。这意味着如果你直接输入 `index`，它会包含 `index.php`。
+
+**目标：** 读取 `flag.php` 的内容。 
+
+**挑战：** 不能输入 `flag`，且要处理掉尾部的 `.php`。
+
+为了绕过上述限制，我们使用 **`data://` 协议**。它允许我们将输入的数据当作“文件内容”让 PHP 去解析执行。
+
+步骤一：绕过 `flag` 关键字过滤
+
+由于正则只检查变量 `$c` 的内容，我们不能直接写 `flag.php`。
+
+- **技巧：使用通配符**。在 Linux Shell 指令中，`*` 可以匹配任意字符。
+- 我们将 `flag.php` 写成 `fla*.php` 或 `f*`。这样在匹配正则时，字符串里没有 `flag`，可以成功绕过。
+
+步骤二：处理强制添加的 `.php` 后缀
+
+题目代码是 `include($c.".php")`。
+
+- 如果你输入 `?c=data://text/plain,<?php phpinfo(); ?>`
+- 最终包含的语句变成了：`include("data://text/plain,<?php phpinfo(); ?>.php")`
+
+**关键原理：** PHP 在执行 `include` 包含的代码时，一旦遇到 **`?>` (PHP 闭合标签)**，就会认为 PHP 代码段已经结束。之后的任何内容（包括自动拼接的 `.php`）都会被当作 **普通字符串/HTML** 直接显示在页面上，而不会被当作 PHP 代码解析执行。
+
+**payload**  
+
+```
+?c=data://text/plain,<?php system("tac fla*.php")?>
+```
+
+1. **注入参数**： URL 变为 `index.php?c=data://text/plain,<?php system("tac fla*.php")?>`
+2. **正则校验**： `preg_match` 检查字符串 `data://text/plain,<?php system("tac fla*.php")?>`。 由于使用的是 `fla*`，字符串中不包含完整的 `flag`，**校验通过**。
+3. **代码拼接**： PHP 执行 `include` 语句： `include("data://text/plain,<?php system("tac fla*.php")?>.php");`
+4. **伪协议解析**： PHP 解释器读取 `data://` 流中的内容：
+   - **代码部分**：`<?php system("tac fla*.php")?>`
+   - **命令执行**：`system` 调用系统 Shell。`tac` 命令反向读取文件（常用于绕过对 `cat` 的过滤，且效果一致）。`fla*.php` 被 Shell 解析为 `flag.php`。
+   - **执行结果**：`flag.php` 的内容被打印到页面源码中。
+5. **后续忽略**： 最后的 `.php` 位于 `?>` 之后，PHP 引擎将其视为纯文本直接输出，不影响代码逻辑。
