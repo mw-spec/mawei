@@ -5,7 +5,7 @@ draft: false
 categories: ["数据结构"]
 ---
 
-# 问题 DQ: 栈模拟
+### 问题 DQ: 栈模拟
 
 ```c++
 #include <iostream>
@@ -78,7 +78,7 @@ int main() {
 }
 ```
 
-# 问题 DR: 一查到底
+### 问题 DR: 一查到底
 
 ```c++
 #include <iostream>
@@ -126,7 +126,7 @@ int main() {
 }
 ```
 
-# 问题 DS: 表达式括号匹配
+### 问题 DS: 表达式括号匹配
 
 ```c++
 #include <iostream>
@@ -162,7 +162,7 @@ int main() {
 }
 ```
 
-# 问题 DT: 字符串消消乐
+### 问题 DT: 字符串消消乐
 
 ```c++
 #include <iostream>
@@ -193,7 +193,7 @@ int main() {
 }
 ```
 
-# 问题 DU: 溶液模拟器
+### 问题 DU: 溶液模拟器
 
 ```c++
 #include <iostream>
@@ -259,7 +259,7 @@ int main() {
 }
 ```
 
-# 问题 DV: 出栈序列操作
+### 问题 DV: 出栈序列操作
 
 ```c++
 #include <iostream>
@@ -305,7 +305,7 @@ int main() {
 }
 ```
 
-# 问题 DW: 车厢调度
+### 问题 DW: 车厢调度
 
 ```c++
 #include <iostream>
@@ -353,7 +353,7 @@ int main() {
 }
 ```
 
-# 问题 DX: 出栈序列统计
+### 问题 DX: 出栈序列统计
 
 ```c++
 #include <iostream>
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-# 问题 DY: 后缀表达式求值
+### 问题 DY: 后缀表达式求值
 
 ```c++
 #include <iostream>
@@ -418,7 +418,7 @@ int main() {
 }
 ```
 
-# 问题 DZ: 中缀表达式求值
+### 问题 DZ: 中缀表达式求值
 
 ```c++
 #include <iostream>
@@ -459,7 +459,7 @@ int main() {
 }
 ```
 
-# 问题 EA: 下一个更大的数
+### 问题 EA: 下一个更大的数
 
 ```c++
 #include <iostream>
@@ -507,7 +507,7 @@ int main() {
 }
 ```
 
-# 问题 EB: 排队
+### 问题 EB: 排队
 
 ```c++
 #include <iostream>
@@ -542,7 +542,7 @@ int main() {
 }
 ```
 
-# 问题 EC: 最大矩形面积
+### 问题 EC: 最大矩形面积
 
 ```c++
 #include <iostream>
@@ -594,7 +594,7 @@ int main() {
 }
 ```
 
-# 问题 ED: 数对统计
+### 问题 ED: 数对统计
 
 ```c++
 #include <iostream>
@@ -642,7 +642,7 @@ int main() {
 }
 ```
 
-# 问题 EE: 队列模拟
+### 问题 EE: 队列模拟
 
 ```c++
 #include <iostream>
@@ -684,7 +684,7 @@ int main() {
 }
 ```
 
-# 问题 EF: 核酸检测
+### 问题 EF: 核酸检测
 
 ```c++
 #include <iostream>
@@ -730,7 +730,7 @@ int main() {
 }
 ```
 
-# 问题 EG: 队列练习
+### 问题 EG: 队列练习
 
 ```c++
 #include <iostream>
@@ -765,7 +765,7 @@ int main() {
 }
 ```
 
-# 问题 EH: 排队买票
+### 问题 EH: 排队买票
 
 ```c++
 #include <iostream>
@@ -810,7 +810,7 @@ int main() {
 }
 ```
 
-# 问题 EI: 追查到底
+### 问题 EI: 追查到底
 
 ```c++
 #include <iostream>
@@ -852,7 +852,7 @@ int main() {
 }
 ```
 
-# 问题 EJ: 循环队列练习
+### 问题 EJ: 循环队列练习
 
 ```c++
 #include <iostream>
@@ -898,7 +898,7 @@ int main() {
 }
 ```
 
-# 问题 EK: 约瑟夫环
+### 问题 EK: 约瑟夫环
 
 ```c++
 #include <iostream>
@@ -934,7 +934,7 @@ int main() {
 }
 ```
 
-# 问题 EL: 机器翻译
+### 问题 EL: 机器翻译
 
 ```c++
 #include <iostream>
@@ -977,7 +977,7 @@ int main() {
 }
 ```
 
-# 问题 EM: 海港
+### 问题 EM: 海港
 
 ```c++
 #include <iostream>
@@ -1023,7 +1023,7 @@ int main() {
 }
 ```
 
-# 问题 EN: 生成窗口最大值数组
+### 问题 EN: 生成窗口最大值数组
 
 ```c++
 #include <iostream>
@@ -1069,7 +1069,7 @@ int main() {
 }
 ```
 
-# 问题 EO: 区间取数1
+### 问题 EO: 区间取数1
 
 ```c++
 #include <iostream>
@@ -1108,7 +1108,7 @@ int main() {
 }
 ```
 
-# 问题 EP: 合并果子
+### 问题 EP: 合并果子
 
 ```c++
 #include <iostream>
@@ -1152,7 +1152,7 @@ int main() {
 }
 ```
 
-# 问题 EQ: 有序表的最小和
+### 问题 EQ: 有序表的最小和
 
 ```c++
 #include <iostream>
