@@ -2,7 +2,7 @@
 title: "30小时教你玩转CTF"
 date: 2026-06-03
 draft: false
-categories: ["web"]
+categories: ["笔记"]
 ---
 ## web
 
