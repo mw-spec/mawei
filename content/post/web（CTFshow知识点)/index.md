@@ -2,7 +2,7 @@
 title: "web（CTFshow知识点)"
 date: 2026-04-26
 draft: false
-categories: ["web"]
+categories: ["webWP"]
 ---
 
 ## 信息搜集
