@@ -1,6 +1,6 @@
 ---
 title: "30小时教你玩转CTF"
-date: 2026-07-11
+date: 2026-07-27
 draft: false
 categories: ["CTF入门"]
 ---
