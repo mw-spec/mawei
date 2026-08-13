@@ -847,8 +847,8 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;触发时机&lt;/strong&gt;：当尝试以调用函数的方式来调用一个对象时（例如 &lt;code&gt;$a()&lt;/code&gt;），&lt;code&gt;__invoke()&lt;/code&gt; 方法会被自动调用。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="执行流程与输出-1"&gt;执行流程与输出
-&lt;/h2&gt;&lt;ol&gt;
+&lt;h5 id="执行流程与输出-1"&gt;执行流程与输出
+&lt;/h5&gt;&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt; 实例化对象。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;$a();&lt;/code&gt; 将对象 &lt;code&gt;$a&lt;/code&gt; 当作函数进行调用，从而自动触发类中的 &lt;code&gt;__invoke()&lt;/code&gt; 方法。&lt;/li&gt;
 &lt;li&gt;运行输出：&lt;/li&gt;
@@ -1640,64 +1640,7 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;查看结果&lt;/strong&gt;：页面上会直接喷出 &lt;code&gt;flag.php&lt;/code&gt; 的源代码（通常带有语法高亮）。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="核心知识点整理"&gt;核心知识点整理
-&lt;/h4&gt;&lt;h5 id="1-php-无参数函数注入-parameterless-function-injection"&gt;1. PHP 无参数函数注入 (Parameterless Function Injection)
-&lt;/h5&gt;&lt;p&gt;这是本题的核心考点。当正则过滤了数字、字母以外的大部分字符时，你无法传参（如 &lt;code&gt;system('ls')&lt;/code&gt;），只能利用 &lt;strong&gt;“函数嵌套”&lt;/strong&gt; 的返回值作为下一个函数的参数。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;特征&lt;/strong&gt;：&lt;code&gt;a(b(c()));&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;局限&lt;/strong&gt;：必须寻找那些不需要参数就能返回有用信息的 PHP 内置函数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="2-目录定位与获取"&gt;2. 目录定位与获取
-&lt;/h5&gt;&lt;p&gt;在没有引号的情况下，获取“当前目录”字符串（&lt;code&gt;.&lt;/code&gt;）是所有操作的第一步。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;localeconv()&lt;/code&gt;&lt;/strong&gt;：返回本地化信息数组。其第一个元素 &lt;code&gt;decimal_point&lt;/code&gt; 始终是 &lt;code&gt;.&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;pos()&lt;/code&gt; / &lt;code&gt;current()&lt;/code&gt;&lt;/strong&gt;：返回数组中的第一个元素。
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;组合技&lt;/strong&gt;：&lt;code&gt;pos(localeconv())&lt;/code&gt; 得到 &lt;code&gt;.&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;getcwd()&lt;/code&gt;&lt;/strong&gt;：直接获取当前工作目录的绝对路径字符串。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="3-文件系统操作"&gt;3. 文件系统操作
-&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;scandir()&lt;/code&gt;&lt;/strong&gt;：核心函数，用于列出指定路径下的所有文件和目录，并返回一个数组。
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;组合技&lt;/strong&gt;：&lt;code&gt;scandir(pos(localeconv()))&lt;/code&gt; 得到当前目录下的文件列表数组。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="4-数组指针与顺序控制"&gt;4. 数组指针与顺序控制
-&lt;/h5&gt;&lt;p&gt;由于 &lt;code&gt;scandir&lt;/code&gt; 返回的数组通常以 &lt;code&gt;.&lt;/code&gt; 和 &lt;code&gt;..&lt;/code&gt; 开头，而 &lt;code&gt;flag.php&lt;/code&gt; 往往排在后面，我们需要操作数组指针来选中它。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;array_reverse()&lt;/code&gt;&lt;/strong&gt;：将数组顺序颠倒。常用于让排在末尾的文件排到前面。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;指针移动函数&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;pos()&lt;/code&gt; / &lt;code&gt;current()&lt;/code&gt;&lt;/strong&gt;：指向当前（第 1 个）元素。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;next()&lt;/code&gt;&lt;/strong&gt;：将指针后移一位（指向第 2 个）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;end()&lt;/code&gt;&lt;/strong&gt;：将指针指向最后一位。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;array_flip()&lt;/code&gt;&lt;/strong&gt;：交换数组的键和值。常配合 &lt;code&gt;array_rand()&lt;/code&gt; 使用，实现随机挑选文件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="5-php-引用传递限制-pass-by-reference"&gt;5. PHP 引用传递限制 (Pass-by-reference)
-&lt;/h5&gt;&lt;p&gt;这是一个进阶坑点。PHP 某些函数（如 &lt;code&gt;next()&lt;/code&gt;, &lt;code&gt;end()&lt;/code&gt;）要求传入的是一个&lt;strong&gt;变量&lt;/strong&gt;，而不是&lt;strong&gt;函数的返回值&lt;/strong&gt;（临时值）。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;报错信息&lt;/strong&gt;：&lt;code&gt;Only variables should be passed by reference&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;使用 &lt;strong&gt;&lt;code&gt;array_slice()&lt;/code&gt;&lt;/strong&gt;：它可以切取数组片段而不操作指针，不要求引用传递。&lt;/li&gt;
-&lt;li&gt;使用 &lt;strong&gt;&lt;code&gt;item()&lt;/code&gt; 逻辑&lt;/strong&gt;：如果环境支持，直接用 &lt;code&gt;[index]&lt;/code&gt; 访问，但通常中括号会被过滤。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="6-文件读取函数"&gt;6. 文件读取函数
-&lt;/h5&gt;&lt;p&gt;拿到文件名字符串后，最后一步是读取内容。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;show_source()&lt;/code&gt; / &lt;code&gt;highlight_file()&lt;/code&gt;&lt;/strong&gt;：读取 PHP 文件并进行语法高亮，最适合读 flag。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;readfile()&lt;/code&gt;&lt;/strong&gt;：直接读取并输出文件内容。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;file_get_contents()&lt;/code&gt;&lt;/strong&gt;：读取内容，但由于是无参数执行，通常外层还需要配合 &lt;code&gt;print_r&lt;/code&gt; 打印出来。&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
+&lt;/ol&gt;</description></item><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; 协议允许开发者在网页中直接嵌入小型数据，而不是引用外部资源。它将资源转换为字符串形式，随 HTML/CSS 一起下载。&lt;/p&gt;
 &lt;h2 id="2-标准语法结构"&gt;2. 标准语法结构
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; URL 的组成非常严谨，公式如下：&lt;/p&gt;
