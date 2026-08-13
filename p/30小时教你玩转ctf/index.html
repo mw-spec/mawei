@@ -1,4 +1,4 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><title>30小时教你玩转CTF</title><link rel=canonical href=https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/><link rel=stylesheet href=/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css><meta property='og:title' content="30小时教你玩转CTF"><meta property='og:description' content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><meta property='og:url' content='https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/'><meta property='og:site_name' content='mawei'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2026-07-11T00:00:00+00:00'><meta property='article:modified_time' content='2026-07-11T00:00:00+00:00'><meta name=twitter:title content="30小时教你玩转CTF"><meta name=twitter:description content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><title>30小时教你玩转CTF</title><link rel=canonical href=https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/><link rel=stylesheet href=/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css><meta property='og:title' content="30小时教你玩转CTF"><meta property='og:description' content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><meta property='og:url' content='https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/'><meta property='og:site_name' content='mawei'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2026-08-13T00:00:00+00:00'><meta property='article:modified_time' content='2026-08-13T00:00:00+00:00'><meta name=twitter:title content="30小时教你玩转CTF"><meta name=twitter:description content="web SQL注入 SQL注入的起因 **SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：数据与代码边界模糊。\n当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。\n"><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
 <span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_6faad56a2de73f11.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
 </a><span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>mawei</a></h1><h2 class=site-description>轻者无敌，快者不破。</h2></div></header><ol class=menu-social><li><a href=https://space.bilibili.com/446969727 target=_blank title=Bilibili rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 014-4h10a4 4 0 014 4v6a4 4 0 01-4 4H7a4 4 0 01-4-4v-6"/><path d="M8 3l2 3"/><path d="M16 3l-2 3"/><path d="M9 13v-2"/><path d="M15 11v2"/></svg></a></li><li><a href=https://github.com/mw-spec target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
 <span>主页</span></a></li><li><a href=/%E5%85%B3%E4%BA%8E/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
@@ -7,8 +7,8 @@
 <span>搜索</span></a></li><li><a href=/%E5%8F%8B%E9%93%BE/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
 <span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
 <svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#sql注入>SQL注入</a><ol><li><a href=#sql注入的起因>SQL注入的起因</a><ol><li><a href=#1-动态字符串拼接最直接的元凶>1. 动态字符串拼接（最直接的元凶）</a></li><li><a href=#2-缺乏严格的输入验证与过滤>2. 缺乏严格的输入验证与过滤</a></li><li><a href=#3-盲目信任隐藏的输入源>3. 盲目信任“隐藏”的输入源</a></li><li><a href=#4-数据库权限过高推波助澜>4. 数据库权限过高（推波助澜）</a></li><li><a href=#核心防御参数化查询>核心防御：参数化查询</a></li></ol></li><li><a href=#数据库的基本结构>数据库的基本结构</a></li><li><a href=#联合注入>联合注入</a><ol><li><a href=#1-联合注入的前提条件>1. 联合注入的前提条件</a></li><li><a href=#2-联合注入的工作流程>2. 联合注入的工作流程</a></li><li><a href=#3-原理解析示意>3. 原理解析示意</a></li><li><a href=#4-为什么会有联合注入起因总结>4. 为什么会有联合注入？（起因总结）</a></li><li><a href=#5-防御建议>5. 防御建议</a></li></ol></li><li><a href=#布尔盲注>布尔盲注</a><ol><li><a href=#1-核心逻辑像玩二十个问题>1. 核心逻辑：像玩“二十个问题”</a></li><li><a href=#2-攻击过程演示>2. 攻击过程演示</a></li><li><a href=#3-布尔盲注的常用函数>3. 布尔盲注的常用函数</a></li><li><a href=#4-自动化攻击脚本编写思维>4. 自动化攻击（脚本编写思维）</a></li><li><a href=#5-为什么会有这种漏洞>5. 为什么会有这种漏洞？</a></li></ol></li><li><a href=#sql注入过程>SQL注入过程</a><ol><li><a href=#sql-注入的五个攻击阶段>SQL 注入的五个攻击阶段</a></li></ol></li><li><a href=#给安全学习者的建议>给安全学习者的建议</a></li></ol></li><li><a href=#php反序列化漏洞>PHP反序列化漏洞</a><ol><li><a href=#序列化实例>序列化实例</a><ol><li><a href=#1-序列化结果分析>1. 序列化结果分析</a></li><li><a href=#2-为什么属性名变长了核心知识点>2. 为什么属性名变长了？（核心知识点）</a></li><li><a href=#3-这对安全测试意味着什么>3. 这对安全测试意味着什么？</a></li></ol></li><li><a href=#魔术方法>魔术方法</a><ol><li><a href=#__construct>__construct</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/ctf%E5%85%A5%E9%97%A8/>CTF入门</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/>30小时教你玩转CTF</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published datetime=2026-07-11T00:00:00Z>2026-07-11</time></div></footer></div></header><section class=article-content><h1 id=web>web</h1><h2 id=sql注入>SQL注入</h2><h3 id=sql注入的起因>SQL注入的起因</h3><p>**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：<strong>数据与代码边界模糊</strong>。</p><p>当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。</p><p>以下是导致 SQL 注入的具体核心原因和常见场景：</p><h4 id=1-动态字符串拼接最直接的元凶>1. 动态字符串拼接（最直接的元凶）</h4><p>这是最常见的错误编写方式。开发者直接使用字符串相加或格式化字符串的方式，把用户提交的参数拼接到 SQL 语句中。</p><ul><li><p><strong>开发者原本预想的正常代码：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#sql注入>SQL注入</a><ol><li><a href=#sql注入的起因>SQL注入的起因</a><ol><li><a href=#1-动态字符串拼接最直接的元凶>1. 动态字符串拼接（最直接的元凶）</a></li><li><a href=#2-缺乏严格的输入验证与过滤>2. 缺乏严格的输入验证与过滤</a></li><li><a href=#3-盲目信任隐藏的输入源>3. 盲目信任“隐藏”的输入源</a></li><li><a href=#4-数据库权限过高推波助澜>4. 数据库权限过高（推波助澜）</a></li><li><a href=#核心防御参数化查询>核心防御：参数化查询</a></li></ol></li><li><a href=#数据库的基本结构>数据库的基本结构</a></li><li><a href=#联合注入>联合注入</a><ol><li><a href=#1-联合注入的前提条件>1. 联合注入的前提条件</a></li><li><a href=#2-联合注入的工作流程>2. 联合注入的工作流程</a></li><li><a href=#3-原理解析示意>3. 原理解析示意</a></li><li><a href=#4-为什么会有联合注入起因总结>4. 为什么会有联合注入？（起因总结）</a></li><li><a href=#5-防御建议>5. 防御建议</a></li></ol></li><li><a href=#布尔盲注>布尔盲注</a><ol><li><a href=#1-核心逻辑像玩二十个问题>1. 核心逻辑：像玩“二十个问题”</a></li><li><a href=#2-攻击过程演示>2. 攻击过程演示</a></li><li><a href=#3-布尔盲注的常用函数>3. 布尔盲注的常用函数</a></li><li><a href=#4-自动化攻击脚本编写思维>4. 自动化攻击（脚本编写思维）</a></li><li><a href=#5-为什么会有这种漏洞>5. 为什么会有这种漏洞？</a></li></ol></li><li><a href=#sql注入过程>SQL注入过程</a><ol><li><a href=#sql-注入的五个攻击阶段>SQL 注入的五个攻击阶段</a></li></ol></li><li><a href=#注意点>注意点</a></li></ol></li><li><a href=#php反序列化漏洞>PHP反序列化漏洞</a><ol><li><a href=#序列化实例>序列化实例</a><ol><li><a href=#1-序列化结果分析>1. 序列化结果分析</a></li><li><a href=#2-为什么属性名变长了核心知识点>2. 为什么属性名变长了？（核心知识点）</a></li><li><a href=#3-这对安全测试意味着什么>3. 这对安全测试意味着什么？</a></li></ol></li><li><a href=#魔术方法>魔术方法</a><ol><li><a href=#__construct>__construct</a></li><li><a href=#__destruct>__destruct()</a></li><li><a href=#__sleep>__sleep()</a></li><li><a href=#__wakeup>__wakeup()</a></li><li><a href=#__tostring>__toString()</a></li><li><a href=#__invoke>__invoke()</a></li></ol></li></ol></li><li><a href=#执行流程与输出-1>执行流程与输出</a><ol><li><ol><li><a href=#__call>__call()</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/ctf/>CTF</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/>30小时教你玩转CTF</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-08-13T00:00:00Z>2026-08-13</time></div></footer></div></header><section class=article-content><h1 id=web>web</h1><h2 id=sql注入>SQL注入</h2><h3 id=sql注入的起因>SQL注入的起因</h3><p>**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：<strong>数据与代码边界模糊</strong>。</p><p>当应用程序将用户输入的数据，直接拼接到了用于执行的 SQL 命令中时，数据库就无法分辨哪些是开发者原本写好的“控制指令”，哪些是用户输入的“纯数据”，从而导致用户输入的数据被当作 SQL 代码执行。</p><p>以下是导致 SQL 注入的具体核心原因和常见场景：</p><h4 id=1-动态字符串拼接最直接的元凶>1. 动态字符串拼接（最直接的元凶）</h4><p>这是最常见的错误编写方式。开发者直接使用字符串相加或格式化字符串的方式，把用户提交的参数拼接到 SQL 语句中。</p><ul><li><p><strong>开发者原本预想的正常代码：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SELECT</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=n>users</span><span class=w> </span><span class=k>WHERE</span><span class=w> </span><span class=n>username</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;admin&#39;</span><span class=w> </span><span class=k>AND</span><span class=w> </span><span class=n>password</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;123&#39;</span><span class=p>;</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div></li><li><p><strong>黑客输入的恶意数据：</strong> 在用户名框输入 <code>admin' OR '1'='1</code></p></li><li><p><strong>实际执行的 SQL 语句：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SELECT</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=n>users</span><span class=w> </span><span class=k>WHERE</span><span class=w> </span><span class=n>username</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;admin&#39;</span><span class=w> </span><span class=k>OR</span><span class=w> </span><span class=s1>&#39;1&#39;</span><span class=o>=</span><span class=s1>&#39;1&#39;</span><span class=w> </span><span class=k>AND</span><span class=w> </span><span class=n>password</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;123&#39;</span><span class=p>;</span><span class=w>
@@ -122,7 +122,7 @@
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=s2>&#34;查询&#34;</span> <span class=ow>in</span> <span class=n>s</span><span class=o>.</span><span class=n>text</span><span class=p>:</span>          <span class=c1># 核心：判断“盲注”结果</span>
 </span></span><span class=line><span class=cl>             <span class=n>result</span> <span class=o>+=</span> <span class=nb>chr</span><span class=p>(</span><span class=n>j</span><span class=p>)</span>        <span class=c1># 若为真，记录字符</span>
 </span></span><span class=line><span class=cl>             <span class=k>break</span>                   <span class=c1># 找到字符，进入下一个位置</span>
-</span></span></code></pre></td></tr></table></div></div><h5 id=3-为什么脚本会这样设计>3. 为什么脚本会这样设计？</h5><ol><li><strong>为什么是 <code>range(33, 127)</code>？</strong> ASCII 码中，33 到 126 是键盘上可打印的字符（数字、字母、常用符号）。0-32 是控制字符（如换行、回车），对于数据库名称或表名，这些字符几乎不会出现。</li><li><strong>为什么用 <code>group_concat()</code>？</strong> 盲注通常无法一次性获取多行结果。<code>group_concat()</code> 将所有表名或列名合并成一个很长的字符串，从而让脚本可以用循环遍历整个字符串。</li><li><strong>如何判断“真”与“假”？</strong> 脚本利用了 <code>if "查询" in s.text</code>。<ul><li><strong>真 (True)</strong>：页面返回正常数据或特定标记，包含“查询”关键词。</li><li><strong>假 (False)</strong>：页面可能显示“未找到结果”或只是空白，不包含“查询”关键词。</li></ul></li></ol><h4 id=5-为什么会有这种漏洞>5. 为什么会有这种漏洞？</h4><ul><li><strong>页面逻辑耦合：</strong> 开发者在后端代码中，将数据库的查询结果直接作为页面逻辑的分支条件。例如：<code>if ($result) { echo "欢迎"; } else { echo "未找到"; }</code>。</li><li><strong>缺乏防御：</strong> 开发人员认为只要不把数据直接打印在屏幕上就是安全的，却忽略了<strong>这种“真假回显”本身就泄露了数据库内部逻辑</strong>。</li></ul><h3 id=sql注入过程>SQL注入过程</h3><p>SQL 注入的过程通常遵循一个标准化的逻辑链条。对于初学者或安全研究人员来说，可以将其拆解为五个核心阶段。</p><h4 id=sql-注入的五个攻击阶段>SQL 注入的五个攻击阶段</h4><h5 id=1-发现注入点-detection>1. 发现注入点 (Detection)</h5><p>攻击者首先会扫描 Web 应用中的交互入口，尝试通过输入特殊字符触发异常。</p><ul><li><strong>输入测试：</strong> 在 URL 参数、搜索框、登录表单等位置输入 <code>'</code>, <code>"</code>, <code>)</code>, <code>#</code>, <code>--</code> 等字符。</li><li><strong>判断依据：</strong> 如果页面出现数据库错误提示、页面显示内容异常、或者响应时间与正常情况不同，则说明该参数可能存在注入点。</li></ul><h5 id=2-判断注入类型-fingerprinting>2. 判断注入类型 (Fingerprinting)</h5><p>确认存在注入点后，需要判断注入的类型，以便选择对应的策略。</p><ul><li><u><strong>数字型 vs 字符型：</strong> 判断后端代码是否使用了引号包裹参数。</u></li><li><strong>注入方式：</strong><ul><li><strong>联合注入 (UNION-based)：</strong> 页面有直接回显。</li><li><strong>报错注入 (Error-based)：</strong> 页面不回显数据，但会显示数据库的报错信息。</li><li><strong>布尔盲注 (Boolean-based)：</strong> 页面根据查询真假显示不同内容（如“欢迎登录” vs “账号错误”）。</li><li><strong>时间盲注 (Time-based)：</strong> 通过注入 <code>SLEEP()</code> 函数，观察页面响应延迟来判断逻辑真假。</li></ul></li></ul><h5 id=3-探测数据库结构-enumeration>3. 探测数据库结构 (Enumeration)</h5><p>利用数据库自带的元数据表（如 MySQL 中的 <code>information_schema</code>）获取权限和结构。</p><ul><li><strong>获取数据库名：</strong> <code>... UNION SELECT 1, database(), 3--</code></li><li><strong>获取表名：</strong> <code>... UNION SELECT 1, group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()--</code></li><li><strong>获取列名：</strong> <code>... UNION SELECT 1, group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--</code></li></ul><h5 id=4-获取敏感数据-exfiltration>4. 获取敏感数据 (Exfiltration)</h5><p>当已知表名（如 <code>users</code>）和列名（如 <code>username</code>, <code>password</code>）后，通过拼接查询语句获取具体内容。</p><ul><li><strong>攻击载荷：</strong> <code>SELECT username, password FROM users</code></li><li><strong>结果：</strong> 页面直接显示出数据库中存放的所有账号和密码。</li></ul><h5 id=5-后渗透与提权-post-exploitation>5. 后渗透与提权 (Post-Exploitation)</h5><p>根据数据库权限，攻击者可能进一步扩大影响。</p><ul><li><strong>写文件：</strong> 如果拥有 <code>FILE</code> 权限且知道服务器物理路径，可使用 <code>INTO OUTFILE</code> 写入一句话木马。</li><li><strong>执行系统命令：</strong> 如果是 SQL Server 或高权限的 MySQL，可能尝试调用系统存储过程进行提权。</li></ul><h3 id=给安全学习者的建议>给安全学习者的建议</h3><ul><li><strong>观察响应差异：</strong> 在处理盲注（Blind SQLi）时，重点观察 <strong>HTTP 响应包的状态码、内容长度 (Content-Length) 或响应时间</strong>，这是判断注入是否成功的核心。</li><li><strong>使用标准工具链：</strong> 在练习（如 CTF）或合法测试中，<code>sqlmap</code> 是最常用的自动化工具。它能自动处理上述所有阶段。<ul><li><em>命令示例：</em> <code>sqlmap -u "http://target.com/page.php?id=1" --dbs</code></li></ul></li><li><strong>防御意识：</strong> 无论攻击过程多么复杂，最终的防御逻辑永远是 <strong>“预编译” (Prepared Statements)</strong>。只要将数据和指令彻底隔离开，SQL 注入就失去了执行的根基。</li></ul><h2 id=php反序列化漏洞>PHP反序列化漏洞</h2><p>序列化：将PHP对象压缩并按照一定格式转换成字符串过程 serialize()</p><p>反序列化：从字符串转换回PHP对象的过程 unserialize()</p><p>目的：为了方便PHP对象的传输和存储</p><h3 id=序列化实例>序列化实例</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span></code></pre></td></tr></table></div></div><h5 id=3-为什么脚本会这样设计>3. 为什么脚本会这样设计？</h5><ol><li><strong>为什么是 <code>range(33, 127)</code>？</strong> ASCII 码中，33 到 126 是键盘上可打印的字符（数字、字母、常用符号）。0-32 是控制字符（如换行、回车），对于数据库名称或表名，这些字符几乎不会出现。</li><li><strong>为什么用 <code>group_concat()</code>？</strong> 盲注通常无法一次性获取多行结果。<code>group_concat()</code> 将所有表名或列名合并成一个很长的字符串，从而让脚本可以用循环遍历整个字符串。</li><li><strong>如何判断“真”与“假”？</strong> 脚本利用了 <code>if "查询" in s.text</code>。<ul><li><strong>真 (True)</strong>：页面返回正常数据或特定标记，包含“查询”关键词。</li><li><strong>假 (False)</strong>：页面可能显示“未找到结果”或只是空白，不包含“查询”关键词。</li></ul></li></ol><h4 id=5-为什么会有这种漏洞>5. 为什么会有这种漏洞？</h4><ul><li><strong>页面逻辑耦合：</strong> 开发者在后端代码中，将数据库的查询结果直接作为页面逻辑的分支条件。例如：<code>if ($result) { echo "欢迎"; } else { echo "未找到"; }</code>。</li><li><strong>缺乏防御：</strong> 开发人员认为只要不把数据直接打印在屏幕上就是安全的，却忽略了<strong>这种“真假回显”本身就泄露了数据库内部逻辑</strong>。</li></ul><h3 id=sql注入过程>SQL注入过程</h3><p>SQL 注入的过程通常遵循一个标准化的逻辑链条。对于初学者或安全研究人员来说，可以将其拆解为五个核心阶段。</p><h4 id=sql-注入的五个攻击阶段>SQL 注入的五个攻击阶段</h4><h5 id=1-发现注入点-detection>1. 发现注入点 (Detection)</h5><p>攻击者首先会扫描 Web 应用中的交互入口，尝试通过输入特殊字符触发异常。</p><ul><li><strong>输入测试：</strong> 在 URL 参数、搜索框、登录表单等位置输入 <code>'</code>, <code>"</code>, <code>)</code>, <code>#</code>, <code>--</code> 等字符。</li><li><strong>判断依据：</strong> 如果页面出现数据库错误提示、页面显示内容异常、或者响应时间与正常情况不同，则说明该参数可能存在注入点。</li></ul><h5 id=2-判断注入类型-fingerprinting>2. 判断注入类型 (Fingerprinting)</h5><p>确认存在注入点后，需要判断注入的类型，以便选择对应的策略。</p><ul><li><u><strong>数字型 vs 字符型：</strong> 判断后端代码是否使用了引号包裹参数。</u></li><li><strong>注入方式：</strong><ul><li><strong>联合注入 (UNION-based)：</strong> 页面有直接回显。</li><li><strong>报错注入 (Error-based)：</strong> 页面不回显数据，但会显示数据库的报错信息。</li><li><strong>布尔盲注 (Boolean-based)：</strong> 页面根据查询真假显示不同内容（如“欢迎登录” vs “账号错误”）。</li><li><strong>时间盲注 (Time-based)：</strong> 通过注入 <code>SLEEP()</code> 函数，观察页面响应延迟来判断逻辑真假。</li></ul></li></ul><h5 id=3-探测数据库结构-enumeration>3. 探测数据库结构 (Enumeration)</h5><p>利用数据库自带的元数据表（如 MySQL 中的 <code>information_schema</code>）获取权限和结构。</p><ul><li><strong>获取数据库名：</strong> <code>... UNION SELECT 1, database(), 3--</code></li><li><strong>获取表名：</strong> <code>... UNION SELECT 1, group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()--</code></li><li><strong>获取列名：</strong> <code>... UNION SELECT 1, group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--</code></li></ul><h5 id=4-获取敏感数据-exfiltration>4. 获取敏感数据 (Exfiltration)</h5><p>当已知表名（如 <code>users</code>）和列名（如 <code>username</code>, <code>password</code>）后，通过拼接查询语句获取具体内容。</p><ul><li><strong>攻击载荷：</strong> <code>SELECT username, password FROM users</code></li><li><strong>结果：</strong> 页面直接显示出数据库中存放的所有账号和密码。</li></ul><h5 id=5-后渗透与提权-post-exploitation>5. 后渗透与提权 (Post-Exploitation)</h5><p>根据数据库权限，攻击者可能进一步扩大影响。</p><ul><li><strong>写文件：</strong> 如果拥有 <code>FILE</code> 权限且知道服务器物理路径，可使用 <code>INTO OUTFILE</code> 写入一句话木马。</li><li><strong>执行系统命令：</strong> 如果是 SQL Server 或高权限的 MySQL，可能尝试调用系统存储过程进行提权。</li></ul><h3 id=注意点>注意点</h3><ul><li><strong>观察响应差异：</strong> 在处理盲注（Blind SQLi）时，重点观察 <strong>HTTP 响应包的状态码、内容长度 (Content-Length) 或响应时间</strong>，这是判断注入是否成功的核心。</li><li><strong>使用标准工具链：</strong> 在练习（如 CTF）或合法测试中，<code>sqlmap</code> 是最常用的自动化工具。它能自动处理上述所有阶段。<ul><li><em>命令示例：</em> <code>sqlmap -u "http://target.com/page.php?id=1" --dbs</code></li></ul></li><li><strong>防御意识：</strong> 无论攻击过程多么复杂，最终的防御逻辑永远是 <strong>“预编译” (Prepared Statements)</strong>。只要将数据和指令彻底隔离开，SQL 注入就失去了执行的根基。</li></ul><h2 id=php反序列化漏洞>PHP反序列化漏洞</h2><p>序列化：将PHP对象压缩并按照一定格式转换成字符串过程 &ndash; serialize()</p><p>反序列化：从字符串转换回PHP对象的过程 &ndash; unserialize()</p><p>目的：为了方便PHP对象的传输和存储</p><h3 id=序列化实例>序列化实例</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -202,7 +202,253 @@
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
-</span></span></span></code></pre></td></tr></table></div></div><p><strong>触发时机</strong>：当你执行 <code>new A()</code> 时，PHP 引擎会自动寻找类中的 <code>__construct</code> 方法并立即执行其中的代码。</p><p><strong>应用场景</strong>：通常用于初始化对象的属性、建立数据库连接或设置默认配置。</p></section><footer class=article-footer></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=[".main-article",".widget--toc"];e.forEach(e=>{const t=document.querySelector(e);t&&renderMathInElement(t,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})})</script></article><footer class=site-footer><section class=copyright>&copy;
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>触发时机</strong>：当你执行 <code>new A()</code> 时，PHP 引擎会自动寻找类中的 <code>__construct</code> 方法并立即执行其中的代码。</p><p><strong>应用场景</strong>：通常用于初始化对象的属性、建立数据库连接或设置默认配置。</p><p><strong>运行输出</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>This</span> <span class=n>is</span> <span class=n>a</span> <span class=n>construct</span> <span class=n>function</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=__destruct>__destruct()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>function</span> <span class=fm>__construct</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a construct function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//...
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>function</span> <span class=fm>__destruct</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a destruct function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//...
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><h5 id=执行流程><strong>执行流程</strong></h5><ul><li><strong><code>__construct()</code></strong>: 构造函数。当通过 <code>$a = new A();</code> 创建类的新对象时，该方法会被自动调用，输出：<code>This is a construct function</code>。</li><li><strong><code>__destruct()</code></strong>: 析构函数。当对象的所有引用都被删除或脚本执行结束时，该方法会被自动调用，输出：<code>This is a destruct function</code>。</li></ul><h5 id=运行输出>运行输出</h5><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>This</span> <span class=n>is</span> <span class=n>a</span> <span class=n>construct</span> <span class=n>functionThis</span> <span class=n>is</span> <span class=n>a</span> <span class=n>destruct</span> <span class=n>function</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=__sleep>__sleep()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=nv>$test2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__construct</span><span class=p>(</span><span class=nv>$test</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>test</span> <span class=o>=</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__sleep</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a sleep function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// ...
+</span></span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=k>array</span><span class=p>(</span><span class=s1>&#39;test&#39;</span><span class=p>);</span> <span class=c1>// 必须返回一个数组，元素为需要被序列化的属性名称
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>(</span><span class=s2>&#34;Aurora&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=k>echo</span> <span class=nx>serialize</span><span class=p>(</span><span class=nv>$a</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><strong><code>__sleep()</code> 触发时机</strong>：当对对象调用 <code>serialize()</code> 函数之前，<code>__sleep()</code> 会被自动调用。</li><li><strong>返回值要求</strong>：该方法<strong>必须返回一个数组</strong>，数组中的元素是要被序列化的属性名称。</li><li><strong>过滤属性</strong>：在上例中，<code>__sleep()</code> 返回了 <code>array('test')</code>，这意味着只有 <code>$test</code> 属性会被序列化并保存，而公开属性 <code>$test2</code> 会被忽略。</li></ul><h5 id=执行流程与输出>执行流程与输出</h5><ol><li><p><code>$a = new A("Aurora");</code> 实例化对象，<code>$this->test</code> 的值为 <code>"Aurora"</code>。</p></li><li><p><code>echo serialize($a);</code> 触发序列化操作，首先自动执行类中的 <code>__sleep()</code> 方法：</p><ul><li>输出字符串：<code>This is a sleep function</code></li><li>返回需要序列化的属性列表：<code>['test']</code></li></ul></li><li><p>最终 <code>serialize()</code> 对对象进行序列化，仅打包 <code>test</code> 属性。</p></li><li><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>This is a sleep functionO:1:&#34;A&#34;:1:{s:7:&#34;\x00A\x00test&#34;;s:6:&#34;Aurora&#34;;}
+</span></span></code></pre></td></tr></table></div></div></li></ol><h4 id=__wakeup>__wakeup()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__construct</span><span class=p>(</span><span class=nv>$test</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>test</span> <span class=o>=</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__sleep</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a sleep function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=k>array</span><span class=p>(</span><span class=s1>&#39;test&#39;</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__wakeup</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a wakeup function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 这里不需要返回数组
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>(</span><span class=s2>&#34;Aurora&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nv>$b</span> <span class=o>=</span> <span class=nx>serialize</span><span class=p>(</span><span class=nv>$a</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nv>$c</span> <span class=o>=</span> <span class=nx>unserialize</span><span class=p>(</span><span class=nv>$b</span><span class=p>);</span> <span class=c1>// 反序列化时触发 __wakeup
+</span></span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><strong><code>__wakeup()</code> 触发时机</strong>：当使用 <code>unserialize()</code> 函数对一个已序列化的字符串进行反序列化操作时，<code>__wakeup()</code> 会被自动调用。</li><li><strong>返回值</strong>：与 <code>__sleep()</code> 不同，<code>__wakeup()</code> <strong>不需要返回值</strong>（无须返回数组）。</li><li><strong>主要用途</strong>：通常用于在反序列化后重新建立数据库连接、初始化资源或者执行其他必要的清理/恢复操作。</li></ul><h5 id=执行流程-1>执行流程</h5><ol><li><strong><code>$a = new A("Aurora");</code></strong>：实例化对象，将 <code>$this->test</code> 赋值为 <code>"Aurora"</code>。</li><li><strong><code>$b = serialize($a);</code></strong>：对对象进行序列化，此时自动调用 <code>__sleep()</code> 方法，输出：<code>This is a sleep function</code>。</li><li><strong><code>$c = unserialize($b);</code></strong>：对字符串进行反序列化，此时自动调用 <code>__wakeup()</code> 方法，输出：<code>This is a wakeup function</code>。</li></ol><h5 id=运行输出-1>运行输出</h5><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>This is a sleep functionThis is a wakeup function
+</span></span></code></pre></td></tr></table></div></div><h4 id=__tostring>__toString()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__construct</span><span class=p>(</span><span class=nv>$test</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>test</span> <span class=o>=</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>function</span> <span class=fm>__toString</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$str</span> <span class=o>=</span> <span class=s2>&#34;This is a toString function&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nv>$str</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>(</span><span class=s2>&#34;Aurora&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=k>echo</span> <span class=nv>$a</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><strong>触发时机</strong>：当一个对象被当做字符串来使用（例如使用 <code>echo</code> 或 <code>print</code> 输出对象）时，<code>__toString()</code> 方法会被自动调用。</li><li><strong>返回值要求</strong>：该方法<strong>必须返回一个字符串</strong>，否则会抛出不可恢复的致命错误（Recoverable fatal error）。</li></ul><h5 id=执行流程与输出结果>执行流程与输出结果</h5><ol><li><code>$a = new A("Aurora");</code> 实例化对象。</li><li><code>echo $a;</code> 尝试直接将对象 <code>$a</code> 作为字符串输出，从而自动触发类中的 <code>__toString()</code> 方法。</li><li><code>__toString()</code> 返回字符串 <code>"This is a toString function"</code> 并打印。</li></ol><h5 id=运行输出-2>运行输出</h5><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>This is a toString function
+</span></span></code></pre></td></tr></table></div></div><h4 id=__invoke>__invoke()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__construct</span><span class=p>(</span><span class=nv>$test</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>test</span> <span class=o>=</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>function</span> <span class=fm>__invoke</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;This is a invoke function&#34;</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>        <span class=c1>//...
+</span></span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>(</span><span class=s2>&#34;Aurora&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span><span class=p>();</span> <span class=c1>// $a是一个对象，但却用$a()调用方法的方式来调用它
+</span></span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><strong>触发时机</strong>：当尝试以调用函数的方式来调用一个对象时（例如 <code>$a()</code>），<code>__invoke()</code> 方法会被自动调用。</li></ul><h2 id=执行流程与输出-1>执行流程与输出</h2><ol><li><code>$a = new A("Aurora");</code> 实例化对象。</li><li><code>$a();</code> 将对象 <code>$a</code> 当作函数进行调用，从而自动触发类中的 <code>__invoke()</code> 方法。</li><li>运行输出：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>This is a invoke function
+</span></span></code></pre></td></tr></table></div></div><h4 id=__call>__call()</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>A</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=fm>__construct</span><span class=p>(</span><span class=nv>$test</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>test</span> <span class=o>=</span> <span class=nv>$test</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>function</span> <span class=fm>__call</span><span class=p>(</span><span class=nv>$funName</span><span class=p>,</span> <span class=nv>$arguments</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;你所调用的函数: &#34;</span> <span class=o>.</span> <span class=nv>$funName</span> <span class=o>.</span> <span class=s2>&#34;(参数: &#34;</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>        <span class=nx>print_r</span><span class=p>(</span><span class=nv>$arguments</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>        <span class=k>echo</span> <span class=s2>&#34;)不存在! &lt;br&gt;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>A</span><span class=p>(</span><span class=s2>&#34;Aurora&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nv>$a</span><span class=o>-&gt;</span><span class=na>test</span><span class=p>(</span><span class=s1>&#39;no&#39;</span><span class=p>,</span> <span class=s1>&#39;this&#39;</span><span class=p>,</span> <span class=s1>&#39;function&#39;</span><span class=p>);</span> <span class=c1>// 可以看到A类中并没有test()方法
+</span></span></span><span class=line><span class=cl><span class=cp>?&gt;</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><strong>触发时机</strong>：当在对象上下文中尝试调用一个<strong>不可访问或不存在的方法</strong>时，<code>__call()</code> 魔术方法会被自动调用。</li><li><strong>参数说明</strong>：<ul><li><code>$funName</code>：字符串类型，表示被调用的不存在的方法名（本例中为 <code>'test'</code>）。</li><li><code>$arguments</code>：数组类型，包含传递给该方法的参数列表（本例中为 <code>['no', 'this', 'function']</code>）。</li></ul></li></ul><h5 id=执行流程-2>执行流程</h5><ol><li><strong><code>$a = new A("Aurora");</code></strong>：实例化类 <code>A</code> 的对象。</li><li><strong><code>$a->test('no', 'this', 'function');</code></strong>：尝试调用对象中并不存在的 <code>test()</code> 方法。</li><li>因为方法不存在，PHP 自动拦截并触发 <code>__call($funName, $arguments)</code> 方法，将方法名和参数传入。</li></ol><h5 id=运行输出-3>运行输出</h5><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>你所调用的函数: test(参数: Array
+</span></span><span class=line><span class=cl>(
+</span></span><span class=line><span class=cl>    [0] =&gt; no
+</span></span><span class=line><span class=cl>    [1] =&gt; this
+</span></span><span class=line><span class=cl>    [2] =&gt; function
+</span></span><span class=line><span class=cl>)
+</span></span><span class=line><span class=cl>)不存在! &lt;br&gt;
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=[".main-article",".widget--toc"];e.forEach(e=>{const t=document.querySelector(e);t&&renderMathInElement(t,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})})</script></article><footer class=site-footer><section class=copyright>&copy;
 2026 mawei-blog</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.33.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
