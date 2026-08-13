@@ -1,8 +1,8 @@
 ---
 title: "30小时教你玩转CTF"
-date: 2026-07-27
+date: 2026-08-13
 draft: false
-categories: ["CTF入门"]
+categories: ["CTF"]
 ---
 # web
 
@@ -320,7 +320,7 @@ SQL 注入的过程通常遵循一个标准化的逻辑链条。对于初学者�
 - **写文件：** 如果拥有 `FILE` 权限且知道服务器物理路径，可使用 `INTO OUTFILE` 写入一句话木马。
 - **执行系统命令：** 如果是 SQL Server 或高权限的 MySQL，可能尝试调用系统存储过程进行提权。
 
-### 给安全学习者的建议
+### 注意点
 
 - **观察响应差异：** 在处理盲注（Blind SQLi）时，重点观察 **HTTP 响应包的状态码、内容长度 (Content-Length) 或响应时间**，这是判断注入是否成功的核心。
 - **使用标准工具链：** 在练习（如 CTF）或合法测试中，`sqlmap` 是最常用的自动化工具。它能自动处理上述所有阶段。
@@ -329,9 +329,9 @@ SQL 注入的过程通常遵循一个标准化的逻辑链条。对于初学者�
 
 ## PHP反序列化漏洞
 
-序列化：将PHP对象压缩并按照一定格式转换成字符串过程    serialize() 
+序列化：将PHP对象压缩并按照一定格式转换成字符串过程 -- serialize() 
 
-反序列化：从字符串转换回PHP对象的过程                               unserialize()     
+反序列化：从字符串转换回PHP对象的过程 -- unserialize()     
 
 目的：为了方便PHP对象的传输和存储
 
@@ -431,3 +431,244 @@ $a = new A();
 
 **应用场景**：通常用于初始化对象的属性、建立数据库连接或设置默认配置。
 
+**运行输出**
+
+```
+This is a construct function
+```
+
+#### __destruct()
+
+```php
+<?php
+class A
+{
+    function __construct()
+    {
+        echo "This is a construct function";
+        //...
+    }
+    function __destruct()
+    {
+        echo "This is a destruct function";
+        //...
+    }
+}
+$a = new A();
+?>
+```
+
+##### **执行流程**
+
+- **`__construct()`**: 构造函数。当通过 `$a = new A();` 创建类的新对象时，该方法会被自动调用，输出：`This is a construct function`。
+- **`__destruct()`**: 析构函数。当对象的所有引用都被删除或脚本执行结束时，该方法会被自动调用，输出：`This is a destruct function`。
+
+##### 运行输出
+
+```
+This is a construct functionThis is a destruct function
+```
+
+#### __sleep()
+
+```php
+<?php
+class A
+{
+    private $test;
+    public $test2;
+    public function __construct($test)
+    {
+        $this->test = $test;
+    }
+    public function __sleep()
+    {
+        echo "This is a sleep function";
+        // ...
+        return array('test'); // 必须返回一个数组，元素为需要被序列化的属性名称
+    }
+}
+$a = new A("Aurora");
+echo serialize($a);
+?>
+```
+
+- **`__sleep()` 触发时机**：当对对象调用 `serialize()` 函数之前，`__sleep()` 会被自动调用。
+- **返回值要求**：该方法**必须返回一个数组**，数组中的元素是要被序列化的属性名称。
+- **过滤属性**：在上例中，`__sleep()` 返回了 `array('test')`，这意味着只有 `$test` 属性会被序列化并保存，而公开属性 `$test2` 会被忽略。
+
+##### 执行流程与输出
+
+1. `$a = new A("Aurora");` 实例化对象，`$this->test` 的值为 `"Aurora"`。
+
+2. `echo serialize($a);` 触发序列化操作，首先自动执行类中的 `__sleep()` 方法：
+
+   - 输出字符串：`This is a sleep function`
+   - 返回需要序列化的属性列表：`['test']`
+
+3. 最终 `serialize()` 对对象进行序列化，仅打包 `test` 属性。
+
+4. ```
+   This is a sleep functionO:1:"A":1:{s:7:"\x00A\x00test";s:6:"Aurora";}
+   ```
+
+#### __wakeup()
+
+```php
+<?php
+class A
+{
+    private $test;
+    public function __construct($test)
+    {
+        $this->test = $test;
+    }
+    public function __sleep()
+    {
+        echo "This is a sleep function";
+        return array('test'); 
+    }
+    public function __wakeup()
+    {
+        echo "This is a wakeup function";
+        // 这里不需要返回数组
+    }
+}
+$a = new A("Aurora");
+$b = serialize($a);
+$c = unserialize($b); // 反序列化时触发 __wakeup
+?>
+```
+
+- **`__wakeup()` 触发时机**：当使用 `unserialize()` 函数对一个已序列化的字符串进行反序列化操作时，`__wakeup()` 会被自动调用。
+- **返回值**：与 `__sleep()` 不同，`__wakeup()` **不需要返回值**（无须返回数组）。
+- **主要用途**：通常用于在反序列化后重新建立数据库连接、初始化资源或者执行其他必要的清理/恢复操作。
+
+##### 执行流程
+
+1. **`$a = new A("Aurora");`**：实例化对象，将 `$this->test` 赋值为 `"Aurora"`。
+2. **`$b = serialize($a);`**：对对象进行序列化，此时自动调用 `__sleep()` 方法，输出：`This is a sleep function`。
+3. **`$c = unserialize($b);`**：对字符串进行反序列化，此时自动调用 `__wakeup()` 方法，输出：`This is a wakeup function`。
+
+##### 运行输出
+
+```
+This is a sleep functionThis is a wakeup function
+```
+
+#### __toString()
+
+```php
+<?php
+class A
+{
+    private $test;
+    public function __construct($test)
+    {
+        $this->test = $test;
+    }
+    function __toString()
+    {
+        $str = "This is a toString function";
+        return $str;
+    }
+}
+$a = new A("Aurora");
+echo $a;
+?>
+```
+
+- **触发时机**：当一个对象被当做字符串来使用（例如使用 `echo` 或 `print` 输出对象）时，`__toString()` 方法会被自动调用。
+- **返回值要求**：该方法**必须返回一个字符串**，否则会抛出不可恢复的致命错误（Recoverable fatal error）。
+
+##### 执行流程与输出结果
+
+1. `$a = new A("Aurora");` 实例化对象。
+2. `echo $a;` 尝试直接将对象 `$a` 作为字符串输出，从而自动触发类中的 `__toString()` 方法。
+3. `__toString()` 返回字符串 `"This is a toString function"` 并打印。
+
+##### 运行输出
+
+```
+This is a toString function
+```
+
+#### __invoke()
+
+```php
+<?php
+class A
+{
+    private $test;
+    public function __construct($test)
+    {
+        $this->test = $test;
+    }
+    function __invoke()
+    {
+        echo "This is a invoke function"; 
+        //...
+    }
+}
+$a = new A("Aurora");
+$a(); // $a是一个对象，但却用$a()调用方法的方式来调用它
+?>
+```
+
+- **触发时机**：当尝试以调用函数的方式来调用一个对象时（例如 `$a()`），`__invoke()` 方法会被自动调用。
+
+## 执行流程与输出
+
+1. `$a = new A("Aurora");` 实例化对象。
+2. `$a();` 将对象 `$a` 当作函数进行调用，从而自动触发类中的 `__invoke()` 方法。
+3. 运行输出：
+
+```
+This is a invoke function
+```
+
+#### __call()
+
+```php
+<?php
+class A
+{
+    private $test;
+    public function __construct($test)
+    {
+        $this->test = $test;
+    }
+    function __call($funName, $arguments)
+    {
+        echo "你所调用的函数: " . $funName . "(参数: "; 
+        print_r($arguments); 
+        echo ")不存在! <br>\n"; 
+    }
+}
+$a = new A("Aurora");
+$a->test('no', 'this', 'function'); // 可以看到A类中并没有test()方法
+?>
+```
+
+- **触发时机**：当在对象上下文中尝试调用一个**不可访问或不存在的方法**时，`__call()` 魔术方法会被自动调用。
+- **参数说明**：
+  - `$funName`：字符串类型，表示被调用的不存在的方法名（本例中为 `'test'`）。
+  - `$arguments`：数组类型，包含传递给该方法的参数列表（本例中为 `['no', 'this', 'function']`）。
+
+##### 执行流程
+
+1. **`$a = new A("Aurora");`**：实例化类 `A` 的对象。
+2. **`$a->test('no', 'this', 'function');`**：尝试调用对象中并不存在的 `test()` 方法。
+3. 因为方法不存在，PHP 自动拦截并触发 `__call($funName, $arguments)` 方法，将方法名和参数传入。
+
+##### 运行输出
+
+```
+你所调用的函数: test(参数: Array
+(
+    [0] => no
+    [1] => this
+    [2] => function
+)
+)不存在! <br>
+```

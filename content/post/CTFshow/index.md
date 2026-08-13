@@ -1,6 +1,6 @@
 ---
-title: "web（CTFshow知识点)"
-date: 2026-07-27
+title: "CTFshow"
+date: 2026-08-13
 draft: false
 categories: ["webWP"]
 ---
