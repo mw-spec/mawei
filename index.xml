@@ -1,4 +1,1076 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mawei</title><link>https://mawei.org.cn/</link><description>Recent content on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mawei</title><link>https://mawei.org.cn/</link><description>Recent content on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Mon, 31 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机三级（两周从0到考试及格）</title><link>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</link><pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;只有知识点，题目另外找或者ai帮忙出&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;天数&lt;/th&gt;
+&lt;th&gt;主要内容&lt;/th&gt;
+&lt;th&gt;当天目标&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 1&lt;/td&gt;
+&lt;td&gt;密码学基础&lt;/td&gt;
+&lt;td&gt;AES、DES、RSA、Hash、数字签名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 2&lt;/td&gt;
+&lt;td&gt;数字证书与身份认证&lt;/td&gt;
+&lt;td&gt;CA、PKI、数字证书、常见认证方式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 3&lt;/td&gt;
+&lt;td&gt;访问控制&lt;/td&gt;
+&lt;td&gt;DAC、MAC、RBAC、权限管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 4&lt;/td&gt;
+&lt;td&gt;操作系统安全&lt;/td&gt;
+&lt;td&gt;用户权限、进程、文件权限、系统加固&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 5&lt;/td&gt;
+&lt;td&gt;数据库安全&lt;/td&gt;
+&lt;td&gt;数据库权限、备份、审计、SQL 注入基础&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 6&lt;/td&gt;
+&lt;td&gt;网络攻击基础&lt;/td&gt;
+&lt;td&gt;扫描、嗅探、欺骗、DoS/DDoS、中间人攻击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 7&lt;/td&gt;
+&lt;td&gt;网络防御&lt;/td&gt;
+&lt;td&gt;防火墙、IDS、IPS、安全审计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 8&lt;/td&gt;
+&lt;td&gt;网络安全协议&lt;/td&gt;
+&lt;td&gt;HTTPS、SSL/TLS、IPSec、VPN、SSH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 9&lt;/td&gt;
+&lt;td&gt;Web 安全&lt;/td&gt;
+&lt;td&gt;SQL 注入、XSS、CSRF、文件上传漏洞等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 10&lt;/td&gt;
+&lt;td&gt;恶意代码与漏洞&lt;/td&gt;
+&lt;td&gt;病毒、蠕虫、木马、后门、漏洞与补丁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 11&lt;/td&gt;
+&lt;td&gt;信息安全管理&lt;/td&gt;
+&lt;td&gt;风险评估、安全策略、应急响应、灾难恢复&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 12&lt;/td&gt;
+&lt;td&gt;法律法规与标准&lt;/td&gt;
+&lt;td&gt;等级保护、网络安全相关法规、安全标准&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 13&lt;/td&gt;
+&lt;td&gt;真题强化&lt;/td&gt;
+&lt;td&gt;完整做题、统计薄弱点、集中补错题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 14&lt;/td&gt;
+&lt;td&gt;考前冲刺&lt;/td&gt;
+&lt;td&gt;高频考点总复习 + 模拟考试 + 错题二刷&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;时间&lt;/th&gt;
+&lt;th&gt;学什么&lt;/th&gt;
+&lt;th&gt;目标&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 1&lt;/td&gt;
+&lt;td&gt;信息安全基础 + 密码学&lt;/td&gt;
+&lt;td&gt;建立基本框架&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 2&lt;/td&gt;
+&lt;td&gt;密码学 + 身份认证&lt;/td&gt;
+&lt;td&gt;重点章节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 3&lt;/td&gt;
+&lt;td&gt;访问控制 + 审计&lt;/td&gt;
+&lt;td&gt;吃透常见概念&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 4&lt;/td&gt;
+&lt;td&gt;操作系统安全&lt;/td&gt;
+&lt;td&gt;会做常见题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 5&lt;/td&gt;
+&lt;td&gt;数据库安全&lt;/td&gt;
+&lt;td&gt;权限、攻击、防护&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 6&lt;/td&gt;
+&lt;td&gt;网络攻击&lt;/td&gt;
+&lt;td&gt;攻击方式要分清&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 7&lt;/td&gt;
+&lt;td&gt;防火墙、IDS/IPS&lt;/td&gt;
+&lt;td&gt;高频考点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 8&lt;/td&gt;
+&lt;td&gt;PKI、VPN、安全协议&lt;/td&gt;
+&lt;td&gt;高频考点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 9&lt;/td&gt;
+&lt;td&gt;Web 安全&lt;/td&gt;
+&lt;td&gt;SQL 注入/XSS 等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 10&lt;/td&gt;
+&lt;td&gt;漏洞、恶意程序&lt;/td&gt;
+&lt;td&gt;木马、病毒等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 11&lt;/td&gt;
+&lt;td&gt;安全管理、风险评估&lt;/td&gt;
+&lt;td&gt;记忆类拿分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 12&lt;/td&gt;
+&lt;td&gt;标准、法规 + 第一套真题&lt;/td&gt;
+&lt;td&gt;查缺补漏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 13&lt;/td&gt;
+&lt;td&gt;真题 + 错题二刷&lt;/td&gt;
+&lt;td&gt;冲 60+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Day 14&lt;/td&gt;
+&lt;td&gt;高频知识点总复习 + 模拟&lt;/td&gt;
+&lt;td&gt;稳定 70 左右&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="第一天"&gt;第一天
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;对称加密、非对称加密、Hash、数字签名&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="1-对称加密"&gt;1. 对称加密
+&lt;/h4&gt;&lt;p&gt;特点：&lt;strong&gt;加密和解密使用同一个密钥&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你可以理解成：我和你共用一把钥匙，我用它锁，你用同一把钥匙开。&lt;/p&gt;
+&lt;p&gt;常见算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DES&lt;/li&gt;
+&lt;li&gt;3DES&lt;/li&gt;
+&lt;li&gt;AES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对称 = 一把钥匙，速度快。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="2-非对称加密"&gt;2. 非对称加密
+&lt;/h4&gt;&lt;p&gt;特点：有两把钥匙：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公钥 + 私钥&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;两者成对出现。&lt;/p&gt;
+&lt;p&gt;最重要的考试规律：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公钥加密 → 私钥解密&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如我想把秘密发给你，我用你的&lt;strong&gt;公钥&lt;/strong&gt;加密。&lt;/p&gt;
+&lt;p&gt;因为你的公钥大家都能拿到。&lt;/p&gt;
+&lt;p&gt;但是加密以后，只有你的&lt;strong&gt;私钥&lt;/strong&gt;才能解开。&lt;/p&gt;
+&lt;p&gt;经典算法：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RSA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;RSA = 公私两把钥匙。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="3-hash--哈希"&gt;3. Hash / 哈希
+&lt;/h4&gt;&lt;p&gt;这是特别容易和“加密”混淆的地方。&lt;/p&gt;
+&lt;p&gt;Hash &lt;strong&gt;不是普通意义上的加密&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;它的核心是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输入一段数据 → 计算出一个固定长度的摘要。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;重要特点：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;单向性。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正常情况下，不能从 Hash 值直接还原出原文。&lt;/p&gt;
+&lt;p&gt;常见算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MD5&lt;/li&gt;
+&lt;li&gt;SHA-1&lt;/li&gt;
+&lt;li&gt;SHA-256&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hash = 摘要 = 完整性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="4-数字签名"&gt;4. 数字签名
+&lt;/h4&gt;&lt;p&gt;这是三级信息安全里很重要的一块。&lt;/p&gt;
+&lt;p&gt;你先直接背住：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;私钥签名，公钥验证。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意，这和刚才的保密通信正好反过来。&lt;/p&gt;
+&lt;p&gt;保密：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;公钥加密，私钥解密。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;签名：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;私钥签名，公钥验证。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="一张表记住"&gt;一张表记住
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;技术&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;th&gt;常见算法/用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;对称加密&lt;/td&gt;
+&lt;td&gt;同一个密钥&lt;/td&gt;
+&lt;td&gt;AES、DES&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;非对称加密&lt;/td&gt;
+&lt;td&gt;公钥+私钥&lt;/td&gt;
+&lt;td&gt;RSA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hash&lt;/td&gt;
+&lt;td&gt;单向摘要&lt;/td&gt;
+&lt;td&gt;MD5、SHA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;数字签名&lt;/td&gt;
+&lt;td&gt;私钥签名、公钥验证&lt;/td&gt;
+&lt;td&gt;身份、完整性、不可否认&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最重要的四句话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AES 是对称加密。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RSA 是非对称加密。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SHA 是 Hash。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数字签名：私钥签名，公钥验证。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="第二天"&gt;第二天
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;数字证书、CA、PKI&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="一数字证书"&gt;一、数字证书
+&lt;/h4&gt;&lt;p&gt;数字证书最核心的作用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;把“某个身份”和“某个公钥”绑定起来。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如你访问一个网站，网站告诉你：&lt;/p&gt;
+&lt;p&gt;“这是我的公钥。”&lt;/p&gt;
+&lt;p&gt;但问题是，你怎么知道这个公钥真的是这个网站的？&lt;/p&gt;
+&lt;p&gt;所以需要数字证书来证明：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这个公钥确实属于这个网站。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数字证书里常见内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;证书持有者身份信息&lt;/li&gt;
+&lt;li&gt;公钥&lt;/li&gt;
+&lt;li&gt;证书有效期&lt;/li&gt;
+&lt;li&gt;CA 信息&lt;/li&gt;
+&lt;li&gt;CA 的数字签名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最重要记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;数字证书 = 身份 + 公钥。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="第三天"&gt;第三天
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;访问控制——DAC、MAC、RBAC&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="1-dac自主访问控制"&gt;1. DAC：自主访问控制
+&lt;/h4&gt;&lt;p&gt;DAC = &lt;strong&gt;Discretionary Access Control&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中文：&lt;strong&gt;自主访问控制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心特点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;资源所有者可以决定谁能访问。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如你创建了一个文件，你可以决定把它分享给谁、给对方读权限还是写权限。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DAC = 主人自己决定。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;优点：灵活。
+缺点：权限容易传播，安全性相对弱。&lt;/p&gt;
+&lt;h4 id="2-mac强制访问控制"&gt;2. MAC：强制访问控制
+&lt;/h4&gt;&lt;p&gt;MAC = &lt;strong&gt;Mandatory Access Control&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中文：&lt;strong&gt;强制访问控制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心特点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不是资源所有者说了算，而是系统根据安全级别强制决定。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;典型场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;绝密&lt;/li&gt;
+&lt;li&gt;机密&lt;/li&gt;
+&lt;li&gt;秘密&lt;/li&gt;
+&lt;li&gt;普通&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用户和文件都有安全级别，系统根据规则决定能不能访问。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MAC = 系统强制，不由个人决定。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它通常安全性高，但灵活性较差。&lt;/p&gt;
+&lt;h4 id="3-rbac基于角色的访问控制"&gt;3. RBAC：基于角色的访问控制
+&lt;/h4&gt;&lt;p&gt;RBAC = &lt;strong&gt;Role-Based Access Control&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中文：&lt;strong&gt;基于角色的访问控制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;用户 → 角色 → 权限&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如公司里：&lt;/p&gt;
+&lt;p&gt;小王是“财务人员”。&lt;/p&gt;
+&lt;p&gt;财务人员这个角色拥有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看账单&lt;/li&gt;
+&lt;li&gt;创建报表&lt;/li&gt;
+&lt;li&gt;修改财务数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么小王获得的是“财务人员角色”，而不是管理员一个个给他配置几十项权限。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RBAC = 看职位/角色给权限。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是企业系统里非常常见的方式。&lt;/p&gt;
+&lt;h4 id="三个放一起"&gt;三个放一起
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模型&lt;/th&gt;
+&lt;th&gt;谁决定权限&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;DAC&lt;/td&gt;
+&lt;td&gt;资源所有者&lt;/td&gt;
+&lt;td&gt;自主&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MAC&lt;/td&gt;
+&lt;td&gt;系统安全策略&lt;/td&gt;
+&lt;td&gt;强制、密级&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RBAC&lt;/td&gt;
+&lt;td&gt;用户所属角色&lt;/td&gt;
+&lt;td&gt;角色、职位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最简单的记忆法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DAC 看主人，MAC 看级别，RBAC 看角色。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>CTFshow</title><link>https://mawei.org.cn/p/ctfshow/</link><pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/ctfshow/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
+&lt;/h2&gt;&lt;h3 id="web1"&gt;web1
+&lt;/h3&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
+&lt;h3 id="web2"&gt;web2
+&lt;/h3&gt;&lt;p&gt;右键打不开，使用快捷键&lt;code&gt;Command + Option + U&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="web3"&gt;web3
+&lt;/h3&gt;&lt;p&gt;F12打开开发者工具，定位到网络面板，展开所有的响应标头，向下滑找到flag&lt;/p&gt;
+&lt;p&gt;在 Web 里，“抓包”就是把浏览器和服务器之间的 HTTP/HTTPS 请求拦下来、看清楚、必要时改一改的过程，用来分析网站有哪些接口、传了什么参数、Cookie 里有什么等。最基础的是用浏览器自带的 F12 开发者工具里的 Network 面板：刷新页面或执行操作，就能看到每个请求的 URL、方法（GET/POST）、参数、请求头和响应内容，这是做信息搜集、理解网站数据流的必备手段。更进一步会用到 Burp Suite、Fiddler、Charles、mitmproxy 等“抓包代理”工具，把浏览器流量导到它们身上，这样不仅能查看，还能拦截并修改请求（比如改参数、改 Content-Type、伪造前端发不出来的奇怪请求），在 CTF 和 Web 安全测试中，抓包几乎是所有漏洞利用的起点。 这道入门题目里面，利用开发者工具的网络面板，对页面进行刷新，查看https://0853d982-ccf9-40d3-bfc0-0c86f69a89b2.challenge.ctf.show/这条记录，明显看到其响应体里的flag信息ctfshow{&amp;hellip;}， 通过这次题目训练，对抓包有了较为基础的理解&lt;/p&gt;
+&lt;h3 id="web4"&gt;web4
+&lt;/h3&gt;&lt;p&gt;题目提示robos.txt可能泄露信息，尝试访问url/robots.txt,响应结果出现flagishere.txt文件，又尝试访问url/flagishere.txt，拿到flag&lt;/p&gt;
+&lt;p&gt;robots.txt 是放在网站根目录下的一个纯文本文件，相当于一个用来告诉搜索引擎爬虫“哪些地方可以爬，哪些地方不要爬” 的说明书。这道入门题目中 ，提示了robots.txt的信息，进而可以在题目url中添加robots.txt的后缀，获取到/flagishere.txt的关键信息，继续访问/flagishere.txt的内容，获取到flag&lt;/p&gt;
+&lt;h3 id="web5"&gt;web5
+&lt;/h3&gt;&lt;p&gt;根据题目提示：phps源码泄露有时候能帮上忙，在地址栏输入/index.phps，下载文件，打开后发现flag&lt;/p&gt;
+&lt;p&gt;phps泄露一般指的是服务器把 &amp;ldquo;.phps&amp;rdquo; 结尾的 PHP 源码文件直接当“高亮源码”给你看了，导致代码泄露，在ctf中，主要包括两种方式第一种比较基础，为直接修改后缀，添加index.phps的后缀可以直接下载php源码，进而直接获取flag等直接信息；第二种稍为进阶，利用/ robots.txt / 备份目录。这道题目提示为phps源码泄露，直接利用第一种方式，添加后缀直接下载源码，获取到flag信息&lt;/p&gt;
+&lt;h3 id="web6"&gt;web6
+&lt;/h3&gt;&lt;p&gt;在url后加www.zip，然后得到文本文档，这个题需要注意的是点开文本文档是拿不到flag，需要把文件名复制到url后面回车得到&lt;/p&gt;
+&lt;p&gt;dirsearch脚本的初步使用与解压源码 dirsearch:一个用字典暴力枚举 Web 目录 / 文件的 Python 脚本;www.zip:把整站源码打包备份成 &lt;a class="link" href="http://www.zip/" target="_blank" rel="noopener"
+&gt;www.zip&lt;/a&gt; 放在网站根目录，却没做好访问控制，结果你可以直接通过 URL 把它下回来。先扫描，后访问，得到对应的flag信息。&lt;/p&gt;
+&lt;h3 id="web7"&gt;web7
+&lt;/h3&gt;&lt;p&gt;直接访问url/.git/index.php&lt;/p&gt;
+&lt;p&gt;版本控制与git仓库的初步理解 Git 是一个分布式的版本控制系统，广泛应用于代码管理。它允许开发者追踪项目文件的更改历史，并协作开发。 Git 泄露 、版本控制漏洞是常见的安全问题，在开发者没有适当配置 Git 的情况下，直接利用dirsearch进行扫描，得到对应的git文件与ok状态的访问地址；之后直接进行访问，得到对应的flag&lt;/p&gt;
+&lt;h3 id="web8"&gt;web8
+&lt;/h3&gt;&lt;p&gt;直接访问url/.svn/&lt;/p&gt;
+&lt;p&gt;版本控制与svn仓库的初步理解 在 CTF Web 题中， SVN（Subversion）和版本控制系统经常作为 漏洞和信息泄露的来源 ，类似于 Git，但其工作方式和使用场景有所不同。通过对 SVN 版本控制系统的配置不当或目录泄露，攻击者可以访问到项目的源代码、历史记录、敏感信息甚至是 flag。 svn泄露 、版本控制漏洞是常见的安全问题，在开发人员和系统管理员忽略配置 svn的情况下，直接利用dirsearch进行扫描，得到对应的.svn文件与ok状态的访问地址；之后直接进行访问，得到对应的flag&lt;/p&gt;
+&lt;h3 id="web9"&gt;web9
+&lt;/h3&gt;&lt;p&gt;直接访问url/index.php.swp&lt;/p&gt;
+&lt;p&gt;vim缓存信息泄露的初步理解 “vim 缓存信息泄露”，本质就是出题人 / 开发在服务器上用 vim 编辑源码 ，留下了各种 编辑器缓存 / 备份文件 （&lt;code&gt;.swp&lt;/code&gt;、&lt;code&gt;~&lt;/code&gt;、&lt;code&gt;.bak&lt;/code&gt; 等），结果这些文件也被 Web 服务器当成普通文件对外开放了，导致 &lt;strong&gt;源代码泄露&lt;/strong&gt; 。 根据提示信息，采取手动猜路径的方法，直接得到.swp文件，得到flag。&lt;/p&gt;
+&lt;h3 id="web10"&gt;web10
+&lt;/h3&gt;&lt;p&gt;F12,cookie中包含flag，url解码&lt;/p&gt;
+&lt;p&gt;cookie的初步理解 在ctf中， cooki相当于“服务器放在你浏览器里的小纸条，你用它上交‘身份’，而我们要想法看懂、改掉甚至伪造这张纸条。 根据题目中对于cookie的提示，先采用最简单的抓包方式，直接利用f12开发者工具进行抓包，获取到对应的信息如下，从中可以明显看到cookie中包含flag信息&lt;/p&gt;
+&lt;h3 id="web11"&gt;web11
+&lt;/h3&gt;&lt;p&gt;通过dns检查查询flag &lt;a class="link" href="https://zijian.aliyun.com/" target="_blank" rel="noopener"
+&gt;https://zijian.aliyun.com/&lt;/a&gt; TXT 记录，一般指为某个主机名或域名设置的说明。&lt;/p&gt;
+&lt;p&gt;查找flag.ctfshow.com域名下的txt记录&lt;/p&gt;
+&lt;p&gt;由于动态更新，txt记录会变，最终flag flag{just_seesee}&lt;/p&gt;
+&lt;h3 id="web12"&gt;web12
+&lt;/h3&gt;&lt;p&gt;查看robots.txt文件&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User-agent: *
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Disallow: /admin/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看源代码找到密码，访问url/admin/输入用户名：admin 和密码&lt;/p&gt;
+&lt;h3 id="web13"&gt;web13
+&lt;/h3&gt;&lt;p&gt;根据题目提示 技术文档 在页面下面发现 document 下载发现里面存在后台地址和用户名密码登录成功获 得flag&lt;/p&gt;
+&lt;h3 id="web14"&gt;web14
+&lt;/h3&gt;&lt;p&gt;根据提示，打开网页源码，搜索editor，访问editor发现编辑器，在上传文件的图片空间里，/var/www/html下面发现flag url/nothinghere/fl0000g.txt，访问目录得到flag&lt;/p&gt;
+&lt;h3 id="web15"&gt;web15
+&lt;/h3&gt;&lt;p&gt;根据提示在页面下方发现QQ号码，url/admin，忘记密码，通过QQ号码查找到地址在西安，输入然后重置密码，获得flag&lt;/p&gt;
+&lt;h3 id="web16"&gt;web16
+&lt;/h3&gt;&lt;p&gt;url/tz.php 发现PHPINFO能点进去找到flag&lt;/p&gt;
+&lt;p&gt;根据题目对于php探针的提示，同时了解到php相关概念后，采用最基础的直接猜路径，在靶场url后添加 &lt;code&gt;/phpinfo.php&lt;/code&gt;等探针类型依次尝试，最后添加/tz.php后访问成功，确定该web网页使用的是雅黑php探针;之后继续查看phpinfo，经过一番搜索后得到flag&lt;/p&gt;
+&lt;h3 id="web17"&gt;web17
+&lt;/h3&gt;&lt;p&gt;下载了dirsearch，扫描url得到[20:13:23] 200 - 934B - /backup.sql ，直接访问url/backup.sql，下载sql文件得到flag&lt;/p&gt;
+&lt;h3 id="web18"&gt;web18
+&lt;/h3&gt;&lt;p&gt;查看源代码，发现&lt;a class="link" href="https://463f16d3-48d8-4451-938b-586ee7ce35d9.challenge.ctf.show/js/Flappy_js.js" target="_blank" rel="noopener"
+&gt;js/Flappy_js.js&lt;/a&gt; ，在里面发现\u4f60\u8d62\u4e86\uff0c\u53bb\u5e7a\u5e7a\u96f6\u70b9\u76ae\u7231\u5403\u76ae\u770b\u770b直接丢给CyberChef，解出你赢了，去幺幺零点皮爱吃皮看看，url/110.php，得到flag&lt;/p&gt;
+&lt;h3 id="web19"&gt;web19
+&lt;/h3&gt;&lt;p&gt;查看源代码，发现$u===&amp;lsquo;admin&amp;rsquo; &amp;amp;&amp;amp; $p ===&amp;lsquo;a599ac85a73384ee3219fa684296eaa62667238d608efa81837030bd1ce1bf04，密文为AES加密，密钥为key = &amp;ldquo;0000000372619038&amp;rdquo;;偏移量为iv = &amp;ldquo;ilove36dverymuch&amp;rdquo;;模式为CBC填充为ZeroPadding编码为Hex，通过CyberChef解出密码，回到原页面输入用户名和密码得到flag&lt;/p&gt;
+&lt;h3 id="web20"&gt;web20
+&lt;/h3&gt;&lt;p&gt;用dirsearch扫描，得到[19:27:25] 301 - 169B - /db -&amp;gt; &lt;a class="link" href="http://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/" target="_blank" rel="noopener"
+&gt;http://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/&lt;/a&gt;，再dirsearch -u &lt;a class="link" href="https://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/" target="_blank" rel="noopener"
+&gt;https://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/&lt;/a&gt; -e sql,bak,txt,zip,db,sqlite -x 400,403,404，得到[19:29:20] 200 - 348KB - /db/db.mdb ，直接url//db/db.mdb ，下载一个db.mdb文件，用mdbtools直接strings db.mdb | grep -i &amp;ldquo;flag&amp;quot;找到flag（mac打不开，win直接用记事本打开检索flag）&lt;/p&gt;
+&lt;h3 id="知识点汇总"&gt;知识点汇总
+&lt;/h3&gt;&lt;h4 id="1-基础源代码与客户端行为-web-1-3-10-18-19"&gt;1. 基础源代码与客户端行为 (Web 1-3, 10, 18-19)
+&lt;/h4&gt;&lt;p&gt;这部分考查对浏览器基本工具和前端逻辑的理解。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;查看源码&lt;/strong&gt;：了解 HTML 结构、注释、隐藏表单项。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;控制台约束绕过&lt;/strong&gt;：学会使用快捷键（&lt;code&gt;Cmd/Ctrl + Opt + U&lt;/code&gt;）或 &lt;code&gt;view-source:&lt;/code&gt; 协议绕过右键禁用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发者工具 (F12)&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Network 面板&lt;/strong&gt;：观察 HTTP 响应头（Headers）和响应体（Body），识别 Flag 或敏感接口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application 面板&lt;/strong&gt;：查看 &lt;strong&gt;Cookie&lt;/strong&gt;、LocalStorage 存储的敏感信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前端逻辑分析&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JS 逆向/分析&lt;/strong&gt;：查看 &lt;code&gt;.js&lt;/code&gt; 文件中的硬编码逻辑（如 Web 18 的 Unicode 编码、Web 19 的 AES 加密参数）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编码转换&lt;/strong&gt;：识别 Unicode（&lt;code&gt;\uXXXX&lt;/code&gt;）、Base64、Hex 等，并学会使用 &lt;strong&gt;CyberChef&lt;/strong&gt; 进行解码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="2-敏感文件与配置泄露-web-4-9-17-20"&gt;2. 敏感文件与配置泄露 (Web 4-9, 17, 20)
+&lt;/h4&gt;&lt;p&gt;开发或运维在配置服务器时的疏忽，导致了后端信息的直接暴露。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;爬虫规则泄露&lt;/strong&gt;：&lt;code&gt;/robots.txt&lt;/code&gt; 本意是引导爬虫，却常泄露后台目录（如 &lt;code&gt;/admin/&lt;/code&gt;）或备份文件名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源码泄露类型&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PHPS&lt;/strong&gt;：&lt;code&gt;.phps&lt;/code&gt; 是 PHP 源码的高亮显示文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;备份文件&lt;/strong&gt;：常见的 &lt;code&gt;.bak&lt;/code&gt;、&lt;code&gt;.zip&lt;/code&gt;、&lt;code&gt;.tar.gz&lt;/code&gt;、&lt;code&gt;.sql&lt;/code&gt;（Web 17 数据库备份）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编辑器缓存&lt;/strong&gt;：Vim 异常退出产生的 &lt;code&gt;.swp&lt;/code&gt; 文件（如 &lt;code&gt;/index.php.swp&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库文件&lt;/strong&gt;：&lt;code&gt;.mdb&lt;/code&gt; (Access)、&lt;code&gt;.sqlite&lt;/code&gt;、&lt;code&gt;.db&lt;/code&gt; 等（Web 20）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目录扫描工具&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dirsearch / Gobuster&lt;/strong&gt;：使用字典暴力枚举隐藏目录，这是 Web 安全测试的“基操”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="3-版本控制系统泄露-web-7-8"&gt;3. 版本控制系统泄露 (Web 7-8)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Git 泄露&lt;/strong&gt;：&lt;code&gt;.git/&lt;/code&gt; 目录如果未删除，攻击者可以通过特定的工具（如 GitHack）还原整个项目的源代码和提交历史。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVN 泄露&lt;/strong&gt;：&lt;code&gt;.svn/&lt;/code&gt; 目录同样包含代码版本信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="4-域名与服务侦察-web-11-16"&gt;4. 域名与服务侦察 (Web 11, 16)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DNS 记录查询&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TXT 记录&lt;/strong&gt;：常用于配置 SPF 或域名校验，但也常被 CTF 题目用来藏匿 Flag。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PHP 探针&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;如 &lt;code&gt;tz.php&lt;/code&gt;（雅黑探针）、&lt;code&gt;phpinfo.php&lt;/code&gt;。它们会暴露服务器的绝对路径、PHP 版本、已安装插件等敏感环境信息，是提权和进一步渗透的重要依据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="5-后台管理与逻辑缺陷-web-12-15"&gt;5. 后台管理与逻辑缺陷 (Web 12-15)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;后台地址搜集&lt;/strong&gt;：通过 &lt;code&gt;robots.txt&lt;/code&gt;、技术文档、甚至页面底部的版权信息或联系方式（如 QQ 号）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;弱口令/硬编码密码&lt;/strong&gt;：在 JS 代码或公开的说明文档中直接寻找默认密码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;密码找回漏洞&lt;/strong&gt;：通过社工手段（如 Web 15 的 QQ 归属地查询）获取密保问题的答案，重置后台管理员密码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;富文本编辑器漏洞&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Editor 路径&lt;/strong&gt;：如 UEditor、KindEditor。通过其内置的文件浏览器或图片上传管理功能（Web 14），可以直接遍历服务器目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="爆破"&gt;爆破
+&lt;/h2&gt;&lt;h3 id="web21"&gt;web21
+&lt;/h3&gt;&lt;p&gt;前提条件：已知用户名是admin。打开代理和Burp Suite，随便输入密码123尝试登陆同时利用Burp Suite抓包。解码发现格式为admin:123，可以进行爆破。爆破原理：利用多个payload（进攻指令），对返回数据进行对比分析，得到唯一不同的就是可能的密码。将所抓包send to intruder，选择sniper模式。加载题目所给字典，设置前缀admin:（因为字典中只包含了密码），并对其进行base64编码（匹配Authorization请求头格式）。进行爆破，找到状态不同的即为正确答案。解码，登录，找到flag。&lt;/p&gt;
+&lt;h3 id="web22"&gt;web22
+&lt;/h3&gt;&lt;p&gt;域名更新后，flag.ctf.show域名失效，内容是flag{ctf_show_web}&lt;/p&gt;
+&lt;h3 id="web23"&gt;web23
+&lt;/h3&gt;&lt;p&gt;写脚本，但我不会，得到/?token=422&lt;/p&gt;
+&lt;h3 id="web24"&gt;web24
+&lt;/h3&gt;&lt;p&gt;终端运行php -r &amp;lsquo;mt_srand(372619038); echo mt_rand();&amp;lsquo;得到1155388967**%** ，然后填入?r=1155388967得到flag&lt;/p&gt;
+&lt;h3 id="web25"&gt;web25
+&lt;/h3&gt;&lt;p&gt;mt_scrand(seed)这个函数的意思，是通过分发seed种子，然后种子有了后，靠mt_rand()生成随机 数。 在之前自己还以为需要暴力破解cookie,最后师傅们给我介绍了一个脚本，专门用来跑mt_srand()种子和 mt_rand()随机数的 这里自己解释一下为什么每一次的mt_rand()+mt_rand()不是第一次的随机数相加？？ 因为生成的随机数可以说是一个线性变换（实际上非常复杂）的每一次的确定的但是每一次是不一样的，所以不能 进行第一次*2就得到mt_rand()+mt_rand() 使用说只要我们得到种子就可以在本地进行获得自己想要的值 解题：通过随机数来寻找种子 我们让 ?r=0 得到随机数。这里我得到的是 183607393 每一次不一样(因为flag值在变化) 然后下载 php_mt_seed4.0 我们在linux下面使用 gcc进行编译 gcc php_mt_seed.c -o php_mt_seed 之后运行脚本添加随机数 ./php_mt_seed 183607393&lt;/p&gt;
+&lt;p&gt;找到对应的版本这里自己的运气好第一个出来的自己验证了一下发现就是这个 注：可能存在多个种子需要自己进行判断 通过种子找到第一个随机数就是上面的随机数。&lt;/p&gt;
+&lt;p&gt;payload： ?r=183607393 Cookie: token=794171094&lt;/p&gt;
+&lt;h3 id="web26"&gt;web26
+&lt;/h3&gt;&lt;p&gt;打开bp抓包点击安装后的请求包，发送至Repeater重发器模块，点击Send发送，查看响应包，即可获取flag&lt;/p&gt;
+&lt;h3 id="web27"&gt;web27
+&lt;/h3&gt;&lt;p&gt;burpsuit爆破，学生学籍信息查询系统可以查询学号，录取名单有姓名和身份证号码（不全）所以爆破身份证号，得到身份证号：621022199002015237登录得到学号，然后登录得到flag&lt;/p&gt;
+&lt;p&gt;这题主要是身份证出生日期爆破，先拦截然后将出生日期设置为变量，attack type默认为狙击手模式，Payloads选项卡中payload type改为Dates模式，payload settings中为Dates设置起始和终止日期，注意Format项改为自定义的yyyyMMdd，然后开始爆破，爆破结束后length字段降序排序，相应包最长的应该就是响应成功的包&lt;/p&gt;
+&lt;h3 id="web28"&gt;web28
+&lt;/h3&gt;&lt;p&gt;打开靶机，发现跳转到url/0/1/2.txt，发现上两级目录都是纯数字，猜测爆破一下目录试试，打开bp抓到请求包，发送到Intruder攻击模块将目录中的0和1设置为变量，Attack type设置为Cluster bomb模式，Payloads中两个Payload type都改为Numbers，给Numbers设置初始值0和终止值为100，开始爆破，爆破结束后，将Status code字段升序排序，找到一个状态码为200的响应包，查看响应包，可获取falg&lt;/p&gt;
+&lt;h3 id="知识点汇总-1"&gt;知识点汇总
+&lt;/h3&gt;&lt;h4 id="1-http-认证与-base64-爆破-web-21"&gt;1. HTTP 认证与 Base64 爆破 (Web 21)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Authorization 头&lt;/strong&gt;：Web 21 涉及的是 HTTP Basic 认证。浏览器会将用户名和密码以 &lt;code&gt;admin:password&lt;/code&gt; 的格式拼接，再进行 Base64 编码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intruder 技巧&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Payload Processing&lt;/strong&gt;：在 Burp 中，不能直接爆破密码，需要使用 &lt;code&gt;Add prefix (admin:)&lt;/code&gt;（添加前缀）和 &lt;code&gt;Base64-encode&lt;/code&gt;（编码）处理插件，使 Payload 符合服务器要求的格式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-php-伪随机数漏洞-web-23-24-25"&gt;2. PHP 伪随机数漏洞 (Web 23, 24, 25)
+&lt;/h4&gt;&lt;p&gt;这是 CTF Web 题中的经典考点。**“伪”**随机意味着它是可以被预测的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;种子 (Seed) 与序列&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mt_srand($seed)&lt;/code&gt;：设置随机数种子。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mt_rand()&lt;/code&gt;：根据种子生成随机数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心原理&lt;/strong&gt;：只要种子确定，生成的随机数序列（第一个、第二个&amp;hellip;第 n 个）就是完全固定的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;逆推种子 (php_mt_seed)&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;如果你知道 &lt;code&gt;mt_rand()&lt;/code&gt; 输出的一个或多个结果，就可以使用工具（如 &lt;code&gt;php_mt_seed&lt;/code&gt;）通过穷举法逆向推算出原始的 &lt;code&gt;$seed&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨请求保持&lt;/strong&gt;：在 Web 25 中，种子一旦在当前会话中固定，后续的所有 &lt;code&gt;mt_rand()&lt;/code&gt; 调用都遵循该种子的序列。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-复杂爆破模式-web-27-28"&gt;3. 复杂爆破模式 (Web 27, 28)
+&lt;/h4&gt;&lt;p&gt;Burp Suite 的 &lt;strong&gt;Attack Type&lt;/strong&gt; 选择是解题效率的关键：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sniper (狙击手)&lt;/strong&gt;：一个变量，或者多个变量轮流爆破（最常用）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Bomb (集束炸弹)&lt;/strong&gt;：多个变量的&lt;strong&gt;笛卡尔积&lt;/strong&gt;。例如 Web 28 中，目录 A 是 0-100，目录 B 是 0-100，总共会尝试 $100 \times 100 = 10,000$ 次请求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Payload Types&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dates (日期)&lt;/strong&gt;：专门用于爆破身份证号、生日等（Web 27）。可以自定义格式如 &lt;code&gt;yyyyMMdd&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Numbers (数字)&lt;/strong&gt;：用于爆破学号、ID、目录名。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="4-逻辑绕过与安装包残留-web-26"&gt;4. 逻辑绕过与安装包残留 (Web 26)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安装文件利用&lt;/strong&gt;：很多 CMS 在安装成功后不会自动删除 &lt;code&gt;install.php&lt;/code&gt; 或相关逻辑。Web 26 提示我们，通过抓取安装过程中的请求并重发（Repeater），可能绕过前端限制直接获取系统初始化的敏感信息（如 Flag）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;维度&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;掌握程度&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;关键工具/命令&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;爆破技术&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;熟练掌握多字段、特定格式、日期格式爆破&lt;/td&gt;
+&lt;td&gt;Burp Suite (Intruder: Cluster Bomb)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;加密处理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;了解 HTTP Basic 认证流程&lt;/td&gt;
+&lt;td&gt;Base64 编码/解码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;随机数安全&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;理解种子泄露导致随机数可预测&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;php_mt_seed&lt;/code&gt;, &lt;code&gt;mt_srand&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;信息分析&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;能从录取名单等零散信息中提取爆破字典&lt;/td&gt;
+&lt;td&gt;观察力 + 构造字典能力&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="命令执行"&gt;命令执行
+&lt;/h2&gt;&lt;h3 id="web29"&gt;web29
+&lt;/h3&gt;&lt;h4 id="代码逻辑分析"&gt;代码逻辑分析
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 关闭错误报告，防止报错信息泄露。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(isset($_GET['c']))&lt;/code&gt;&lt;/strong&gt;: 检查是否通过 GET 请求传递了参数 &lt;code&gt;c&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;: 核心防御逻辑。使用正则表达式检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含 &amp;ldquo;flag&amp;rdquo; 字符串（&lt;code&gt;i&lt;/code&gt; 表示不区分大小写）。如果不包含，则执行下一步。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;eval($c);&lt;/code&gt;&lt;/strong&gt;: 这是一个极其危险的函数，它会将字符串 &lt;code&gt;$c&lt;/code&gt; 当作 PHP 代码直接执行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;highlight_file(__FILE__);&lt;/code&gt;&lt;/strong&gt;: 如果没有参数 &lt;code&gt;c&lt;/code&gt;，则显示当前源代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="绕过思路"&gt;绕过思路
+&lt;/h4&gt;&lt;p&gt;由于后端过滤了 &lt;code&gt;flag&lt;/code&gt; 这个词，我们无法直接使用类似 &lt;code&gt;system(&amp;quot;cat flag.php&amp;quot;);&lt;/code&gt; 的命令。我们需要通过一些技巧来绕过正则检测。&lt;/p&gt;
+&lt;h5 id="1-使用通配符-wildcards"&gt;1. 使用通配符 (Wildcards)
+&lt;/h5&gt;&lt;p&gt;在 Linux Shell 中，&lt;code&gt;?&lt;/code&gt; 匹配单个字符，&lt;code&gt;*&lt;/code&gt; 匹配任意字符。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=system(&amp;quot;cat f*&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=system(&amp;quot;cat fla?.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2-使用-php-变量拼接"&gt;2. 使用 PHP 变量拼接
+&lt;/h5&gt;&lt;p&gt;我们可以将字符串拆开，避开正则检测。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=$a=&amp;quot;fla&amp;quot;;$b=&amp;quot;g.php&amp;quot;;system(&amp;quot;cat &amp;quot;.$a.$b);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这两种都可以，但要查看源代码才能得到flag&lt;/p&gt;
+&lt;h3 id="web30"&gt;web30
+&lt;/h3&gt;&lt;p&gt;代码的核心逻辑是：通过 &lt;code&gt;GET&lt;/code&gt; 方式接收参数 &lt;code&gt;c&lt;/code&gt;，在过滤了关键词 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;system&lt;/code&gt; 和 &lt;code&gt;php&lt;/code&gt;（不区分大小写）后，将内容传递给 &lt;code&gt;eval()&lt;/code&gt; 执行。&lt;/p&gt;
+&lt;h4 id="第一步查看目录文件"&gt;第一步：查看目录文件
+&lt;/h4&gt;&lt;p&gt;首先确定 flag 文件的确切名称。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nf"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="第二步读取文件内容"&gt;第二步：读取文件内容
+&lt;/h4&gt;&lt;p&gt;假设目录下有 &lt;code&gt;flag.php&lt;/code&gt;，使用通配符绕过：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=passthru(&amp;#34;cat f*&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看源代码&lt;/p&gt;
+&lt;h3 id="web31"&gt;web31
+&lt;/h3&gt;&lt;p&gt;代码的核心逻辑是：通过 &lt;code&gt;GET&lt;/code&gt; 方式接收参数 &lt;code&gt;c&lt;/code&gt;，在经过一个正则表达式过滤后，使用 &lt;code&gt;eval()&lt;/code&gt; 执行该字符串。&lt;/p&gt;
+&lt;h4 id="核心限制分析"&gt;核心限制分析
+&lt;/h4&gt;&lt;p&gt;正则表达式 &lt;code&gt;/flag|system|php|cat|sort|shell|\.| |\’/i&lt;/code&gt; 禁用了以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;（且不区分大小写）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特殊符号&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="绕过思路-1"&gt;绕过思路
+&lt;/h4&gt;&lt;h5 id="1-绕过-system-限制"&gt;1. 绕过 &lt;code&gt;system&lt;/code&gt; 限制
+&lt;/h5&gt;&lt;p&gt;虽然 &lt;code&gt;system&lt;/code&gt; 被禁用了，但 PHP 中还有其他执行系统命令的函数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;passthru()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exec()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;shell_exec()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;反引号 (```)&lt;/strong&gt;：这是 &lt;code&gt;shell_exec()&lt;/code&gt; 的快捷方式，非常适合绕过关键字过滤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2-绕过空格限制"&gt;2. 绕过空格限制
+&lt;/h5&gt;&lt;p&gt;在 Linux 环境下，可以使用以下字符代替空格：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%09&lt;/code&gt; (Tab 键的 URL 编码)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${IFS}&lt;/code&gt; (Shell 的内部字段分隔符)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$IFS$9&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="3-绕过-flag-和-cat-限制"&gt;3. 绕过 &lt;code&gt;flag&lt;/code&gt; 和 &lt;code&gt;cat&lt;/code&gt; 限制
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文件名通配符&lt;/strong&gt;：用 &lt;code&gt;f*&lt;/code&gt; 或 &lt;code&gt;f???&lt;/code&gt; 代替 &lt;code&gt;flag&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;替代命令&lt;/strong&gt;：用 &lt;code&gt;tac&lt;/code&gt; (倒序读取), &lt;code&gt;more&lt;/code&gt;, &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;nl&lt;/code&gt; (带行号读取) 代替 &lt;code&gt;cat&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="构造-payload"&gt;构造 Payload
+&lt;/h4&gt;&lt;h5 id="利用反引号和-tac"&gt;利用反引号和 &lt;code&gt;tac&lt;/code&gt;
+&lt;/h5&gt;&lt;p&gt;利用 &lt;code&gt;echo&lt;/code&gt; 配合反引号执行命令。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=echo%09`tac%09f*`;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%09&lt;/code&gt; 绕过空格。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tac&lt;/code&gt; 绕过 &lt;code&gt;cat&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f*&lt;/code&gt; 绕过 &lt;code&gt;flag&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="web32"&gt;web32
+&lt;/h3&gt;&lt;h4 id="1-代码逻辑分析"&gt;1. 代码逻辑分析
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;：关闭错误报告，增加调试难度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;isset($_GET['c'])&lt;/code&gt;&lt;/strong&gt;：检查是否通过 GET 请求传入了参数 &lt;code&gt;c&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;preg_match(...)&lt;/code&gt;&lt;/strong&gt;：这是一个&lt;strong&gt;黑名单&lt;/strong&gt;过滤。如果你的输入包含以下任何字符或单词，程序就会停止：
+&lt;ul&gt;
+&lt;li&gt;关键字：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;特殊符号：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), ``` (反引号), &lt;code&gt;;&lt;/code&gt; (分号), &lt;code&gt;(&lt;/code&gt; (左括号)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;eval($c);&lt;/code&gt;&lt;/strong&gt;：如果绕过了过滤，参数 &lt;code&gt;c&lt;/code&gt; 的内容将作为 PHP 代码执行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="2-绕过思路"&gt;2. 绕过思路
+&lt;/h4&gt;&lt;p&gt;由于 &lt;code&gt;(&lt;/code&gt; 和 &lt;code&gt;;&lt;/code&gt; 被过滤，我们无法直接调用函数（如 &lt;code&gt;system()&lt;/code&gt;），也无法写出标准的多行语句。我们需要利用 PHP 的&lt;strong&gt;语言构造器&lt;/strong&gt;和&lt;strong&gt;短标签&lt;/strong&gt;特性。&lt;/p&gt;
+&lt;h5 id="a-绕过分号-"&gt;A. 绕过分号 &lt;code&gt;;&lt;/code&gt;
+&lt;/h5&gt;&lt;p&gt;在 PHP 的 &lt;code&gt;eval()&lt;/code&gt; 中，你可以使用 &lt;code&gt;?&amp;gt;&lt;/code&gt;（PHP 结束标签）来代替分号。&lt;/p&gt;
+&lt;h5 id="b-绕过括号-"&gt;B. 绕过括号 &lt;code&gt;(&lt;/code&gt;
+&lt;/h5&gt;&lt;p&gt;&lt;code&gt;include&lt;/code&gt; 和 &lt;code&gt;require&lt;/code&gt; 是 PHP 的&lt;strong&gt;语言构造器&lt;/strong&gt;，不是函数，因此调用它们不需要括号。 例如：&lt;code&gt;include $_GET[1]?&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id="c-绕过空格"&gt;C. 绕过空格
+&lt;/h5&gt;&lt;p&gt;在 Linux 环境下，URL 中可以使用 &lt;code&gt;%09&lt;/code&gt; (Tab 键) 或 &lt;code&gt;$IFS$9&lt;/code&gt; 等方式绕过。但在 PHP 代码中，如果 &lt;code&gt;include&lt;/code&gt; 后紧跟变量，有时连空格都不需要。&lt;/p&gt;
+&lt;h5 id="d-绕过-flag-等关键字"&gt;D. 绕过 &lt;code&gt;flag&lt;/code&gt; 等关键字
+&lt;/h5&gt;&lt;p&gt;最常用的技巧是&lt;strong&gt;参数逃逸&lt;/strong&gt;：在 &lt;code&gt;c&lt;/code&gt; 中执行一个不被过滤的语句，去调用另一个不受过滤限制的参数（如 &lt;code&gt;$_GET[1]&lt;/code&gt;）。&lt;/p&gt;
+&lt;h4 id="3-常见的攻击-payload"&gt;3. 常见的攻击 Payload
+&lt;/h4&gt;&lt;h5 id="利用-include-和伪协议读取文件"&gt;利用 &lt;code&gt;include&lt;/code&gt; 和伪协议读取文件
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：&lt;code&gt;c&lt;/code&gt; 的内容是 &lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;，没有触碰任何黑名单。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行&lt;/strong&gt;：它会包含参数 &lt;code&gt;1&lt;/code&gt; 指向的内容。由于 &lt;code&gt;flag.php&lt;/code&gt; 直接读取会被服务器解析而不显示源码，我们使用 &lt;code&gt;php://filter&lt;/code&gt; 将其转为 Base64 编码，读出来后再自行解码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="web33"&gt;web33
+&lt;/h3&gt;&lt;h4 id="1-核心过滤分析"&gt;1. 核心过滤分析
+&lt;/h4&gt;&lt;p&gt;正则表达式&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/flag|system|php|cat|sort|shell|\.| |\&amp;#39;|\`|echo|\;|\(|\&amp;#34;/i
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;过滤了以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;（堵死了直接读取和常用的系统调用）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;符号&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; (点)：无法直接写文件名或后缀。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt; &lt;/code&gt; (空格)：无法分隔命令参数。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'&lt;/code&gt; 和 &lt;code&gt;&amp;quot;&lt;/code&gt; (引号)：无法构造字符串。&lt;/li&gt;
+&lt;li&gt;`` `(反引号)：无法执行 Shell 命令。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt; (分号)：无法结束语句（&lt;strong&gt;关键限制&lt;/strong&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(&lt;/code&gt; (括号)：无法直接调用函数，如 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;eval()&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-绕过思路文件包含-include"&gt;2. 绕过思路：文件包含 (Include)
+&lt;/h4&gt;&lt;p&gt;在 PHP 中，&lt;code&gt;include&lt;/code&gt; 是一个&lt;strong&gt;语言结构&lt;/strong&gt;而非函数，因此它&lt;strong&gt;不需要括号&lt;/strong&gt;。利用这一点，我们可以尝试通过 &lt;code&gt;include&lt;/code&gt; 包含一个受控的外部变量。&lt;/p&gt;
+&lt;p&gt;由于分号 &lt;code&gt;;&lt;/code&gt; 被禁，我们可以利用 PHP 的&lt;strong&gt;闭合标签 &lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt; 来代替分号结束当前的语句。&lt;/p&gt;
+&lt;h4 id="payload-构造"&gt;Payload 构造：
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]&lt;/code&gt;&lt;/strong&gt;：&lt;code&gt;include&lt;/code&gt; 后面直接跟变量，绕过了括号限制；使用 &lt;code&gt;$_GET&lt;/code&gt; 数组绕过了引号限制（PHP 数组键名不加引号在某些配置下会当作字符串处理，或者利用 PHP 特性直接拼接）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：成功绕过分号 &lt;code&gt;;&lt;/code&gt; 限制，告诉 PHP 解析器当前代码段结束。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;1&lt;/code&gt; 参数&lt;/strong&gt;：因为正则只检测变量 &lt;code&gt;c&lt;/code&gt;，所以我们在参数 &lt;code&gt;1&lt;/code&gt; 中可以自由书写被禁用的关键词，如 &lt;code&gt;php&lt;/code&gt;、&lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;.&lt;/code&gt; 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;php://filter&lt;/code&gt;&lt;/strong&gt;：使用伪协议读取文件并将内容进行 Base64 编码。这是因为 &lt;code&gt;flag.php&lt;/code&gt; 通常包含 PHP 代码，直接 include 会被解析而不显示内容，编码后可以拿到源码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="web34"&gt;web34
+&lt;/h3&gt;&lt;p&gt;以下内容被禁止了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特殊字符&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), `` &lt;code&gt;(反引号),&lt;/code&gt;;&lt;code&gt;(分号),&lt;/code&gt;(&lt;code&gt;(左括号),&lt;/code&gt;:&lt;code&gt;(冒号),&lt;/code&gt;&amp;quot;` (双引号)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="解题思路反解绕过与通配符"&gt;解题思路：反解绕过与通配符
+&lt;/h4&gt;&lt;p&gt;由于括号 &lt;code&gt;(&lt;/code&gt; 被禁用，我们无法直接调用 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;eval()&lt;/code&gt; 等函数。然而，PHP 的 &lt;strong&gt;&lt;code&gt;include&lt;/code&gt;&lt;/strong&gt; 是一个&lt;strong&gt;语句&lt;/strong&gt;（Language Construct），它在不需要括号的情况下也可以工作。&lt;/p&gt;
+&lt;p&gt;我们可以通过以下链条实现绕过：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;利用 &lt;code&gt;include&lt;/code&gt; 包含伪协议&lt;/strong&gt;：由于无法直接写字符串，我们可以利用 PHP 的动态特性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;利用 &lt;code&gt;$_GET&lt;/code&gt; 传参绕过&lt;/strong&gt;：虽然变量 &lt;code&gt;$c&lt;/code&gt; 受到正则限制，但我们可以利用 PHP 不限制其他参数的特点，通过 &lt;code&gt;$_GET&lt;/code&gt; 传入我们要执行的恶意代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配合通配符或反撇号&lt;/strong&gt;：由于本题过滤了反撇号，我们需要寻找替代方案。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="payload"&gt;Payload
+&lt;/h4&gt;&lt;p&gt;可以尝试使用 &lt;strong&gt;PHP 伪协议配合数据流&lt;/strong&gt; 或者 &lt;strong&gt;包含 &lt;code&gt;/proc/self/fd&lt;/code&gt;&lt;/strong&gt; 等技巧。但最简单且最经典的方法是利用 &lt;code&gt;include&lt;/code&gt; 结合 &lt;code&gt;$_GET&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; 不需要括号。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$_GET[1]&lt;/code&gt; 避开了正则对变量 &lt;code&gt;$c&lt;/code&gt; 的内容检查。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; 是 PHP 的闭合标签，用于替代被禁用的分号 &lt;code&gt;;&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;amp;1=...&lt;/code&gt;&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;在参数 &lt;code&gt;1&lt;/code&gt; 中，我们可以自由使用被过滤的字符（如 &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;.&lt;/code&gt; 等）。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;php://filter&lt;/code&gt; 协议将 &lt;code&gt;flag.php&lt;/code&gt; 的内容进行 Base64 编码读出（防止被服务器直接解析而不显示）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="web35"&gt;Web35
+&lt;/h3&gt;&lt;h4 id="代码逻辑分析-1"&gt;代码逻辑分析
+&lt;/h4&gt;&lt;p&gt;代码通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数，并使用 &lt;code&gt;preg_match&lt;/code&gt; 进行了严格的黑名单过滤。被过滤的关键字和字符包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键字&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特殊字符&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), `` &lt;code&gt;(反引号),&lt;/code&gt;;&lt;code&gt;(分号),&lt;/code&gt;(&lt;code&gt;(左括号),&lt;/code&gt;:&lt;code&gt;(冒号),&lt;/code&gt;&amp;quot;&lt;code&gt;(双引号),&lt;/code&gt;&amp;lt;&lt;code&gt;(小于号),&lt;/code&gt;=` (等于号)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="核心难点"&gt;核心难点
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;禁用了括号 &lt;code&gt;(&lt;/code&gt;&lt;/strong&gt;：这意味着我们无法直接调用任何函数（如 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;passthru()&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁用了分号 &lt;code&gt;;&lt;/code&gt;&lt;/strong&gt;：这意味着我们只能执行一条语句，且不能使用传统的语句结束符。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁用了空格&lt;/strong&gt;：需要寻找替代符。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="解题思路利用-include-和伪协议"&gt;解题思路：利用 include 和伪协议
+&lt;/h4&gt;&lt;p&gt;由于禁用了括号，我们无法进行函数调用，但 PHP 中的 &lt;strong&gt;&lt;code&gt;include&lt;/code&gt;&lt;/strong&gt; 是一个&lt;strong&gt;语句&lt;/strong&gt;（language construct），它不需要括号即可运行。&lt;/p&gt;
+&lt;p&gt;我们可以利用 &lt;code&gt;include&lt;/code&gt; 配合 &lt;strong&gt;PHP 伪协议&lt;/strong&gt; 或者 &lt;strong&gt;通配符&lt;/strong&gt; 来绕过限制。&lt;/p&gt;
+&lt;h5 id="方案一利用-include-配合通配符推荐"&gt;方案一：利用 &lt;code&gt;include&lt;/code&gt; 配合通配符（推荐）
+&lt;/h5&gt;&lt;p&gt;在 PHP 中，如果开启了 &lt;code&gt;short_open_tag&lt;/code&gt;，我们可以通过 &lt;code&gt;include&lt;/code&gt; 包含一个包含通配符的文件路径。但在本题中，最巧妙的方法是利用 &lt;code&gt;include&lt;/code&gt; 包含 &lt;code&gt;/proc/self/fd/&lt;/code&gt; 下的文件或者利用临时文件，但在没括号的情况下，最简单的思路是：&lt;strong&gt;利用 PHP 标签绕过&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;由于禁用了许多关键字符，我们可以尝试使用 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt; 来闭合当前的 PHP 标签，然后直接书写我们想执行的内容。&lt;/p&gt;
+&lt;h5 id="方案二利用取反异或绕过如果环境允许"&gt;方案二：利用取反/异或绕过（如果环境允许）
+&lt;/h5&gt;&lt;p&gt;通常用于绕过正则限制，但因为禁用了括号，这条路很难走通。&lt;/p&gt;
+&lt;h5 id="方案三利用-include-包含-post-数据"&gt;方案三：利用 &lt;code&gt;include&lt;/code&gt; 包含 POST 数据
+&lt;/h5&gt;&lt;p&gt;这是最常用的技巧。虽然 &lt;code&gt;c&lt;/code&gt; 被过滤了很多，但我们可以让 &lt;code&gt;c&lt;/code&gt; 执行 &lt;code&gt;include&lt;/code&gt; 某个外部来源。&lt;/p&gt;
+&lt;h4 id="payload-构造-1"&gt;Payload 构造：
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;逻辑解析：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]&lt;/code&gt;&lt;/strong&gt;：&lt;code&gt;include&lt;/code&gt; 不需要括号，且后面可以直接跟变量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：用来替代分号 &lt;code&gt;;&lt;/code&gt;。在 PHP 中，结束标签 &lt;code&gt;?&amp;gt;&lt;/code&gt; 隐含了一个分号的作用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;绕过空格&lt;/strong&gt;：由于空格被过滤，但在 &lt;code&gt;include&lt;/code&gt; 和变量之间，如果环境支持，有时可以不加空格或利用某些特殊编码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;变量注入&lt;/strong&gt;：通过 &lt;code&gt;$_GET[1]&lt;/code&gt; 传入我们真正想执行的、带有敏感字符的 payload（如 &lt;code&gt;flag&lt;/code&gt;），因为 &lt;code&gt;preg_match&lt;/code&gt; 只检查变量 &lt;code&gt;c&lt;/code&gt;，不检查变量 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="web36"&gt;web36
+&lt;/h3&gt;&lt;h4 id="核心限制分析-1"&gt;核心限制分析
+&lt;/h4&gt;&lt;p&gt;正则表达式封锁了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键字&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt; 等（无法直接执行系统命令或读取文件）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;符号&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; (点) 和 &lt;code&gt;/&lt;/code&gt; (斜杠)：无法直接指定路径。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt; (分号)：无法结束语句。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(&lt;/code&gt; 和 &lt;code&gt;)&lt;/code&gt; (括号)：&lt;strong&gt;最致命的限制&lt;/strong&gt;，这意味着无法调用任何函数（如 &lt;code&gt;system()&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt; &lt;/code&gt; (空格)：无法分隔命令。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'&lt;/code&gt; 和 &lt;code&gt;&amp;quot;&lt;/code&gt; (引号)：无法定义字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数字&lt;/strong&gt;：&lt;code&gt;0-9&lt;/code&gt; 全被封死。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="绕过思路利用-php-语言特性"&gt;绕过思路：利用 PHP 语言特性
+&lt;/h4&gt;&lt;p&gt;既然无法使用括号调用函数，我们必须利用 PHP 中的 &lt;strong&gt;语言结构 (Language Constructs)&lt;/strong&gt;。&lt;code&gt;include&lt;/code&gt; 就是一个不需要括号且能执行代码的语言结构。&lt;/p&gt;
+&lt;h5 id="1-配合通配符与-_get-数组"&gt;1. 配合通配符与 &lt;code&gt;$_GET&lt;/code&gt; 数组
+&lt;/h5&gt;&lt;p&gt;虽然 &lt;code&gt;c&lt;/code&gt; 受到了严格过滤，但我们可以引入一个新的参数（如 &lt;code&gt;a&lt;/code&gt;），而 &lt;code&gt;a&lt;/code&gt; 是不受过滤的。 PHP 允许使用 &lt;code&gt;$_GET{a}&lt;/code&gt;（花括号）来代替 &lt;code&gt;$_GET['a']&lt;/code&gt;（方括号），从而绕过对引号的限制。&lt;/p&gt;
+&lt;h5 id="2-利用-php-闭合标签"&gt;2. 利用 PHP 闭合标签
+&lt;/h5&gt;&lt;p&gt;由于分号 &lt;code&gt;;&lt;/code&gt; 被禁用，我们可以使用 PHP 的结束标签 &lt;code&gt;?&amp;gt;&lt;/code&gt; 来强制结束当前的 &lt;code&gt;eval&lt;/code&gt; 语句，这在 PHP 中具有替代分号的作用。&lt;/p&gt;
+&lt;h4 id="最终-payload-构造"&gt;最终 Payload 构造
+&lt;/h4&gt;&lt;p&gt;我们可以利用 &lt;code&gt;include&lt;/code&gt; 包含一个由另一个参数传入的伪协议流。&lt;/p&gt;
+&lt;p&gt;Payload 示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET{a}?&amp;gt;&amp;amp;a=php://filter/read=convert.base64-encode/resource=flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;逻辑解析：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;c=include$_GET{a}?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;没有使用括号、分号、空格或数字，完全绕过了正则。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; 后面直接跟变量在 PHP 中是合法的。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; 代替了分号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;amp;a=...&lt;/code&gt;&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;后端脚本只检查 &lt;code&gt;$_GET['c']&lt;/code&gt;，不检查 &lt;code&gt;$_GET['a']&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;我们在 &lt;code&gt;a&lt;/code&gt; 中构造完整的读取逻辑：利用 &lt;code&gt;php://filter&lt;/code&gt; 将 &lt;code&gt;flag.php&lt;/code&gt; 的内容转为 Base64 编码输出（直接包含 &lt;code&gt;.php&lt;/code&gt; 文件会被执行而看不到源码，所以需要编码）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="web37"&gt;web37
+&lt;/h3&gt;&lt;h4 id="核心代码审计"&gt;核心代码审计
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 屏蔽所有报错信息。这意味着即使包含失败，页面也不会显示路径错误或权限错误，增加了盲测的难度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;这是代码的关键防御机制。使用正则表达式检查变量 &lt;code&gt;$c&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/i&lt;/code&gt; 修饰符表示&lt;strong&gt;不区分大小写&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;意图&lt;/strong&gt;：防止用户直接通过 &lt;code&gt;?c=flag.php&lt;/code&gt; 读取 flag。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;include($c);&lt;/code&gt;&lt;/strong&gt;: 漏洞触发点。PHP 会尝试将被包含文件作为 PHP 脚本执行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;echo $flag;&lt;/code&gt;&lt;/strong&gt;: 关键点。注意，这个 &lt;code&gt;echo&lt;/code&gt; 在 &lt;code&gt;include&lt;/code&gt; 之后。这意味着只要 &lt;code&gt;flag.php&lt;/code&gt; 被成功包含，其中定义的 &lt;code&gt;$flag&lt;/code&gt; 变量就会进入当前作用域，并被这行代码打印出来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="payload-1"&gt;payload
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZionKTs/Pg==
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
+&gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="web38"&gt;web38
+&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;这个正则表达式会检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含关键字 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;php&lt;/code&gt; 或 &lt;code&gt;file&lt;/code&gt;（不区分大小写）。&lt;/li&gt;
+&lt;li&gt;如果匹配到这些词，代码就不会执行 &lt;code&gt;include($c)&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;漏洞点&lt;/strong&gt;：&lt;code&gt;include($c)&lt;/code&gt;。这是一个文件包含函数，如果能绕过过滤并成功包含 &lt;code&gt;flag.php&lt;/code&gt;，由于代码最后有一句 &lt;code&gt;echo $flag;&lt;/code&gt;，变量 &lt;code&gt;$flag&lt;/code&gt;（通常定义在 &lt;code&gt;flag.php&lt;/code&gt; 中）就会被打印出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;做法和37差不多&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhKicpOyA/Pg==
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="web39"&gt;web39
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;$c = $_GET['c'];&lt;/code&gt;&lt;/strong&gt;：从 URL 参数 &lt;code&gt;c&lt;/code&gt; 获取输入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;第一道防线&lt;/strong&gt;。正则表达式检查输入中是否含有 &lt;code&gt;flag&lt;/code&gt;（不区分大小写）。如果你的输入里有这四个字母，直接出局。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;include($c.&amp;quot;.php&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;核心漏洞点 &amp;amp; 第二道防线&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这里存在文件包含漏洞（LFI）。&lt;/li&gt;
+&lt;li&gt;它强制在你的输入后面加上 &lt;code&gt;.php&lt;/code&gt; 后缀。这意味着如果你直接输入 &lt;code&gt;index&lt;/code&gt;，它会包含 &lt;code&gt;index.php&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 读取 &lt;code&gt;flag.php&lt;/code&gt; 的内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;挑战：&lt;/strong&gt; 不能输入 &lt;code&gt;flag&lt;/code&gt;，且要处理掉尾部的 &lt;code&gt;.php&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了绕过上述限制，我们使用 &lt;strong&gt;&lt;code&gt;data://&lt;/code&gt; 协议&lt;/strong&gt;。它允许我们将输入的数据当作“文件内容”让 PHP 去解析执行。&lt;/p&gt;
+&lt;p&gt;步骤一：绕过 &lt;code&gt;flag&lt;/code&gt; 关键字过滤&lt;/p&gt;
+&lt;p&gt;由于正则只检查变量 &lt;code&gt;$c&lt;/code&gt; 的内容，我们不能直接写 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技巧：使用通配符&lt;/strong&gt;。在 Linux Shell 指令中，&lt;code&gt;*&lt;/code&gt; 可以匹配任意字符。&lt;/li&gt;
+&lt;li&gt;我们将 &lt;code&gt;flag.php&lt;/code&gt; 写成 &lt;code&gt;fla*.php&lt;/code&gt; 或 &lt;code&gt;f*&lt;/code&gt;。这样在匹配正则时，字符串里没有 &lt;code&gt;flag&lt;/code&gt;，可以成功绕过。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;步骤二：处理强制添加的 &lt;code&gt;.php&lt;/code&gt; 后缀&lt;/p&gt;
+&lt;p&gt;题目代码是 &lt;code&gt;include($c.&amp;quot;.php&amp;quot;)&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你输入 &lt;code&gt;?c=data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;最终包含的语句变成了：&lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;.php&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关键原理：&lt;/strong&gt; PHP 在执行 &lt;code&gt;include&lt;/code&gt; 包含的代码时，一旦遇到 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; (PHP 闭合标签)&lt;/strong&gt;，就会认为 PHP 代码段已经结束。之后的任何内容（包括自动拼接的 &lt;code&gt;.php&lt;/code&gt;）都会被当作 &lt;strong&gt;普通字符串/HTML&lt;/strong&gt; 直接显示在页面上，而不会被当作 PHP 代码解析执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;payload&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain,&amp;lt;?php system(&amp;#34;tac fla*.php&amp;#34;)?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;注入参数&lt;/strong&gt;： URL 变为 &lt;code&gt;index.php?c=data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;正则校验&lt;/strong&gt;： &lt;code&gt;preg_match&lt;/code&gt; 检查字符串 &lt;code&gt;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;。 由于使用的是 &lt;code&gt;fla*&lt;/code&gt;，字符串中不包含完整的 &lt;code&gt;flag&lt;/code&gt;，&lt;strong&gt;校验通过&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码拼接&lt;/strong&gt;： PHP 执行 &lt;code&gt;include&lt;/code&gt; 语句： &lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伪协议解析&lt;/strong&gt;： PHP 解释器读取 &lt;code&gt;data://&lt;/code&gt; 流中的内容：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;代码部分&lt;/strong&gt;：&lt;code&gt;&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令执行&lt;/strong&gt;：&lt;code&gt;system&lt;/code&gt; 调用系统 Shell。&lt;code&gt;tac&lt;/code&gt; 命令反向读取文件（常用于绕过对 &lt;code&gt;cat&lt;/code&gt; 的过滤，且效果一致）。&lt;code&gt;fla*.php&lt;/code&gt; 被 Shell 解析为 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行结果&lt;/strong&gt;：&lt;code&gt;flag.php&lt;/code&gt; 的内容被打印到页面源码中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后续忽略&lt;/strong&gt;： 最后的 &lt;code&gt;.php&lt;/code&gt; 位于 &lt;code&gt;?&amp;gt;&lt;/code&gt; 之后，PHP 引擎将其视为纯文本直接输出，不影响代码逻辑。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="web40"&gt;web40
+&lt;/h3&gt;&lt;h4 id="第一步确认环境与注入点"&gt;第一步：确认环境与注入点
+&lt;/h4&gt;&lt;p&gt;打开题目页面，看到源码。首先确认变量 &lt;code&gt;c&lt;/code&gt; 是通过 GET 方式传入的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;注入点&lt;/strong&gt;：&lt;code&gt;URL/?c=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：读取服务器上的 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="第二步测试并寻找当前目录"&gt;第二步：测试并寻找“当前目录”
+&lt;/h4&gt;&lt;p&gt;在无法使用 &lt;code&gt;'.'&lt;/code&gt; 的情况下，我们需要确认 PHP 能否找到当前目录。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在浏览器输入： &lt;code&gt;?c=print_r(localeconv());&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;观察结果&lt;/strong&gt;：应该能看到一个数组输出。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;确认逻辑&lt;/strong&gt;：数组的第一个元素（&lt;code&gt;[decimal_point]&lt;/code&gt;）通常是 &lt;code&gt;.&lt;/code&gt;。 使用 &lt;code&gt;pos()&lt;/code&gt; 提取它：&lt;code&gt;?c=print_r(pos(localeconv()));&lt;/code&gt; 页面如果只显示一个 &lt;code&gt;.&lt;/code&gt;，说明这步成功了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="第三步查看文件列表"&gt;第三步：查看文件列表
+&lt;/h4&gt;&lt;p&gt;我们需要确认 &lt;code&gt;flag.php&lt;/code&gt; 到底在不在当前目录下，以及它排在第几个。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输入 Payload： &lt;code&gt;?c=print_r(scandir(pos(localeconv())));&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;观察返回的数组&lt;/strong&gt;，假设结果如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Array (
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [0] =&amp;gt; .
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [1] =&amp;gt; ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [2] =&amp;gt; flag.php
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [3] =&amp;gt; index.php
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;注意：此时 &lt;code&gt;flag.php&lt;/code&gt; 的索引是 &lt;strong&gt;2&lt;/strong&gt;。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="第四步移动指针定位文件"&gt;第四步：移动指针定位文件
+&lt;/h4&gt;&lt;p&gt;这是最关键的一步。我们需要让 PHP 的“准星”对准 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;尝试反转数组&lt;/strong&gt;： &lt;code&gt;?c=print_r(array_reverse(scandir(pos(localeconv()))));&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;结果&lt;/strong&gt;：&lt;code&gt;Array ( [0] =&amp;gt; index.php [1] =&amp;gt; flag.php [2] =&amp;gt; .. [3] =&amp;gt; . )&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分析&lt;/strong&gt;：此时 &lt;code&gt;flag.php&lt;/code&gt; 排在&lt;strong&gt;第二个&lt;/strong&gt;位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用 &lt;code&gt;next()&lt;/code&gt; 移动指针&lt;/strong&gt;： 在 PHP 中，数组刚产生时指针指向第一个（&lt;code&gt;index.php&lt;/code&gt;）。调用 &lt;code&gt;next()&lt;/code&gt; 后，指针会向后移动一位，指向 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="第五步读取文件源码最终-payload"&gt;第五步：读取文件源码（最终 Payload）
+&lt;/h4&gt;&lt;p&gt;现在万事俱备，我们要把 &lt;code&gt;print_r&lt;/code&gt; 换成能读取文件内容的函数（如 &lt;code&gt;show_source&lt;/code&gt; 或 &lt;code&gt;highlight_file&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作步骤：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在浏览器地址栏输入最终 Payload：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=show_source(next(array_reverse(scandir(pos(localeconv())))));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;按下回车&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查看结果&lt;/strong&gt;：页面上会直接喷出 &lt;code&gt;flag.php&lt;/code&gt; 的源代码（通常带有语法高亮）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
 &lt;/h1&gt;&lt;h2 id="sql注入"&gt;SQL注入
 &lt;/h2&gt;&lt;h3 id="sql注入的起因"&gt;SQL注入的起因
 &lt;/h3&gt;&lt;p&gt;**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：&lt;strong&gt;数据与代码边界模糊&lt;/strong&gt;。&lt;/p&gt;
@@ -940,707 +2012,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)不存在! &amp;lt;br&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>CTFshow</title><link>https://mawei.org.cn/p/ctfshow/</link><pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/ctfshow/</guid><description>&lt;h2 id="信息搜集"&gt;信息搜集
-&lt;/h2&gt;&lt;h3 id="web1"&gt;web1
-&lt;/h3&gt;&lt;p&gt;右键打开网页源代码&lt;/p&gt;
-&lt;h3 id="web2"&gt;web2
-&lt;/h3&gt;&lt;p&gt;右键打不开，使用快捷键&lt;code&gt;Command + Option + U&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="web3"&gt;web3
-&lt;/h3&gt;&lt;p&gt;F12打开开发者工具，定位到网络面板，展开所有的响应标头，向下滑找到flag&lt;/p&gt;
-&lt;p&gt;在 Web 里，“抓包”就是把浏览器和服务器之间的 HTTP/HTTPS 请求拦下来、看清楚、必要时改一改的过程，用来分析网站有哪些接口、传了什么参数、Cookie 里有什么等。最基础的是用浏览器自带的 F12 开发者工具里的 Network 面板：刷新页面或执行操作，就能看到每个请求的 URL、方法（GET/POST）、参数、请求头和响应内容，这是做信息搜集、理解网站数据流的必备手段。更进一步会用到 Burp Suite、Fiddler、Charles、mitmproxy 等“抓包代理”工具，把浏览器流量导到它们身上，这样不仅能查看，还能拦截并修改请求（比如改参数、改 Content-Type、伪造前端发不出来的奇怪请求），在 CTF 和 Web 安全测试中，抓包几乎是所有漏洞利用的起点。 这道入门题目里面，利用开发者工具的网络面板，对页面进行刷新，查看https://0853d982-ccf9-40d3-bfc0-0c86f69a89b2.challenge.ctf.show/这条记录，明显看到其响应体里的flag信息ctfshow{&amp;hellip;}， 通过这次题目训练，对抓包有了较为基础的理解&lt;/p&gt;
-&lt;h3 id="web4"&gt;web4
-&lt;/h3&gt;&lt;p&gt;题目提示robos.txt可能泄露信息，尝试访问url/robots.txt,响应结果出现flagishere.txt文件，又尝试访问url/flagishere.txt，拿到flag&lt;/p&gt;
-&lt;p&gt;robots.txt 是放在网站根目录下的一个纯文本文件，相当于一个用来告诉搜索引擎爬虫“哪些地方可以爬，哪些地方不要爬” 的说明书。这道入门题目中 ，提示了robots.txt的信息，进而可以在题目url中添加robots.txt的后缀，获取到/flagishere.txt的关键信息，继续访问/flagishere.txt的内容，获取到flag&lt;/p&gt;
-&lt;h3 id="web5"&gt;web5
-&lt;/h3&gt;&lt;p&gt;根据题目提示：phps源码泄露有时候能帮上忙，在地址栏输入/index.phps，下载文件，打开后发现flag&lt;/p&gt;
-&lt;p&gt;phps泄露一般指的是服务器把 &amp;ldquo;.phps&amp;rdquo; 结尾的 PHP 源码文件直接当“高亮源码”给你看了，导致代码泄露，在ctf中，主要包括两种方式第一种比较基础，为直接修改后缀，添加index.phps的后缀可以直接下载php源码，进而直接获取flag等直接信息；第二种稍为进阶，利用/ robots.txt / 备份目录。这道题目提示为phps源码泄露，直接利用第一种方式，添加后缀直接下载源码，获取到flag信息&lt;/p&gt;
-&lt;h3 id="web6"&gt;web6
-&lt;/h3&gt;&lt;p&gt;在url后加www.zip，然后得到文本文档，这个题需要注意的是点开文本文档是拿不到flag，需要把文件名复制到url后面回车得到&lt;/p&gt;
-&lt;p&gt;dirsearch脚本的初步使用与解压源码 dirsearch:一个用字典暴力枚举 Web 目录 / 文件的 Python 脚本;www.zip:把整站源码打包备份成 &lt;a class="link" href="http://www.zip/" target="_blank" rel="noopener"
-&gt;www.zip&lt;/a&gt; 放在网站根目录，却没做好访问控制，结果你可以直接通过 URL 把它下回来。先扫描，后访问，得到对应的flag信息。&lt;/p&gt;
-&lt;h3 id="web7"&gt;web7
-&lt;/h3&gt;&lt;p&gt;直接访问url/.git/index.php&lt;/p&gt;
-&lt;p&gt;版本控制与git仓库的初步理解 Git 是一个分布式的版本控制系统，广泛应用于代码管理。它允许开发者追踪项目文件的更改历史，并协作开发。 Git 泄露 、版本控制漏洞是常见的安全问题，在开发者没有适当配置 Git 的情况下，直接利用dirsearch进行扫描，得到对应的git文件与ok状态的访问地址；之后直接进行访问，得到对应的flag&lt;/p&gt;
-&lt;h3 id="web8"&gt;web8
-&lt;/h3&gt;&lt;p&gt;直接访问url/.svn/&lt;/p&gt;
-&lt;p&gt;版本控制与svn仓库的初步理解 在 CTF Web 题中， SVN（Subversion）和版本控制系统经常作为 漏洞和信息泄露的来源 ，类似于 Git，但其工作方式和使用场景有所不同。通过对 SVN 版本控制系统的配置不当或目录泄露，攻击者可以访问到项目的源代码、历史记录、敏感信息甚至是 flag。 svn泄露 、版本控制漏洞是常见的安全问题，在开发人员和系统管理员忽略配置 svn的情况下，直接利用dirsearch进行扫描，得到对应的.svn文件与ok状态的访问地址；之后直接进行访问，得到对应的flag&lt;/p&gt;
-&lt;h3 id="web9"&gt;web9
-&lt;/h3&gt;&lt;p&gt;直接访问url/index.php.swp&lt;/p&gt;
-&lt;p&gt;vim缓存信息泄露的初步理解 “vim 缓存信息泄露”，本质就是出题人 / 开发在服务器上用 vim 编辑源码 ，留下了各种 编辑器缓存 / 备份文件 （&lt;code&gt;.swp&lt;/code&gt;、&lt;code&gt;~&lt;/code&gt;、&lt;code&gt;.bak&lt;/code&gt; 等），结果这些文件也被 Web 服务器当成普通文件对外开放了，导致 &lt;strong&gt;源代码泄露&lt;/strong&gt; 。 根据提示信息，采取手动猜路径的方法，直接得到.swp文件，得到flag。&lt;/p&gt;
-&lt;h3 id="web10"&gt;web10
-&lt;/h3&gt;&lt;p&gt;F12,cookie中包含flag，url解码&lt;/p&gt;
-&lt;p&gt;cookie的初步理解 在ctf中， cooki相当于“服务器放在你浏览器里的小纸条，你用它上交‘身份’，而我们要想法看懂、改掉甚至伪造这张纸条。 根据题目中对于cookie的提示，先采用最简单的抓包方式，直接利用f12开发者工具进行抓包，获取到对应的信息如下，从中可以明显看到cookie中包含flag信息&lt;/p&gt;
-&lt;h3 id="web11"&gt;web11
-&lt;/h3&gt;&lt;p&gt;通过dns检查查询flag &lt;a class="link" href="https://zijian.aliyun.com/" target="_blank" rel="noopener"
-&gt;https://zijian.aliyun.com/&lt;/a&gt; TXT 记录，一般指为某个主机名或域名设置的说明。&lt;/p&gt;
-&lt;p&gt;查找flag.ctfshow.com域名下的txt记录&lt;/p&gt;
-&lt;p&gt;由于动态更新，txt记录会变，最终flag flag{just_seesee}&lt;/p&gt;
-&lt;h3 id="web12"&gt;web12
-&lt;/h3&gt;&lt;p&gt;查看robots.txt文件&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User-agent: *
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Disallow: /admin/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;查看源代码找到密码，访问url/admin/输入用户名：admin 和密码&lt;/p&gt;
-&lt;h3 id="web13"&gt;web13
-&lt;/h3&gt;&lt;p&gt;根据题目提示 技术文档 在页面下面发现 document 下载发现里面存在后台地址和用户名密码登录成功获 得flag&lt;/p&gt;
-&lt;h3 id="web14"&gt;web14
-&lt;/h3&gt;&lt;p&gt;根据提示，打开网页源码，搜索editor，访问editor发现编辑器，在上传文件的图片空间里，/var/www/html下面发现flag url/nothinghere/fl0000g.txt，访问目录得到flag&lt;/p&gt;
-&lt;h3 id="web15"&gt;web15
-&lt;/h3&gt;&lt;p&gt;根据提示在页面下方发现QQ号码，url/admin，忘记密码，通过QQ号码查找到地址在西安，输入然后重置密码，获得flag&lt;/p&gt;
-&lt;h3 id="web16"&gt;web16
-&lt;/h3&gt;&lt;p&gt;url/tz.php 发现PHPINFO能点进去找到flag&lt;/p&gt;
-&lt;p&gt;根据题目对于php探针的提示，同时了解到php相关概念后，采用最基础的直接猜路径，在靶场url后添加 &lt;code&gt;/phpinfo.php&lt;/code&gt;等探针类型依次尝试，最后添加/tz.php后访问成功，确定该web网页使用的是雅黑php探针;之后继续查看phpinfo，经过一番搜索后得到flag&lt;/p&gt;
-&lt;h3 id="web17"&gt;web17
-&lt;/h3&gt;&lt;p&gt;下载了dirsearch，扫描url得到[20:13:23] 200 - 934B - /backup.sql ，直接访问url/backup.sql，下载sql文件得到flag&lt;/p&gt;
-&lt;h3 id="web18"&gt;web18
-&lt;/h3&gt;&lt;p&gt;查看源代码，发现&lt;a class="link" href="https://463f16d3-48d8-4451-938b-586ee7ce35d9.challenge.ctf.show/js/Flappy_js.js" target="_blank" rel="noopener"
-&gt;js/Flappy_js.js&lt;/a&gt; ，在里面发现\u4f60\u8d62\u4e86\uff0c\u53bb\u5e7a\u5e7a\u96f6\u70b9\u76ae\u7231\u5403\u76ae\u770b\u770b直接丢给CyberChef，解出你赢了，去幺幺零点皮爱吃皮看看，url/110.php，得到flag&lt;/p&gt;
-&lt;h3 id="web19"&gt;web19
-&lt;/h3&gt;&lt;p&gt;查看源代码，发现$u===&amp;lsquo;admin&amp;rsquo; &amp;amp;&amp;amp; $p ===&amp;lsquo;a599ac85a73384ee3219fa684296eaa62667238d608efa81837030bd1ce1bf04，密文为AES加密，密钥为key = &amp;ldquo;0000000372619038&amp;rdquo;;偏移量为iv = &amp;ldquo;ilove36dverymuch&amp;rdquo;;模式为CBC填充为ZeroPadding编码为Hex，通过CyberChef解出密码，回到原页面输入用户名和密码得到flag&lt;/p&gt;
-&lt;h3 id="web20"&gt;web20
-&lt;/h3&gt;&lt;p&gt;用dirsearch扫描，得到[19:27:25] 301 - 169B - /db -&amp;gt; &lt;a class="link" href="http://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/" target="_blank" rel="noopener"
-&gt;http://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/&lt;/a&gt;，再dirsearch -u &lt;a class="link" href="https://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/" target="_blank" rel="noopener"
-&gt;https://f83cd3ef-7cf5-4e10-a200-c49856940f2d.challenge.ctf.show/db/&lt;/a&gt; -e sql,bak,txt,zip,db,sqlite -x 400,403,404，得到[19:29:20] 200 - 348KB - /db/db.mdb ，直接url//db/db.mdb ，下载一个db.mdb文件，用mdbtools直接strings db.mdb | grep -i &amp;ldquo;flag&amp;quot;找到flag（mac打不开，win直接用记事本打开检索flag）&lt;/p&gt;
-&lt;h3 id="知识点汇总"&gt;知识点汇总
-&lt;/h3&gt;&lt;h4 id="1-基础源代码与客户端行为-web-1-3-10-18-19"&gt;1. 基础源代码与客户端行为 (Web 1-3, 10, 18-19)
-&lt;/h4&gt;&lt;p&gt;这部分考查对浏览器基本工具和前端逻辑的理解。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;查看源码&lt;/strong&gt;：了解 HTML 结构、注释、隐藏表单项。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;控制台约束绕过&lt;/strong&gt;：学会使用快捷键（&lt;code&gt;Cmd/Ctrl + Opt + U&lt;/code&gt;）或 &lt;code&gt;view-source:&lt;/code&gt; 协议绕过右键禁用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开发者工具 (F12)&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Network 面板&lt;/strong&gt;：观察 HTTP 响应头（Headers）和响应体（Body），识别 Flag 或敏感接口。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Application 面板&lt;/strong&gt;：查看 &lt;strong&gt;Cookie&lt;/strong&gt;、LocalStorage 存储的敏感信息。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;前端逻辑分析&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;JS 逆向/分析&lt;/strong&gt;：查看 &lt;code&gt;.js&lt;/code&gt; 文件中的硬编码逻辑（如 Web 18 的 Unicode 编码、Web 19 的 AES 加密参数）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;编码转换&lt;/strong&gt;：识别 Unicode（&lt;code&gt;\uXXXX&lt;/code&gt;）、Base64、Hex 等，并学会使用 &lt;strong&gt;CyberChef&lt;/strong&gt; 进行解码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h4 id="2-敏感文件与配置泄露-web-4-9-17-20"&gt;2. 敏感文件与配置泄露 (Web 4-9, 17, 20)
-&lt;/h4&gt;&lt;p&gt;开发或运维在配置服务器时的疏忽，导致了后端信息的直接暴露。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;爬虫规则泄露&lt;/strong&gt;：&lt;code&gt;/robots.txt&lt;/code&gt; 本意是引导爬虫，却常泄露后台目录（如 &lt;code&gt;/admin/&lt;/code&gt;）或备份文件名。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;源码泄露类型&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;PHPS&lt;/strong&gt;：&lt;code&gt;.phps&lt;/code&gt; 是 PHP 源码的高亮显示文件。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;备份文件&lt;/strong&gt;：常见的 &lt;code&gt;.bak&lt;/code&gt;、&lt;code&gt;.zip&lt;/code&gt;、&lt;code&gt;.tar.gz&lt;/code&gt;、&lt;code&gt;.sql&lt;/code&gt;（Web 17 数据库备份）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;编辑器缓存&lt;/strong&gt;：Vim 异常退出产生的 &lt;code&gt;.swp&lt;/code&gt; 文件（如 &lt;code&gt;/index.php.swp&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据库文件&lt;/strong&gt;：&lt;code&gt;.mdb&lt;/code&gt; (Access)、&lt;code&gt;.sqlite&lt;/code&gt;、&lt;code&gt;.db&lt;/code&gt; 等（Web 20）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;目录扫描工具&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Dirsearch / Gobuster&lt;/strong&gt;：使用字典暴力枚举隐藏目录，这是 Web 安全测试的“基操”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h4 id="3-版本控制系统泄露-web-7-8"&gt;3. 版本控制系统泄露 (Web 7-8)
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Git 泄露&lt;/strong&gt;：&lt;code&gt;.git/&lt;/code&gt; 目录如果未删除，攻击者可以通过特定的工具（如 GitHack）还原整个项目的源代码和提交历史。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SVN 泄露&lt;/strong&gt;：&lt;code&gt;.svn/&lt;/code&gt; 目录同样包含代码版本信息。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h4 id="4-域名与服务侦察-web-11-16"&gt;4. 域名与服务侦察 (Web 11, 16)
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DNS 记录查询&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;TXT 记录&lt;/strong&gt;：常用于配置 SPF 或域名校验，但也常被 CTF 题目用来藏匿 Flag。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PHP 探针&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;如 &lt;code&gt;tz.php&lt;/code&gt;（雅黑探针）、&lt;code&gt;phpinfo.php&lt;/code&gt;。它们会暴露服务器的绝对路径、PHP 版本、已安装插件等敏感环境信息，是提权和进一步渗透的重要依据。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h4 id="5-后台管理与逻辑缺陷-web-12-15"&gt;5. 后台管理与逻辑缺陷 (Web 12-15)
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;后台地址搜集&lt;/strong&gt;：通过 &lt;code&gt;robots.txt&lt;/code&gt;、技术文档、甚至页面底部的版权信息或联系方式（如 QQ 号）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;弱口令/硬编码密码&lt;/strong&gt;：在 JS 代码或公开的说明文档中直接寻找默认密码。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;密码找回漏洞&lt;/strong&gt;：通过社工手段（如 Web 15 的 QQ 归属地查询）获取密保问题的答案，重置后台管理员密码。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;富文本编辑器漏洞&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Editor 路径&lt;/strong&gt;：如 UEditor、KindEditor。通过其内置的文件浏览器或图片上传管理功能（Web 14），可以直接遍历服务器目录。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="爆破"&gt;爆破
-&lt;/h2&gt;&lt;h3 id="web21"&gt;web21
-&lt;/h3&gt;&lt;p&gt;前提条件：已知用户名是admin。打开代理和Burp Suite，随便输入密码123尝试登陆同时利用Burp Suite抓包。解码发现格式为admin:123，可以进行爆破。爆破原理：利用多个payload（进攻指令），对返回数据进行对比分析，得到唯一不同的就是可能的密码。将所抓包send to intruder，选择sniper模式。加载题目所给字典，设置前缀admin:（因为字典中只包含了密码），并对其进行base64编码（匹配Authorization请求头格式）。进行爆破，找到状态不同的即为正确答案。解码，登录，找到flag。&lt;/p&gt;
-&lt;h3 id="web22"&gt;web22
-&lt;/h3&gt;&lt;p&gt;域名更新后，flag.ctf.show域名失效，内容是flag{ctf_show_web}&lt;/p&gt;
-&lt;h3 id="web23"&gt;web23
-&lt;/h3&gt;&lt;p&gt;写脚本，但我不会，得到/?token=422&lt;/p&gt;
-&lt;h3 id="web24"&gt;web24
-&lt;/h3&gt;&lt;p&gt;终端运行php -r &amp;lsquo;mt_srand(372619038); echo mt_rand();&amp;lsquo;得到1155388967**%** ，然后填入?r=1155388967得到flag&lt;/p&gt;
-&lt;h3 id="web25"&gt;web25
-&lt;/h3&gt;&lt;p&gt;mt_scrand(seed)这个函数的意思，是通过分发seed种子，然后种子有了后，靠mt_rand()生成随机 数。 在之前自己还以为需要暴力破解cookie,最后师傅们给我介绍了一个脚本，专门用来跑mt_srand()种子和 mt_rand()随机数的 这里自己解释一下为什么每一次的mt_rand()+mt_rand()不是第一次的随机数相加？？ 因为生成的随机数可以说是一个线性变换（实际上非常复杂）的每一次的确定的但是每一次是不一样的，所以不能 进行第一次*2就得到mt_rand()+mt_rand() 使用说只要我们得到种子就可以在本地进行获得自己想要的值 解题：通过随机数来寻找种子 我们让 ?r=0 得到随机数。这里我得到的是 183607393 每一次不一样(因为flag值在变化) 然后下载 php_mt_seed4.0 我们在linux下面使用 gcc进行编译 gcc php_mt_seed.c -o php_mt_seed 之后运行脚本添加随机数 ./php_mt_seed 183607393&lt;/p&gt;
-&lt;p&gt;找到对应的版本这里自己的运气好第一个出来的自己验证了一下发现就是这个 注：可能存在多个种子需要自己进行判断 通过种子找到第一个随机数就是上面的随机数。&lt;/p&gt;
-&lt;p&gt;payload： ?r=183607393 Cookie: token=794171094&lt;/p&gt;
-&lt;h3 id="web26"&gt;web26
-&lt;/h3&gt;&lt;p&gt;打开bp抓包点击安装后的请求包，发送至Repeater重发器模块，点击Send发送，查看响应包，即可获取flag&lt;/p&gt;
-&lt;h3 id="web27"&gt;web27
-&lt;/h3&gt;&lt;p&gt;burpsuit爆破，学生学籍信息查询系统可以查询学号，录取名单有姓名和身份证号码（不全）所以爆破身份证号，得到身份证号：621022199002015237登录得到学号，然后登录得到flag&lt;/p&gt;
-&lt;p&gt;这题主要是身份证出生日期爆破，先拦截然后将出生日期设置为变量，attack type默认为狙击手模式，Payloads选项卡中payload type改为Dates模式，payload settings中为Dates设置起始和终止日期，注意Format项改为自定义的yyyyMMdd，然后开始爆破，爆破结束后length字段降序排序，相应包最长的应该就是响应成功的包&lt;/p&gt;
-&lt;h3 id="web28"&gt;web28
-&lt;/h3&gt;&lt;p&gt;打开靶机，发现跳转到url/0/1/2.txt，发现上两级目录都是纯数字，猜测爆破一下目录试试，打开bp抓到请求包，发送到Intruder攻击模块将目录中的0和1设置为变量，Attack type设置为Cluster bomb模式，Payloads中两个Payload type都改为Numbers，给Numbers设置初始值0和终止值为100，开始爆破，爆破结束后，将Status code字段升序排序，找到一个状态码为200的响应包，查看响应包，可获取falg&lt;/p&gt;
-&lt;h3 id="知识点汇总-1"&gt;知识点汇总
-&lt;/h3&gt;&lt;h4 id="1-http-认证与-base64-爆破-web-21"&gt;1. HTTP 认证与 Base64 爆破 (Web 21)
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Authorization 头&lt;/strong&gt;：Web 21 涉及的是 HTTP Basic 认证。浏览器会将用户名和密码以 &lt;code&gt;admin:password&lt;/code&gt; 的格式拼接，再进行 Base64 编码。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intruder 技巧&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Payload Processing&lt;/strong&gt;：在 Burp 中，不能直接爆破密码，需要使用 &lt;code&gt;Add prefix (admin:)&lt;/code&gt;（添加前缀）和 &lt;code&gt;Base64-encode&lt;/code&gt;（编码）处理插件，使 Payload 符合服务器要求的格式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="2-php-伪随机数漏洞-web-23-24-25"&gt;2. PHP 伪随机数漏洞 (Web 23, 24, 25)
-&lt;/h4&gt;&lt;p&gt;这是 CTF Web 题中的经典考点。**“伪”**随机意味着它是可以被预测的。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;种子 (Seed) 与序列&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mt_srand($seed)&lt;/code&gt;：设置随机数种子。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mt_rand()&lt;/code&gt;：根据种子生成随机数。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心原理&lt;/strong&gt;：只要种子确定，生成的随机数序列（第一个、第二个&amp;hellip;第 n 个）就是完全固定的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;逆推种子 (php_mt_seed)&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;如果你知道 &lt;code&gt;mt_rand()&lt;/code&gt; 输出的一个或多个结果，就可以使用工具（如 &lt;code&gt;php_mt_seed&lt;/code&gt;）通过穷举法逆向推算出原始的 &lt;code&gt;$seed&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跨请求保持&lt;/strong&gt;：在 Web 25 中，种子一旦在当前会话中固定，后续的所有 &lt;code&gt;mt_rand()&lt;/code&gt; 调用都遵循该种子的序列。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="3-复杂爆破模式-web-27-28"&gt;3. 复杂爆破模式 (Web 27, 28)
-&lt;/h4&gt;&lt;p&gt;Burp Suite 的 &lt;strong&gt;Attack Type&lt;/strong&gt; 选择是解题效率的关键：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Sniper (狙击手)&lt;/strong&gt;：一个变量，或者多个变量轮流爆破（最常用）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cluster Bomb (集束炸弹)&lt;/strong&gt;：多个变量的&lt;strong&gt;笛卡尔积&lt;/strong&gt;。例如 Web 28 中，目录 A 是 0-100，目录 B 是 0-100，总共会尝试 $100 \times 100 = 10,000$ 次请求。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Payload Types&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Dates (日期)&lt;/strong&gt;：专门用于爆破身份证号、生日等（Web 27）。可以自定义格式如 &lt;code&gt;yyyyMMdd&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Numbers (数字)&lt;/strong&gt;：用于爆破学号、ID、目录名。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="4-逻辑绕过与安装包残留-web-26"&gt;4. 逻辑绕过与安装包残留 (Web 26)
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;安装文件利用&lt;/strong&gt;：很多 CMS 在安装成功后不会自动删除 &lt;code&gt;install.php&lt;/code&gt; 或相关逻辑。Web 26 提示我们，通过抓取安装过程中的请求并重发（Repeater），可能绕过前端限制直接获取系统初始化的敏感信息（如 Flag）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;维度&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;掌握程度&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;关键工具/命令&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;爆破技术&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;熟练掌握多字段、特定格式、日期格式爆破&lt;/td&gt;
-&lt;td&gt;Burp Suite (Intruder: Cluster Bomb)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;加密处理&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;了解 HTTP Basic 认证流程&lt;/td&gt;
-&lt;td&gt;Base64 编码/解码&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;随机数安全&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;理解种子泄露导致随机数可预测&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;php_mt_seed&lt;/code&gt;, &lt;code&gt;mt_srand&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;信息分析&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;能从录取名单等零散信息中提取爆破字典&lt;/td&gt;
-&lt;td&gt;观察力 + 构造字典能力&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="命令执行"&gt;命令执行
-&lt;/h2&gt;&lt;h3 id="web29"&gt;web29
-&lt;/h3&gt;&lt;h4 id="代码逻辑分析"&gt;代码逻辑分析
-&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 关闭错误报告，防止报错信息泄露。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(isset($_GET['c']))&lt;/code&gt;&lt;/strong&gt;: 检查是否通过 GET 请求传递了参数 &lt;code&gt;c&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;: 核心防御逻辑。使用正则表达式检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含 &amp;ldquo;flag&amp;rdquo; 字符串（&lt;code&gt;i&lt;/code&gt; 表示不区分大小写）。如果不包含，则执行下一步。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;eval($c);&lt;/code&gt;&lt;/strong&gt;: 这是一个极其危险的函数，它会将字符串 &lt;code&gt;$c&lt;/code&gt; 当作 PHP 代码直接执行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;highlight_file(__FILE__);&lt;/code&gt;&lt;/strong&gt;: 如果没有参数 &lt;code&gt;c&lt;/code&gt;，则显示当前源代码。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="绕过思路"&gt;绕过思路
-&lt;/h4&gt;&lt;p&gt;由于后端过滤了 &lt;code&gt;flag&lt;/code&gt; 这个词，我们无法直接使用类似 &lt;code&gt;system(&amp;quot;cat flag.php&amp;quot;);&lt;/code&gt; 的命令。我们需要通过一些技巧来绕过正则检测。&lt;/p&gt;
-&lt;h5 id="1-使用通配符-wildcards"&gt;1. 使用通配符 (Wildcards)
-&lt;/h5&gt;&lt;p&gt;在 Linux Shell 中，&lt;code&gt;?&lt;/code&gt; 匹配单个字符，&lt;code&gt;*&lt;/code&gt; 匹配任意字符。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=system(&amp;quot;cat f*&amp;quot;);&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=system(&amp;quot;cat fla?.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="2-使用-php-变量拼接"&gt;2. 使用 PHP 变量拼接
-&lt;/h5&gt;&lt;p&gt;我们可以将字符串拆开，避开正则检测。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Payload:&lt;/strong&gt; &lt;code&gt;?c=$a=&amp;quot;fla&amp;quot;;$b=&amp;quot;g.php&amp;quot;;system(&amp;quot;cat &amp;quot;.$a.$b);&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这两种都可以，但要查看源代码才能得到flag&lt;/p&gt;
-&lt;h3 id="web30"&gt;web30
-&lt;/h3&gt;&lt;p&gt;代码的核心逻辑是：通过 &lt;code&gt;GET&lt;/code&gt; 方式接收参数 &lt;code&gt;c&lt;/code&gt;，在过滤了关键词 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;system&lt;/code&gt; 和 &lt;code&gt;php&lt;/code&gt;（不区分大小写）后，将内容传递给 &lt;code&gt;eval()&lt;/code&gt; 执行。&lt;/p&gt;
-&lt;h4 id="第一步查看目录文件"&gt;第一步：查看目录文件
-&lt;/h4&gt;&lt;p&gt;首先确定 flag 文件的确切名称。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nf"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id="第二步读取文件内容"&gt;第二步：读取文件内容
-&lt;/h4&gt;&lt;p&gt;假设目录下有 &lt;code&gt;flag.php&lt;/code&gt;，使用通配符绕过：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=passthru(&amp;#34;cat f*&amp;#34;);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;查看源代码&lt;/p&gt;
-&lt;h3 id="web31"&gt;web31
-&lt;/h3&gt;&lt;p&gt;代码的核心逻辑是：通过 &lt;code&gt;GET&lt;/code&gt; 方式接收参数 &lt;code&gt;c&lt;/code&gt;，在经过一个正则表达式过滤后，使用 &lt;code&gt;eval()&lt;/code&gt; 执行该字符串。&lt;/p&gt;
-&lt;h4 id="核心限制分析"&gt;核心限制分析
-&lt;/h4&gt;&lt;p&gt;正则表达式 &lt;code&gt;/flag|system|php|cat|sort|shell|\.| |\’/i&lt;/code&gt; 禁用了以下内容：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;（且不区分大小写）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特殊符号&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="绕过思路-1"&gt;绕过思路
-&lt;/h4&gt;&lt;h5 id="1-绕过-system-限制"&gt;1. 绕过 &lt;code&gt;system&lt;/code&gt; 限制
-&lt;/h5&gt;&lt;p&gt;虽然 &lt;code&gt;system&lt;/code&gt; 被禁用了，但 PHP 中还有其他执行系统命令的函数：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;passthru()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;exec()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;shell_exec()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;反引号 (```)&lt;/strong&gt;：这是 &lt;code&gt;shell_exec()&lt;/code&gt; 的快捷方式，非常适合绕过关键字过滤。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="2-绕过空格限制"&gt;2. 绕过空格限制
-&lt;/h5&gt;&lt;p&gt;在 Linux 环境下，可以使用以下字符代替空格：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;%09&lt;/code&gt; (Tab 键的 URL 编码)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;${IFS}&lt;/code&gt; (Shell 的内部字段分隔符)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$IFS$9&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="3-绕过-flag-和-cat-限制"&gt;3. 绕过 &lt;code&gt;flag&lt;/code&gt; 和 &lt;code&gt;cat&lt;/code&gt; 限制
-&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;文件名通配符&lt;/strong&gt;：用 &lt;code&gt;f*&lt;/code&gt; 或 &lt;code&gt;f???&lt;/code&gt; 代替 &lt;code&gt;flag&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;替代命令&lt;/strong&gt;：用 &lt;code&gt;tac&lt;/code&gt; (倒序读取), &lt;code&gt;more&lt;/code&gt;, &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;nl&lt;/code&gt; (带行号读取) 代替 &lt;code&gt;cat&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="构造-payload"&gt;构造 Payload
-&lt;/h4&gt;&lt;h5 id="利用反引号和-tac"&gt;利用反引号和 &lt;code&gt;tac&lt;/code&gt;
-&lt;/h5&gt;&lt;p&gt;利用 &lt;code&gt;echo&lt;/code&gt; 配合反引号执行命令。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=echo%09`tac%09f*`;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;%09&lt;/code&gt; 绕过空格。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tac&lt;/code&gt; 绕过 &lt;code&gt;cat&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;f*&lt;/code&gt; 绕过 &lt;code&gt;flag&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="web32"&gt;web32
-&lt;/h3&gt;&lt;h4 id="1-代码逻辑分析"&gt;1. 代码逻辑分析
-&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;：关闭错误报告，增加调试难度。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;isset($_GET['c'])&lt;/code&gt;&lt;/strong&gt;：检查是否通过 GET 请求传入了参数 &lt;code&gt;c&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;preg_match(...)&lt;/code&gt;&lt;/strong&gt;：这是一个&lt;strong&gt;黑名单&lt;/strong&gt;过滤。如果你的输入包含以下任何字符或单词，程序就会停止：
-&lt;ul&gt;
-&lt;li&gt;关键字：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;特殊符号：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), ``` (反引号), &lt;code&gt;;&lt;/code&gt; (分号), &lt;code&gt;(&lt;/code&gt; (左括号)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;eval($c);&lt;/code&gt;&lt;/strong&gt;：如果绕过了过滤，参数 &lt;code&gt;c&lt;/code&gt; 的内容将作为 PHP 代码执行。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="2-绕过思路"&gt;2. 绕过思路
-&lt;/h4&gt;&lt;p&gt;由于 &lt;code&gt;(&lt;/code&gt; 和 &lt;code&gt;;&lt;/code&gt; 被过滤，我们无法直接调用函数（如 &lt;code&gt;system()&lt;/code&gt;），也无法写出标准的多行语句。我们需要利用 PHP 的&lt;strong&gt;语言构造器&lt;/strong&gt;和&lt;strong&gt;短标签&lt;/strong&gt;特性。&lt;/p&gt;
-&lt;h5 id="a-绕过分号-"&gt;A. 绕过分号 &lt;code&gt;;&lt;/code&gt;
-&lt;/h5&gt;&lt;p&gt;在 PHP 的 &lt;code&gt;eval()&lt;/code&gt; 中，你可以使用 &lt;code&gt;?&amp;gt;&lt;/code&gt;（PHP 结束标签）来代替分号。&lt;/p&gt;
-&lt;h5 id="b-绕过括号-"&gt;B. 绕过括号 &lt;code&gt;(&lt;/code&gt;
-&lt;/h5&gt;&lt;p&gt;&lt;code&gt;include&lt;/code&gt; 和 &lt;code&gt;require&lt;/code&gt; 是 PHP 的&lt;strong&gt;语言构造器&lt;/strong&gt;，不是函数，因此调用它们不需要括号。 例如：&lt;code&gt;include $_GET[1]?&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;h5 id="c-绕过空格"&gt;C. 绕过空格
-&lt;/h5&gt;&lt;p&gt;在 Linux 环境下，URL 中可以使用 &lt;code&gt;%09&lt;/code&gt; (Tab 键) 或 &lt;code&gt;$IFS$9&lt;/code&gt; 等方式绕过。但在 PHP 代码中，如果 &lt;code&gt;include&lt;/code&gt; 后紧跟变量，有时连空格都不需要。&lt;/p&gt;
-&lt;h5 id="d-绕过-flag-等关键字"&gt;D. 绕过 &lt;code&gt;flag&lt;/code&gt; 等关键字
-&lt;/h5&gt;&lt;p&gt;最常用的技巧是&lt;strong&gt;参数逃逸&lt;/strong&gt;：在 &lt;code&gt;c&lt;/code&gt; 中执行一个不被过滤的语句，去调用另一个不受过滤限制的参数（如 &lt;code&gt;$_GET[1]&lt;/code&gt;）。&lt;/p&gt;
-&lt;h4 id="3-常见的攻击-payload"&gt;3. 常见的攻击 Payload
-&lt;/h4&gt;&lt;h5 id="利用-include-和伪协议读取文件"&gt;利用 &lt;code&gt;include&lt;/code&gt; 和伪协议读取文件
-&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：&lt;code&gt;c&lt;/code&gt; 的内容是 &lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;，没有触碰任何黑名单。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行&lt;/strong&gt;：它会包含参数 &lt;code&gt;1&lt;/code&gt; 指向的内容。由于 &lt;code&gt;flag.php&lt;/code&gt; 直接读取会被服务器解析而不显示源码，我们使用 &lt;code&gt;php://filter&lt;/code&gt; 将其转为 Base64 编码，读出来后再自行解码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="web33"&gt;web33
-&lt;/h3&gt;&lt;h4 id="1-核心过滤分析"&gt;1. 核心过滤分析
-&lt;/h4&gt;&lt;p&gt;正则表达式&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/flag|system|php|cat|sort|shell|\.| |\&amp;#39;|\`|echo|\;|\(|\&amp;#34;/i
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;过滤了以下内容：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;（堵死了直接读取和常用的系统调用）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;符号&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; (点)：无法直接写文件名或后缀。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt; &lt;/code&gt; (空格)：无法分隔命令参数。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;'&lt;/code&gt; 和 &lt;code&gt;&amp;quot;&lt;/code&gt; (引号)：无法构造字符串。&lt;/li&gt;
-&lt;li&gt;`` `(反引号)：无法执行 Shell 命令。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;;&lt;/code&gt; (分号)：无法结束语句（&lt;strong&gt;关键限制&lt;/strong&gt;）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;(&lt;/code&gt; (括号)：无法直接调用函数，如 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;eval()&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="2-绕过思路文件包含-include"&gt;2. 绕过思路：文件包含 (Include)
-&lt;/h4&gt;&lt;p&gt;在 PHP 中，&lt;code&gt;include&lt;/code&gt; 是一个&lt;strong&gt;语言结构&lt;/strong&gt;而非函数，因此它&lt;strong&gt;不需要括号&lt;/strong&gt;。利用这一点，我们可以尝试通过 &lt;code&gt;include&lt;/code&gt; 包含一个受控的外部变量。&lt;/p&gt;
-&lt;p&gt;由于分号 &lt;code&gt;;&lt;/code&gt; 被禁，我们可以利用 PHP 的&lt;strong&gt;闭合标签 &lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt; 来代替分号结束当前的语句。&lt;/p&gt;
-&lt;h4 id="payload-构造"&gt;Payload 构造：
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]&lt;/code&gt;&lt;/strong&gt;：&lt;code&gt;include&lt;/code&gt; 后面直接跟变量，绕过了括号限制；使用 &lt;code&gt;$_GET&lt;/code&gt; 数组绕过了引号限制（PHP 数组键名不加引号在某些配置下会当作字符串处理，或者利用 PHP 特性直接拼接）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：成功绕过分号 &lt;code&gt;;&lt;/code&gt; 限制，告诉 PHP 解析器当前代码段结束。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;1&lt;/code&gt; 参数&lt;/strong&gt;：因为正则只检测变量 &lt;code&gt;c&lt;/code&gt;，所以我们在参数 &lt;code&gt;1&lt;/code&gt; 中可以自由书写被禁用的关键词，如 &lt;code&gt;php&lt;/code&gt;、&lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;.&lt;/code&gt; 等。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;php://filter&lt;/code&gt;&lt;/strong&gt;：使用伪协议读取文件并将内容进行 Base64 编码。这是因为 &lt;code&gt;flag.php&lt;/code&gt; 通常包含 PHP 代码，直接 include 会被解析而不显示内容，编码后可以拿到源码。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="web34"&gt;web34
-&lt;/h3&gt;&lt;p&gt;以下内容被禁止了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关键词&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特殊字符&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), `` &lt;code&gt;(反引号),&lt;/code&gt;;&lt;code&gt;(分号),&lt;/code&gt;(&lt;code&gt;(左括号),&lt;/code&gt;:&lt;code&gt;(冒号),&lt;/code&gt;&amp;quot;` (双引号)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="解题思路反解绕过与通配符"&gt;解题思路：反解绕过与通配符
-&lt;/h4&gt;&lt;p&gt;由于括号 &lt;code&gt;(&lt;/code&gt; 被禁用，我们无法直接调用 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;eval()&lt;/code&gt; 等函数。然而，PHP 的 &lt;strong&gt;&lt;code&gt;include&lt;/code&gt;&lt;/strong&gt; 是一个&lt;strong&gt;语句&lt;/strong&gt;（Language Construct），它在不需要括号的情况下也可以工作。&lt;/p&gt;
-&lt;p&gt;我们可以通过以下链条实现绕过：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;利用 &lt;code&gt;include&lt;/code&gt; 包含伪协议&lt;/strong&gt;：由于无法直接写字符串，我们可以利用 PHP 的动态特性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;利用 &lt;code&gt;$_GET&lt;/code&gt; 传参绕过&lt;/strong&gt;：虽然变量 &lt;code&gt;$c&lt;/code&gt; 受到正则限制，但我们可以利用 PHP 不限制其他参数的特点，通过 &lt;code&gt;$_GET&lt;/code&gt; 传入我们要执行的恶意代码。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配合通配符或反撇号&lt;/strong&gt;：由于本题过滤了反撇号，我们需要寻找替代方案。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="payload"&gt;Payload
-&lt;/h4&gt;&lt;p&gt;可以尝试使用 &lt;strong&gt;PHP 伪协议配合数据流&lt;/strong&gt; 或者 &lt;strong&gt;包含 &lt;code&gt;/proc/self/fd&lt;/code&gt;&lt;/strong&gt; 等技巧。但最简单且最经典的方法是利用 &lt;code&gt;include&lt;/code&gt; 结合 &lt;code&gt;$_GET&lt;/code&gt;：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;代码解析：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;include&lt;/code&gt; 不需要括号。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$_GET[1]&lt;/code&gt; 避开了正则对变量 &lt;code&gt;$c&lt;/code&gt; 的内容检查。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; 是 PHP 的闭合标签，用于替代被禁用的分号 &lt;code&gt;;&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;amp;1=...&lt;/code&gt;&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;在参数 &lt;code&gt;1&lt;/code&gt; 中，我们可以自由使用被过滤的字符（如 &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;.&lt;/code&gt; 等）。&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;php://filter&lt;/code&gt; 协议将 &lt;code&gt;flag.php&lt;/code&gt; 的内容进行 Base64 编码读出（防止被服务器直接解析而不显示）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="web35"&gt;Web35
-&lt;/h3&gt;&lt;h4 id="代码逻辑分析-1"&gt;代码逻辑分析
-&lt;/h4&gt;&lt;p&gt;代码通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数，并使用 &lt;code&gt;preg_match&lt;/code&gt; 进行了严格的黑名单过滤。被过滤的关键字和字符包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关键字&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;shell&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特殊字符&lt;/strong&gt;：&lt;code&gt;.&lt;/code&gt; (点), &lt;code&gt; &lt;/code&gt; (空格), &lt;code&gt;'&lt;/code&gt; (单引号), `` &lt;code&gt;(反引号),&lt;/code&gt;;&lt;code&gt;(分号),&lt;/code&gt;(&lt;code&gt;(左括号),&lt;/code&gt;:&lt;code&gt;(冒号),&lt;/code&gt;&amp;quot;&lt;code&gt;(双引号),&lt;/code&gt;&amp;lt;&lt;code&gt;(小于号),&lt;/code&gt;=` (等于号)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="核心难点"&gt;核心难点
-&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;禁用了括号 &lt;code&gt;(&lt;/code&gt;&lt;/strong&gt;：这意味着我们无法直接调用任何函数（如 &lt;code&gt;system()&lt;/code&gt; 或 &lt;code&gt;passthru()&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;禁用了分号 &lt;code&gt;;&lt;/code&gt;&lt;/strong&gt;：这意味着我们只能执行一条语句，且不能使用传统的语句结束符。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;禁用了空格&lt;/strong&gt;：需要寻找替代符。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="解题思路利用-include-和伪协议"&gt;解题思路：利用 include 和伪协议
-&lt;/h4&gt;&lt;p&gt;由于禁用了括号，我们无法进行函数调用，但 PHP 中的 &lt;strong&gt;&lt;code&gt;include&lt;/code&gt;&lt;/strong&gt; 是一个&lt;strong&gt;语句&lt;/strong&gt;（language construct），它不需要括号即可运行。&lt;/p&gt;
-&lt;p&gt;我们可以利用 &lt;code&gt;include&lt;/code&gt; 配合 &lt;strong&gt;PHP 伪协议&lt;/strong&gt; 或者 &lt;strong&gt;通配符&lt;/strong&gt; 来绕过限制。&lt;/p&gt;
-&lt;h5 id="方案一利用-include-配合通配符推荐"&gt;方案一：利用 &lt;code&gt;include&lt;/code&gt; 配合通配符（推荐）
-&lt;/h5&gt;&lt;p&gt;在 PHP 中，如果开启了 &lt;code&gt;short_open_tag&lt;/code&gt;，我们可以通过 &lt;code&gt;include&lt;/code&gt; 包含一个包含通配符的文件路径。但在本题中，最巧妙的方法是利用 &lt;code&gt;include&lt;/code&gt; 包含 &lt;code&gt;/proc/self/fd/&lt;/code&gt; 下的文件或者利用临时文件，但在没括号的情况下，最简单的思路是：&lt;strong&gt;利用 PHP 标签绕过&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;由于禁用了许多关键字符，我们可以尝试使用 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt; 来闭合当前的 PHP 标签，然后直接书写我们想执行的内容。&lt;/p&gt;
-&lt;h5 id="方案二利用取反异或绕过如果环境允许"&gt;方案二：利用取反/异或绕过（如果环境允许）
-&lt;/h5&gt;&lt;p&gt;通常用于绕过正则限制，但因为禁用了括号，这条路很难走通。&lt;/p&gt;
-&lt;h5 id="方案三利用-include-包含-post-数据"&gt;方案三：利用 &lt;code&gt;include&lt;/code&gt; 包含 POST 数据
-&lt;/h5&gt;&lt;p&gt;这是最常用的技巧。虽然 &lt;code&gt;c&lt;/code&gt; 被过滤了很多，但我们可以让 &lt;code&gt;c&lt;/code&gt; 执行 &lt;code&gt;include&lt;/code&gt; 某个外部来源。&lt;/p&gt;
-&lt;h4 id="payload-构造-1"&gt;Payload 构造：
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET[1]?&amp;gt;&amp;amp;1=php://filter/read=convert.base64-encode/resource=flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;逻辑解析：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;include$_GET[1]&lt;/code&gt;&lt;/strong&gt;：&lt;code&gt;include&lt;/code&gt; 不需要括号，且后面可以直接跟变量。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：用来替代分号 &lt;code&gt;;&lt;/code&gt;。在 PHP 中，结束标签 &lt;code&gt;?&amp;gt;&lt;/code&gt; 隐含了一个分号的作用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;绕过空格&lt;/strong&gt;：由于空格被过滤，但在 &lt;code&gt;include&lt;/code&gt; 和变量之间，如果环境支持，有时可以不加空格或利用某些特殊编码。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;变量注入&lt;/strong&gt;：通过 &lt;code&gt;$_GET[1]&lt;/code&gt; 传入我们真正想执行的、带有敏感字符的 payload（如 &lt;code&gt;flag&lt;/code&gt;），因为 &lt;code&gt;preg_match&lt;/code&gt; 只检查变量 &lt;code&gt;c&lt;/code&gt;，不检查变量 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="web36"&gt;web36
-&lt;/h3&gt;&lt;h4 id="核心限制分析-1"&gt;核心限制分析
-&lt;/h4&gt;&lt;p&gt;正则表达式封锁了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;关键字&lt;/strong&gt;：&lt;code&gt;flag&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;php&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;echo&lt;/code&gt; 等（无法直接执行系统命令或读取文件）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;符号&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; (点) 和 &lt;code&gt;/&lt;/code&gt; (斜杠)：无法直接指定路径。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;;&lt;/code&gt; (分号)：无法结束语句。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;(&lt;/code&gt; 和 &lt;code&gt;)&lt;/code&gt; (括号)：&lt;strong&gt;最致命的限制&lt;/strong&gt;，这意味着无法调用任何函数（如 &lt;code&gt;system()&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt; &lt;/code&gt; (空格)：无法分隔命令。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;'&lt;/code&gt; 和 &lt;code&gt;&amp;quot;&lt;/code&gt; (引号)：无法定义字符串。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数字&lt;/strong&gt;：&lt;code&gt;0-9&lt;/code&gt; 全被封死。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="绕过思路利用-php-语言特性"&gt;绕过思路：利用 PHP 语言特性
-&lt;/h4&gt;&lt;p&gt;既然无法使用括号调用函数，我们必须利用 PHP 中的 &lt;strong&gt;语言结构 (Language Constructs)&lt;/strong&gt;。&lt;code&gt;include&lt;/code&gt; 就是一个不需要括号且能执行代码的语言结构。&lt;/p&gt;
-&lt;h5 id="1-配合通配符与-_get-数组"&gt;1. 配合通配符与 &lt;code&gt;$_GET&lt;/code&gt; 数组
-&lt;/h5&gt;&lt;p&gt;虽然 &lt;code&gt;c&lt;/code&gt; 受到了严格过滤，但我们可以引入一个新的参数（如 &lt;code&gt;a&lt;/code&gt;），而 &lt;code&gt;a&lt;/code&gt; 是不受过滤的。 PHP 允许使用 &lt;code&gt;$_GET{a}&lt;/code&gt;（花括号）来代替 &lt;code&gt;$_GET['a']&lt;/code&gt;（方括号），从而绕过对引号的限制。&lt;/p&gt;
-&lt;h5 id="2-利用-php-闭合标签"&gt;2. 利用 PHP 闭合标签
-&lt;/h5&gt;&lt;p&gt;由于分号 &lt;code&gt;;&lt;/code&gt; 被禁用，我们可以使用 PHP 的结束标签 &lt;code&gt;?&amp;gt;&lt;/code&gt; 来强制结束当前的 &lt;code&gt;eval&lt;/code&gt; 语句，这在 PHP 中具有替代分号的作用。&lt;/p&gt;
-&lt;h4 id="最终-payload-构造"&gt;最终 Payload 构造
-&lt;/h4&gt;&lt;p&gt;我们可以利用 &lt;code&gt;include&lt;/code&gt; 包含一个由另一个参数传入的伪协议流。&lt;/p&gt;
-&lt;p&gt;Payload 示例：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=include$_GET{a}?&amp;gt;&amp;amp;a=php://filter/read=convert.base64-encode/resource=flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;逻辑解析：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;c=include$_GET{a}?&amp;gt;&lt;/code&gt;&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;没有使用括号、分号、空格或数字，完全绕过了正则。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;include&lt;/code&gt; 后面直接跟变量在 PHP 中是合法的。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; 代替了分号。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;amp;a=...&lt;/code&gt;&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;后端脚本只检查 &lt;code&gt;$_GET['c']&lt;/code&gt;，不检查 &lt;code&gt;$_GET['a']&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;我们在 &lt;code&gt;a&lt;/code&gt; 中构造完整的读取逻辑：利用 &lt;code&gt;php://filter&lt;/code&gt; 将 &lt;code&gt;flag.php&lt;/code&gt; 的内容转为 Base64 编码输出（直接包含 &lt;code&gt;.php&lt;/code&gt; 文件会被执行而看不到源码，所以需要编码）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="web37"&gt;web37
-&lt;/h3&gt;&lt;h4 id="核心代码审计"&gt;核心代码审计
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;error_reporting(0);&lt;/code&gt;&lt;/strong&gt;: 屏蔽所有报错信息。这意味着即使包含失败，页面也不会显示路径错误或权限错误，增加了盲测的难度。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;这是代码的关键防御机制。使用正则表达式检查变量 &lt;code&gt;$c&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/i&lt;/code&gt; 修饰符表示&lt;strong&gt;不区分大小写&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;意图&lt;/strong&gt;：防止用户直接通过 &lt;code&gt;?c=flag.php&lt;/code&gt; 读取 flag。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;include($c);&lt;/code&gt;&lt;/strong&gt;: 漏洞触发点。PHP 会尝试将被包含文件作为 PHP 脚本执行。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;echo $flag;&lt;/code&gt;&lt;/strong&gt;: 关键点。注意，这个 &lt;code&gt;echo&lt;/code&gt; 在 &lt;code&gt;include&lt;/code&gt; 之后。这意味着只要 &lt;code&gt;flag.php&lt;/code&gt; 被成功包含，其中定义的 &lt;code&gt;$flag&lt;/code&gt; 变量就会进入当前作用域，并被这行代码打印出来。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="payload-1"&gt;payload
-&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZionKTs/Pg==
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
-&gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="web38"&gt;web38
-&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
-&lt;/h5&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
-&lt;ul&gt;
-&lt;li&gt;这个正则表达式会检查变量 &lt;code&gt;$c&lt;/code&gt; 中是否包含关键字 &lt;code&gt;flag&lt;/code&gt;、&lt;code&gt;php&lt;/code&gt; 或 &lt;code&gt;file&lt;/code&gt;（不区分大小写）。&lt;/li&gt;
-&lt;li&gt;如果匹配到这些词，代码就不会执行 &lt;code&gt;include($c)&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;漏洞点&lt;/strong&gt;：&lt;code&gt;include($c)&lt;/code&gt;。这是一个文件包含函数，如果能绕过过滤并成功包含 &lt;code&gt;flag.php&lt;/code&gt;，由于代码最后有一句 &lt;code&gt;echo $flag;&lt;/code&gt;，变量 &lt;code&gt;$flag&lt;/code&gt;（通常定义在 &lt;code&gt;flag.php&lt;/code&gt; 中）就会被打印出来。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;做法和37差不多&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhKicpOyA/Pg==
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="web39"&gt;web39
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;$c = $_GET['c'];&lt;/code&gt;&lt;/strong&gt;：从 URL 参数 &lt;code&gt;c&lt;/code&gt; 获取输入。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;if(!preg_match(&amp;quot;/flag/i&amp;quot;, $c))&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;第一道防线&lt;/strong&gt;。正则表达式检查输入中是否含有 &lt;code&gt;flag&lt;/code&gt;（不区分大小写）。如果你的输入里有这四个字母，直接出局。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;include($c.&amp;quot;.php&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：&lt;strong&gt;核心漏洞点 &amp;amp; 第二道防线&lt;/strong&gt;。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;这里存在文件包含漏洞（LFI）。&lt;/li&gt;
-&lt;li&gt;它强制在你的输入后面加上 &lt;code&gt;.php&lt;/code&gt; 后缀。这意味着如果你直接输入 &lt;code&gt;index&lt;/code&gt;，它会包含 &lt;code&gt;index.php&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 读取 &lt;code&gt;flag.php&lt;/code&gt; 的内容。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;挑战：&lt;/strong&gt; 不能输入 &lt;code&gt;flag&lt;/code&gt;，且要处理掉尾部的 &lt;code&gt;.php&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;为了绕过上述限制，我们使用 &lt;strong&gt;&lt;code&gt;data://&lt;/code&gt; 协议&lt;/strong&gt;。它允许我们将输入的数据当作“文件内容”让 PHP 去解析执行。&lt;/p&gt;
-&lt;p&gt;步骤一：绕过 &lt;code&gt;flag&lt;/code&gt; 关键字过滤&lt;/p&gt;
-&lt;p&gt;由于正则只检查变量 &lt;code&gt;$c&lt;/code&gt; 的内容，我们不能直接写 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;技巧：使用通配符&lt;/strong&gt;。在 Linux Shell 指令中，&lt;code&gt;*&lt;/code&gt; 可以匹配任意字符。&lt;/li&gt;
-&lt;li&gt;我们将 &lt;code&gt;flag.php&lt;/code&gt; 写成 &lt;code&gt;fla*.php&lt;/code&gt; 或 &lt;code&gt;f*&lt;/code&gt;。这样在匹配正则时，字符串里没有 &lt;code&gt;flag&lt;/code&gt;，可以成功绕过。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;步骤二：处理强制添加的 &lt;code&gt;.php&lt;/code&gt; 后缀&lt;/p&gt;
-&lt;p&gt;题目代码是 &lt;code&gt;include($c.&amp;quot;.php&amp;quot;)&lt;/code&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果你输入 &lt;code&gt;?c=data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;最终包含的语句变成了：&lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php phpinfo(); ?&amp;gt;.php&amp;quot;)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;关键原理：&lt;/strong&gt; PHP 在执行 &lt;code&gt;include&lt;/code&gt; 包含的代码时，一旦遇到 &lt;strong&gt;&lt;code&gt;?&amp;gt;&lt;/code&gt; (PHP 闭合标签)&lt;/strong&gt;，就会认为 PHP 代码段已经结束。之后的任何内容（包括自动拼接的 &lt;code&gt;.php&lt;/code&gt;）都会被当作 &lt;strong&gt;普通字符串/HTML&lt;/strong&gt; 直接显示在页面上，而不会被当作 PHP 代码解析执行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;payload&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=data://text/plain,&amp;lt;?php system(&amp;#34;tac fla*.php&amp;#34;)?&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;注入参数&lt;/strong&gt;： URL 变为 &lt;code&gt;index.php?c=data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;正则校验&lt;/strong&gt;： &lt;code&gt;preg_match&lt;/code&gt; 检查字符串 &lt;code&gt;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;。 由于使用的是 &lt;code&gt;fla*&lt;/code&gt;，字符串中不包含完整的 &lt;code&gt;flag&lt;/code&gt;，&lt;strong&gt;校验通过&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;代码拼接&lt;/strong&gt;： PHP 执行 &lt;code&gt;include&lt;/code&gt; 语句： &lt;code&gt;include(&amp;quot;data://text/plain,&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;.php&amp;quot;);&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;伪协议解析&lt;/strong&gt;： PHP 解释器读取 &lt;code&gt;data://&lt;/code&gt; 流中的内容：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;代码部分&lt;/strong&gt;：&lt;code&gt;&amp;lt;?php system(&amp;quot;tac fla*.php&amp;quot;)?&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;命令执行&lt;/strong&gt;：&lt;code&gt;system&lt;/code&gt; 调用系统 Shell。&lt;code&gt;tac&lt;/code&gt; 命令反向读取文件（常用于绕过对 &lt;code&gt;cat&lt;/code&gt; 的过滤，且效果一致）。&lt;code&gt;fla*.php&lt;/code&gt; 被 Shell 解析为 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行结果&lt;/strong&gt;：&lt;code&gt;flag.php&lt;/code&gt; 的内容被打印到页面源码中。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后续忽略&lt;/strong&gt;： 最后的 &lt;code&gt;.php&lt;/code&gt; 位于 &lt;code&gt;?&amp;gt;&lt;/code&gt; 之后，PHP 引擎将其视为纯文本直接输出，不影响代码逻辑。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="web40"&gt;web40
-&lt;/h3&gt;&lt;h4 id="第一步确认环境与注入点"&gt;第一步：确认环境与注入点
-&lt;/h4&gt;&lt;p&gt;打开题目页面，看到源码。首先确认变量 &lt;code&gt;c&lt;/code&gt; 是通过 GET 方式传入的。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;注入点&lt;/strong&gt;：&lt;code&gt;URL/?c=&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：读取服务器上的 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="第二步测试并寻找当前目录"&gt;第二步：测试并寻找“当前目录”
-&lt;/h4&gt;&lt;p&gt;在无法使用 &lt;code&gt;'.'&lt;/code&gt; 的情况下，我们需要确认 PHP 能否找到当前目录。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在浏览器输入： &lt;code&gt;?c=print_r(localeconv());&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;观察结果&lt;/strong&gt;：应该能看到一个数组输出。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;确认逻辑&lt;/strong&gt;：数组的第一个元素（&lt;code&gt;[decimal_point]&lt;/code&gt;）通常是 &lt;code&gt;.&lt;/code&gt;。 使用 &lt;code&gt;pos()&lt;/code&gt; 提取它：&lt;code&gt;?c=print_r(pos(localeconv()));&lt;/code&gt; 页面如果只显示一个 &lt;code&gt;.&lt;/code&gt;，说明这步成功了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="第三步查看文件列表"&gt;第三步：查看文件列表
-&lt;/h4&gt;&lt;p&gt;我们需要确认 &lt;code&gt;flag.php&lt;/code&gt; 到底在不在当前目录下，以及它排在第几个。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;输入 Payload： &lt;code&gt;?c=print_r(scandir(pos(localeconv())));&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;观察返回的数组&lt;/strong&gt;，假设结果如下：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Array (
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [0] =&amp;gt; .
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [1] =&amp;gt; ..
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [2] =&amp;gt; flag.php
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [3] =&amp;gt; index.php
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;em&gt;注意：此时 &lt;code&gt;flag.php&lt;/code&gt; 的索引是 &lt;strong&gt;2&lt;/strong&gt;。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="第四步移动指针定位文件"&gt;第四步：移动指针定位文件
-&lt;/h4&gt;&lt;p&gt;这是最关键的一步。我们需要让 PHP 的“准星”对准 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;尝试反转数组&lt;/strong&gt;： &lt;code&gt;?c=print_r(array_reverse(scandir(pos(localeconv()))));&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;结果&lt;/strong&gt;：&lt;code&gt;Array ( [0] =&amp;gt; index.php [1] =&amp;gt; flag.php [2] =&amp;gt; .. [3] =&amp;gt; . )&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分析&lt;/strong&gt;：此时 &lt;code&gt;flag.php&lt;/code&gt; 排在&lt;strong&gt;第二个&lt;/strong&gt;位置。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用 &lt;code&gt;next()&lt;/code&gt; 移动指针&lt;/strong&gt;： 在 PHP 中，数组刚产生时指针指向第一个（&lt;code&gt;index.php&lt;/code&gt;）。调用 &lt;code&gt;next()&lt;/code&gt; 后，指针会向后移动一位，指向 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id="第五步读取文件源码最终-payload"&gt;第五步：读取文件源码（最终 Payload）
-&lt;/h4&gt;&lt;p&gt;现在万事俱备，我们要把 &lt;code&gt;print_r&lt;/code&gt; 换成能读取文件内容的函数（如 &lt;code&gt;show_source&lt;/code&gt; 或 &lt;code&gt;highlight_file&lt;/code&gt;）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;操作步骤：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在浏览器地址栏输入最终 Payload：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;?c=show_source(next(array_reverse(scandir(pos(localeconv())))));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;按下回车&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;查看结果&lt;/strong&gt;：页面上会直接喷出 &lt;code&gt;flag.php&lt;/code&gt; 的源代码（通常带有语法高亮）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
+&lt;/div&gt;</description></item><item><title>Data URI Scheme (data: 协议)</title><link>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</link><pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/data-uri-scheme-data-%E5%8D%8F%E8%AE%AE/</guid><description>&lt;h2 id="1-协议概述"&gt;1. 协议概述
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; 协议允许开发者在网页中直接嵌入小型数据，而不是引用外部资源。它将资源转换为字符串形式，随 HTML/CSS 一起下载。&lt;/p&gt;
 &lt;h2 id="2-标准语法结构"&gt;2. 标准语法结构
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;data:&lt;/code&gt; URL 的组成非常严谨，公式如下：&lt;/p&gt;
