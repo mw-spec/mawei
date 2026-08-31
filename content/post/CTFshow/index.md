@@ -1,6 +1,6 @@
 ---
 title: "CTFshow"
-date: 2026-08-13
+date: 2026-08-27
 draft: false
 categories: ["webWP"]
 ---
@@ -710,4 +710,6 @@ Payload 示例：
 2. **按下回车**。
 
 3. **查看结果**：页面上会直接喷出 `flag.php` 的源代码（通常带有语法高亮）。
+
+
 
