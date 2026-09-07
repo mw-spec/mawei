@@ -458,12 +458,12 @@ $a = new A();
 ?>
 ```
 
-##### **执行流程**
+**执行流程**
 
 - **`__construct()`**: 构造函数。当通过 `$a = new A();` 创建类的新对象时，该方法会被自动调用，输出：`This is a construct function`。
 - **`__destruct()`**: 析构函数。当对象的所有引用都被删除或脚本执行结束时，该方法会被自动调用，输出：`This is a destruct function`。
 
-##### 运行输出
+**运行输出**
 
 ```
 This is a construct functionThis is a destruct function
@@ -497,7 +497,7 @@ echo serialize($a);
 - **返回值要求**：该方法**必须返回一个数组**，数组中的元素是要被序列化的属性名称。
 - **过滤属性**：在上例中，`__sleep()` 返回了 `array('test')`，这意味着只有 `$test` 属性会被序列化并保存，而公开属性 `$test2` 会被忽略。
 
-##### 执行流程与输出
+**执行流程与输出**
 
 1. `$a = new A("Aurora");` 实例化对象，`$this->test` 的值为 `"Aurora"`。
 
@@ -544,13 +544,13 @@ $c = unserialize($b); // 反序列化时触发 __wakeup
 - **返回值**：与 `__sleep()` 不同，`__wakeup()` **不需要返回值**（无须返回数组）。
 - **主要用途**：通常用于在反序列化后重新建立数据库连接、初始化资源或者执行其他必要的清理/恢复操作。
 
-##### 执行流程
+**执行流程**
 
 1. **`$a = new A("Aurora");`**：实例化对象，将 `$this->test` 赋值为 `"Aurora"`。
 2. **`$b = serialize($a);`**：对对象进行序列化，此时自动调用 `__sleep()` 方法，输出：`This is a sleep function`。
 3. **`$c = unserialize($b);`**：对字符串进行反序列化，此时自动调用 `__wakeup()` 方法，输出：`This is a wakeup function`。
 
-##### 运行输出
+**运行输出**
 
 ```
 This is a sleep functionThis is a wakeup function
@@ -581,13 +581,13 @@ echo $a;
 - **触发时机**：当一个对象被当做字符串来使用（例如使用 `echo` 或 `print` 输出对象）时，`__toString()` 方法会被自动调用。
 - **返回值要求**：该方法**必须返回一个字符串**，否则会抛出不可恢复的致命错误（Recoverable fatal error）。
 
-##### 执行流程与输出结果
+**执行流程与输出结果**
 
 1. `$a = new A("Aurora");` 实例化对象。
 2. `echo $a;` 尝试直接将对象 `$a` 作为字符串输出，从而自动触发类中的 `__toString()` 方法。
 3. `__toString()` 返回字符串 `"This is a toString function"` 并打印。
 
-##### 运行输出
+**运行输出**
 
 ```
 This is a toString function
@@ -617,7 +617,7 @@ $a(); // $a是一个对象，但却用$a()调用方法的方式来调用它
 
 - **触发时机**：当尝试以调用函数的方式来调用一个对象时（例如 `$a()`），`__invoke()` 方法会被自动调用。
 
-##### 执行流程与输出
+**执行流程与输出**
 
 1. `$a = new A("Aurora");` 实例化对象。
 2. `$a();` 将对象 `$a` 当作函数进行调用，从而自动触发类中的 `__invoke()` 方法。
@@ -655,13 +655,13 @@ $a->test('no', 'this', 'function'); // 可以看到A类中并没有test()方法
   - `$funName`：字符串类型，表示被调用的不存在的方法名（本例中为 `'test'`）。
   - `$arguments`：数组类型，包含传递给该方法的参数列表（本例中为 `['no', 'this', 'function']`）。
 
-##### 执行流程
+**执行流程**
 
 1. **`$a = new A("Aurora");`**：实例化类 `A` 的对象。
 2. **`$a->test('no', 'this', 'function');`**：尝试调用对象中并不存在的 `test()` 方法。
 3. 因为方法不存在，PHP 自动拦截并触发 `__call($funName, $arguments)` 方法，将方法名和参数传入。
 
-##### 运行输出
+**运行输出**
 
 ```
 你所调用的函数: test(参数: Array
@@ -672,3 +672,4 @@ $a->test('no', 'this', 'function'); // 可以看到A类中并没有test()方法
 )
 )不存在! <br>
 ```
+
