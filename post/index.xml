@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mawei</title><link>https://mawei.org.cn/post/</link><description>Recent content in Posts on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/post/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机三级（两周从0到考试及格）</title><link>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</link><pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mawei</title><link>https://mawei.org.cn/post/</link><description>Recent content in Posts on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/post/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机三级（两周从0到考试及格）</title><link>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</link><pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;只有知识点，题目另外找或者ai帮忙出&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
@@ -785,8 +785,427 @@
 &lt;p&gt;&lt;strong&gt;最小权限 = 少给。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;职责分离 = 分开给。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=""&gt;
-&lt;/h3&gt;</description></item><item><title>Web 安全代码审计与漏洞防御学习笔记</title><link>https://mawei.org.cn/p/web-%E5%AE%89%E5%85%A8%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E4%B8%8E%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/web-%E5%AE%89%E5%85%A8%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E4%B8%8E%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid><description>&lt;h1 id="web-安全代码审计与漏洞防御学习笔记"&gt;Web 安全代码审计与漏洞防御学习笔记
+&lt;h3 id="第四天"&gt;第四天
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;账户、管理员权限、文件权限、进程、内存、漏洞、补丁、端口、服务、日志、病毒、木马、系统加固&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="一操作系统安全在保护什么"&gt;一、操作系统安全在保护什么
+&lt;/h4&gt;&lt;p&gt;操作系统处在一个很重要的位置：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;硬件 ← 操作系统 ← 应用程序 ← 用户&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果操作系统本身被攻破，那么上面运行的应用和存储的数据都会受到影响。&lt;/p&gt;
+&lt;p&gt;所以操作系统安全主要要保护：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户账户&lt;/li&gt;
+&lt;li&gt;文件和数据&lt;/li&gt;
+&lt;li&gt;系统进程&lt;/li&gt;
+&lt;li&gt;内存&lt;/li&gt;
+&lt;li&gt;系统服务&lt;/li&gt;
+&lt;li&gt;系统配置&lt;/li&gt;
+&lt;li&gt;日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以先理解成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;操作系统安全 = 权限控制 + 隔离 + 加固 + 更新 + 审计。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="二用户和账户安全"&gt;二、用户和账户安全
+&lt;/h4&gt;&lt;p&gt;一台电脑可能存在：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通用户&lt;/li&gt;
+&lt;li&gt;管理员&lt;/li&gt;
+&lt;li&gt;系统账户&lt;/li&gt;
+&lt;li&gt;服务账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不同账户拥有不同权限。&lt;/p&gt;
+&lt;p&gt;最重要的原则就是我们 Day 3 学过的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如一个员工只需要使用浏览器和办公软件，就没必要让他拥有管理员权限。&lt;/p&gt;
+&lt;p&gt;为什么？&lt;/p&gt;
+&lt;p&gt;如果这个账号被攻击：&lt;/p&gt;
+&lt;p&gt;普通权限账号 → 攻击影响有限。&lt;/p&gt;
+&lt;p&gt;管理员账号 → 可能修改整个系统。&lt;/p&gt;
+&lt;p&gt;所以考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“普通用户不应该长期使用管理员权限”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;想到：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;管理员账户为什么危险&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;管理员一般拥有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装软件&lt;/li&gt;
+&lt;li&gt;修改系统配置&lt;/li&gt;
+&lt;li&gt;创建用户&lt;/li&gt;
+&lt;li&gt;删除用户&lt;/li&gt;
+&lt;li&gt;修改权限&lt;/li&gt;
+&lt;li&gt;启动/停止服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;管理员权限越高，被攻破后的损失越大。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;常见安全措施：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通工作使用普通账户&lt;/li&gt;
+&lt;li&gt;管理操作才使用管理员权限&lt;/li&gt;
+&lt;li&gt;禁用无用账户&lt;/li&gt;
+&lt;li&gt;设置强密码&lt;/li&gt;
+&lt;li&gt;限制登录失败次数&lt;/li&gt;
+&lt;li&gt;定期检查账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="三文件和目录权限"&gt;三、文件和目录权限
+&lt;/h4&gt;&lt;p&gt;操作系统必须控制：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;谁能访问哪个文件，并且能做什么。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最常见的权限：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R = Read，读&lt;/li&gt;
+&lt;li&gt;W = Write，写&lt;/li&gt;
+&lt;li&gt;X = Execute，执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;某员工只需要看工资表。&lt;/p&gt;
+&lt;p&gt;那么给：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;读权限&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而不应该给：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写、删除权限。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这仍然体现：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;文件权限题怎么判断&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;如果题目说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户 A 可以读取文件，但不能修改。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说明用户只有：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;读权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户能够运行一个程序文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需要：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;执行权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所以记：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;R 读，W 写，X 执行。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="四进程是什么"&gt;四、进程是什么
+&lt;/h4&gt;&lt;p&gt;程序运行起来之后，可以理解成一个：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;进程&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;你打开浏览器。&lt;/p&gt;
+&lt;p&gt;浏览器程序运行之后，就产生一个或多个进程。&lt;/p&gt;
+&lt;p&gt;操作系统需要控制不同进程之间不能随意访问彼此的数据。&lt;/p&gt;
+&lt;p&gt;为什么？&lt;/p&gt;
+&lt;p&gt;假设：&lt;/p&gt;
+&lt;p&gt;浏览器进程可以随意读取密码管理器进程的内存。&lt;/p&gt;
+&lt;p&gt;那就非常危险。&lt;/p&gt;
+&lt;p&gt;所以操作系统需要：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;进程隔离&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不同进程之间要隔离。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="五内存保护"&gt;五、内存保护
+&lt;/h4&gt;&lt;p&gt;每个进程运行时，都需要一定的内存空间。&lt;/p&gt;
+&lt;p&gt;正常情况下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A 进程不能随意读写 B 进程的内存。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这就是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内存保护&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主要目的是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;防止程序相互破坏&lt;/li&gt;
+&lt;li&gt;防止越权访问&lt;/li&gt;
+&lt;li&gt;提高系统稳定性&lt;/li&gt;
+&lt;li&gt;限制攻击影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“防止一个进程非法访问另一个进程的地址空间”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;想到：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内存保护 / 进程隔离&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="六漏洞"&gt;六、漏洞
+&lt;/h4&gt;&lt;p&gt;操作系统也是软件。&lt;/p&gt;
+&lt;p&gt;只要是软件，就可能存在：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;漏洞&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;漏洞可以理解成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;程序设计、实现或配置中的安全缺陷。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如某个系统漏洞允许攻击者绕过权限控制。&lt;/p&gt;
+&lt;p&gt;厂商发现后，就可能发布：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;安全补丁&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="七补丁管理"&gt;七、补丁管理
+&lt;/h4&gt;&lt;p&gt;安全补丁的主要作用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;修复已经发现的软件安全漏洞。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;系统发现严重漏洞。&lt;/p&gt;
+&lt;p&gt;厂商发布更新。&lt;/p&gt;
+&lt;p&gt;管理员应该：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;及时安装安全补丁。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以考试看到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安全更新&lt;/li&gt;
+&lt;li&gt;修复已知漏洞&lt;/li&gt;
+&lt;li&gt;Patch&lt;/li&gt;
+&lt;li&gt;系统更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优先想到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;补丁管理&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;一个常见误区&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;不要认为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“装了杀毒软件，就不用更新系统。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是错误的。&lt;/p&gt;
+&lt;p&gt;因为：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;杀毒软件&lt;/strong&gt;主要针对恶意代码等威胁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补丁&lt;/strong&gt;主要修复软件本身的漏洞。&lt;/p&gt;
+&lt;p&gt;两个不是一回事。&lt;/p&gt;
+&lt;h4 id="八系统安全加固"&gt;八、系统安全加固
+&lt;/h4&gt;&lt;p&gt;这是非常重要的一组概念。&lt;/p&gt;
+&lt;p&gt;什么叫系统加固？&lt;/p&gt;
+&lt;p&gt;简单来说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;把系统中不必要、不安全的东西关掉或限制掉，降低攻击面。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;常见系统加固措施&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id="1-关闭不需要的服务"&gt;1. 关闭不需要的服务
+&lt;/h5&gt;&lt;p&gt;比如服务器根本不用某项服务，就不要让它一直运行。&lt;/p&gt;
+&lt;p&gt;原因：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;多运行一个服务，就可能多一个攻击入口。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id="2-关闭不必要端口"&gt;2. 关闭不必要端口
+&lt;/h5&gt;&lt;p&gt;如果某个端口不需要：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关闭。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为开放端口往往对应某种网络服务。&lt;/p&gt;
+&lt;h5 id="3-删除或禁用无用账户"&gt;3. 删除或禁用无用账户
+&lt;/h5&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试账户&lt;/li&gt;
+&lt;li&gt;离职员工账户&lt;/li&gt;
+&lt;li&gt;默认账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;长期留着可能形成风险。&lt;/p&gt;
+&lt;h5 id="4-修改默认配置"&gt;4. 修改默认配置
+&lt;/h5&gt;&lt;p&gt;比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认密码&lt;/li&gt;
+&lt;li&gt;默认账户&lt;/li&gt;
+&lt;li&gt;不安全的系统配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应该及时修改。&lt;/p&gt;
+&lt;h5 id="5-限制权限"&gt;5. 限制权限
+&lt;/h5&gt;&lt;p&gt;普通用户不授予管理员权限。&lt;/p&gt;
+&lt;h5 id="6-安装安全补丁"&gt;6. 安装安全补丁
+&lt;/h5&gt;&lt;p&gt;保持系统及时更新。&lt;/p&gt;
+&lt;p&gt;所以看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关闭无用服务 + 删除无用账户 + 修改默认设置&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;基本可以判断：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统安全加固&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不用的关掉，不必要的删掉，需要的限制好。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="九端口和服务是什么关系"&gt;九、端口和服务是什么关系
+&lt;/h4&gt;&lt;p&gt;这一部分不用深入网络原理。&lt;/p&gt;
+&lt;p&gt;你先简单理解：&lt;/p&gt;
+&lt;p&gt;很多网络服务会监听某个：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;端口&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;Web 服务可能监听某个网络端口。&lt;/p&gt;
+&lt;p&gt;如果服务不需要，但端口一直开放，就可能增加攻击面。&lt;/p&gt;
+&lt;p&gt;因此：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;不用的服务关闭 → 对应的不必要端口也应关闭。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“减少系统攻击面”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;经常对应：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关闭不必要的服务和端口&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="十安全日志"&gt;十、安全日志
+&lt;/h4&gt;&lt;p&gt;操作系统通常会记录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录成功&lt;/li&gt;
+&lt;li&gt;登录失败&lt;/li&gt;
+&lt;li&gt;用户操作&lt;/li&gt;
+&lt;li&gt;系统异常&lt;/li&gt;
+&lt;li&gt;服务启动&lt;/li&gt;
+&lt;li&gt;权限变化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些记录称为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;日志&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;日志非常重要，因为发生安全问题之后可以查：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;什么时候、谁、做了什么。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十一安全审计"&gt;十一、安全审计
+&lt;/h4&gt;&lt;p&gt;Day 2 已经接触过。&lt;/p&gt;
+&lt;p&gt;再强化一下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;安全审计 = 对系统活动进行记录、检查和追踪。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如凌晨出现：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;02:01 登录失败
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;02:01 登录失败
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;02:01 登录失败
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;02:02 登录失败
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;02:02 登录成功
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这可能意味着：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有人不断尝试登录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;管理员可以通过日志发现异常。&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;日志是重要数据，审计是对这些活动进行检查和分析。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十二恶意代码"&gt;十二、恶意代码
+&lt;/h4&gt;&lt;p&gt;恶意代码就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;为了执行恶意行为而编写的软件或代码。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;考试常考四个词：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;病毒&lt;/li&gt;
+&lt;li&gt;蠕虫&lt;/li&gt;
+&lt;li&gt;木马&lt;/li&gt;
+&lt;li&gt;后门&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先把它们分清。&lt;/p&gt;
+&lt;h4 id="十三计算机病毒"&gt;十三、计算机病毒
+&lt;/h4&gt;&lt;p&gt;病毒的一个典型特点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;通常需要依附在其他文件或程序上。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它可能感染：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可执行文件&lt;/li&gt;
+&lt;li&gt;文档&lt;/li&gt;
+&lt;li&gt;系统文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;运行被感染程序以后，病毒可能继续传播。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;病毒——依附传播。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十四蠕虫"&gt;十四、蠕虫
+&lt;/h4&gt;&lt;p&gt;蠕虫一个很重要的特点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;可以利用网络主动传播。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通常不需要像传统病毒一样必须依附其他程序。&lt;/p&gt;
+&lt;p&gt;所以考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“能够通过网络自行传播”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;优先：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠕虫&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;蠕虫——自己爬网络。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十五木马"&gt;十五、木马
+&lt;/h4&gt;&lt;p&gt;木马：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;伪装成正常程序，诱骗用户运行，实际执行恶意功能。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如看起来像：&lt;/p&gt;
+&lt;p&gt;“免费游戏.exe”&lt;/p&gt;
+&lt;p&gt;运行之后却在后台偷取信息。&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;木马最重要的关键词：伪装。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;木马——装好人。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十六后门"&gt;十六、后门
+&lt;/h4&gt;&lt;p&gt;后门：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;绕过正常认证或安全检查进入系统的隐藏入口。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如攻击者控制服务器后留下一个隐藏入口，以后可以再次访问。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;后门——偷偷留入口。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;四个恶意代码放一起&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;最典型特征&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;病毒&lt;/td&gt;
+&lt;td&gt;依附其他文件/程序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;蠕虫&lt;/td&gt;
+&lt;td&gt;网络自主传播&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;木马&lt;/td&gt;
+&lt;td&gt;伪装欺骗&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;后门&lt;/td&gt;
+&lt;td&gt;隐藏访问入口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;考试记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;病毒会附身，蠕虫自己跑，木马会伪装，后门偷偷进。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Web 安全代码审计与漏洞防御学习笔记</title><link>https://mawei.org.cn/p/web-%E5%AE%89%E5%85%A8%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E4%B8%8E%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/web-%E5%AE%89%E5%85%A8%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E4%B8%8E%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid><description>&lt;h1 id="web-安全代码审计与漏洞防御学习笔记"&gt;Web 安全代码审计与漏洞防御学习笔记
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;学习目标：&lt;/strong&gt; 从代码审计、安全开发和漏洞防御角度理解常见 Web 漏洞的形成原因，建立 &lt;code&gt;Source → Data Flow → Validation → Sink&lt;/code&gt; 的统一安全分析思维。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;适用范围：&lt;/strong&gt; 本笔记仅用于本地实验、安全自查、代码修复和漏洞防御研究，不包含攻击利用载荷、数据库数据提取、自动化攻击或未授权安全测试方法。&lt;/p&gt;
@@ -8607,8 +9026,8 @@
 &lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
 &gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="web38"&gt;web38
-&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
-&lt;/h5&gt;&lt;ol&gt;
+&lt;/h3&gt;&lt;h4 id="代码逻辑分析-2"&gt;代码逻辑分析
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
@@ -8749,7 +9168,9 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;查看结果&lt;/strong&gt;：页面上会直接喷出 &lt;code&gt;flag.php&lt;/code&gt; 的源代码（通常带有语法高亮）。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
+&lt;/ol&gt;
+&lt;h3 id="web41"&gt;web41
+&lt;/h3&gt;</description></item><item><title>30小时教你玩转CTF</title><link>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</link><pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/30%E5%B0%8F%E6%97%B6%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACctf/</guid><description>&lt;h1 id="web"&gt;web
 &lt;/h1&gt;&lt;h2 id="sql注入"&gt;SQL注入
 &lt;/h2&gt;&lt;h3 id="sql注入的起因"&gt;SQL注入的起因
 &lt;/h3&gt;&lt;p&gt;**SQL注入（SQL Injection，简称 SQLi）**的根本原因可以总结为八个字：&lt;strong&gt;数据与代码边界模糊&lt;/strong&gt;。&lt;/p&gt;
@@ -9331,13 +9752,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="err"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id="执行流程"&gt;&lt;strong&gt;执行流程&lt;/strong&gt;
-&lt;/h5&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;执行流程&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;__construct()&lt;/code&gt;&lt;/strong&gt;: 构造函数。当通过 &lt;code&gt;$a = new A();&lt;/code&gt; 创建类的新对象时，该方法会被自动调用，输出：&lt;code&gt;This is a construct function&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;__destruct()&lt;/code&gt;&lt;/strong&gt;: 析构函数。当对象的所有引用都被删除或脚本执行结束时，该方法会被自动调用，输出：&lt;code&gt;This is a destruct function&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="运行输出"&gt;运行输出
-&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;p&gt;&lt;strong&gt;运行输出&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -9395,8 +9816,8 @@
 &lt;li&gt;&lt;strong&gt;返回值要求&lt;/strong&gt;：该方法&lt;strong&gt;必须返回一个数组&lt;/strong&gt;，数组中的元素是要被序列化的属性名称。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;过滤属性&lt;/strong&gt;：在上例中，&lt;code&gt;__sleep()&lt;/code&gt; 返回了 &lt;code&gt;array('test')&lt;/code&gt;，这意味着只有 &lt;code&gt;$test&lt;/code&gt; 属性会被序列化并保存，而公开属性 &lt;code&gt;$test2&lt;/code&gt; 会被忽略。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="执行流程与输出"&gt;执行流程与输出
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;&lt;strong&gt;执行流程与输出&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt; 实例化对象，&lt;code&gt;$this-&amp;gt;test&lt;/code&gt; 的值为 &lt;code&gt;&amp;quot;Aurora&amp;quot;&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
@@ -9479,14 +9900,14 @@
 &lt;li&gt;&lt;strong&gt;返回值&lt;/strong&gt;：与 &lt;code&gt;__sleep()&lt;/code&gt; 不同，&lt;code&gt;__wakeup()&lt;/code&gt; &lt;strong&gt;不需要返回值&lt;/strong&gt;（无须返回数组）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;主要用途&lt;/strong&gt;：通常用于在反序列化后重新建立数据库连接、初始化资源或者执行其他必要的清理/恢复操作。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="执行流程-1"&gt;执行流程
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;&lt;strong&gt;执行流程&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：实例化对象，将 &lt;code&gt;$this-&amp;gt;test&lt;/code&gt; 赋值为 &lt;code&gt;&amp;quot;Aurora&amp;quot;&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;$b = serialize($a);&lt;/code&gt;&lt;/strong&gt;：对对象进行序列化，此时自动调用 &lt;code&gt;__sleep()&lt;/code&gt; 方法，输出：&lt;code&gt;This is a sleep function&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;$c = unserialize($b);&lt;/code&gt;&lt;/strong&gt;：对字符串进行反序列化，此时自动调用 &lt;code&gt;__wakeup()&lt;/code&gt; 方法，输出：&lt;code&gt;This is a wakeup function&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id="运行输出-1"&gt;运行输出
-&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;p&gt;&lt;strong&gt;运行输出&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -9539,14 +9960,14 @@
 &lt;li&gt;&lt;strong&gt;触发时机&lt;/strong&gt;：当一个对象被当做字符串来使用（例如使用 &lt;code&gt;echo&lt;/code&gt; 或 &lt;code&gt;print&lt;/code&gt; 输出对象）时，&lt;code&gt;__toString()&lt;/code&gt; 方法会被自动调用。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;返回值要求&lt;/strong&gt;：该方法&lt;strong&gt;必须返回一个字符串&lt;/strong&gt;，否则会抛出不可恢复的致命错误（Recoverable fatal error）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="执行流程与输出结果"&gt;执行流程与输出结果
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;&lt;strong&gt;执行流程与输出结果&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt; 实例化对象。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;echo $a;&lt;/code&gt; 尝试直接将对象 &lt;code&gt;$a&lt;/code&gt; 作为字符串输出，从而自动触发类中的 &lt;code&gt;__toString()&lt;/code&gt; 方法。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;__toString()&lt;/code&gt; 返回字符串 &lt;code&gt;&amp;quot;This is a toString function&amp;quot;&lt;/code&gt; 并打印。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id="运行输出-2"&gt;运行输出
-&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;p&gt;&lt;strong&gt;运行输出&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -9598,8 +10019,8 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;触发时机&lt;/strong&gt;：当尝试以调用函数的方式来调用一个对象时（例如 &lt;code&gt;$a()&lt;/code&gt;），&lt;code&gt;__invoke()&lt;/code&gt; 方法会被自动调用。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="执行流程与输出-1"&gt;执行流程与输出
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;&lt;strong&gt;执行流程与输出&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt; 实例化对象。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;$a();&lt;/code&gt; 将对象 &lt;code&gt;$a&lt;/code&gt; 当作函数进行调用，从而自动触发类中的 &lt;code&gt;__invoke()&lt;/code&gt; 方法。&lt;/li&gt;
 &lt;li&gt;运行输出：&lt;/li&gt;
@@ -9664,14 +10085,14 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="执行流程-2"&gt;执行流程
-&lt;/h5&gt;&lt;ol&gt;
+&lt;p&gt;&lt;strong&gt;执行流程&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;$a = new A(&amp;quot;Aurora&amp;quot;);&lt;/code&gt;&lt;/strong&gt;：实例化类 &lt;code&gt;A&lt;/code&gt; 的对象。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;$a-&amp;gt;test('no', 'this', 'function');&lt;/code&gt;&lt;/strong&gt;：尝试调用对象中并不存在的 &lt;code&gt;test()&lt;/code&gt; 方法。&lt;/li&gt;
 &lt;li&gt;因为方法不存在，PHP 自动拦截并触发 &lt;code&gt;__call($funName, $arguments)&lt;/code&gt; 方法，将方法名和参数传入。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id="运行输出-3"&gt;运行输出
-&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;p&gt;&lt;strong&gt;运行输出&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2

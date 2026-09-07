@@ -556,8 +556,8 @@
 &lt;/div&gt;&lt;p&gt;看&lt;a class="link" href="https://mawei.org.cn/p/data-uri-scheme-data-%e5%8d%8f%e8%ae%ae/" target="_blank" rel="noopener"
 &gt; Data URI Scheme (data: 协议)&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="web38"&gt;web38
-&lt;/h3&gt;&lt;h5 id="代码逻辑分析-2"&gt;代码逻辑分析
-&lt;/h5&gt;&lt;ol&gt;
+&lt;/h3&gt;&lt;h4 id="代码逻辑分析-2"&gt;代码逻辑分析
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：注释提示 &lt;code&gt;flag in flag.php&lt;/code&gt;，说明我们的目标是读取或包含 &lt;code&gt;flag.php&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;输入控制&lt;/strong&gt;：通过 &lt;code&gt;$_GET['c']&lt;/code&gt; 接收参数。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;正则过滤&lt;/strong&gt;：&lt;code&gt;preg_match(&amp;quot;/flag|php|file/i&amp;quot;, $c)&lt;/code&gt;。
@@ -698,4 +698,6 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;查看结果&lt;/strong&gt;：页面上会直接喷出 &lt;code&gt;flag.php&lt;/code&gt; 的源代码（通常带有语法高亮）。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description></item></channel></rss>
+&lt;/ol&gt;
+&lt;h3 id="web41"&gt;web41
+&lt;/h3&gt;</description></item></channel></rss>
