@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机三级信息安全技术 on mawei</title><link>https://mawei.org.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/</link><description>Recent content in 计算机三级信息安全技术 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机三级（两周从0到考试及格）</title><link>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</link><pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机三级信息安全技术 on mawei</title><link>https://mawei.org.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/</link><description>Recent content in 计算机三级信息安全技术 on mawei</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>mawei-blog</copyright><lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mawei.org.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机三级（两周从0到考试及格）</title><link>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</link><pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate><guid>https://mawei.org.cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E4%B8%A4%E5%91%A8%E4%BB%8E0%E5%88%B0%E8%80%83%E8%AF%95%E5%8F%8A%E6%A0%BC/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;只有知识点，题目另外找或者ai帮忙出&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
@@ -226,8 +226,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;私钥签名，公钥验证。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="一张表记住"&gt;一张表记住
-&lt;/h4&gt;&lt;table&gt;
+&lt;p&gt;&lt;strong&gt;一张表记住&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;技术&lt;/th&gt;
@@ -1205,4 +1205,472 @@
 &lt;p&gt;考试记忆：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;病毒会附身，蠕虫自己跑，木马会伪装，后门偷偷进。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description></item></channel></rss>
+&lt;/blockquote&gt;
+&lt;h3 id="第五天"&gt;第五天
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;数据库账户、权限、审计、备份、加密、SQL 注入、参数化查询&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="一数据库安全在保护什么"&gt;一、数据库安全在保护什么
+&lt;/h4&gt;&lt;p&gt;数据库通常保存系统里最重要的数据，例如用户资料、账号信息、订单、财务数据等。&lt;/p&gt;
+&lt;p&gt;所以数据库安全主要考虑三件事：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;机密性、完整性、可用性&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这三个词在信息安全考试里非常重要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;机密性&lt;/strong&gt;：不该看的人不能看到。&lt;/p&gt;
+&lt;p&gt;比如普通员工不能读取公司所有人的工资。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完整性&lt;/strong&gt;：数据不能被未经授权地修改。&lt;/p&gt;
+&lt;p&gt;比如攻击者不能偷偷把账户余额从 100 元改成 100000 元。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可用性&lt;/strong&gt;：需要使用数据库的时候能够正常使用。&lt;/p&gt;
+&lt;p&gt;比如数据库服务器故障后，要尽快恢复业务。&lt;/p&gt;
+&lt;p&gt;可以记：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;机密性 = 不能乱看
+完整性 = 不能乱改
+可用性 = 不能用不了&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="二数据库账户安全"&gt;二、数据库账户安全
+&lt;/h4&gt;&lt;p&gt;数据库通常有不同账户。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;管理员
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;应用程序账户
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;普通查询用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;审计人员
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这些账户不应该拥有一样的权限。&lt;/p&gt;
+&lt;p&gt;管理员可能有非常大的权限，而普通用户只应该获得工作所需要的权限。&lt;/p&gt;
+&lt;p&gt;这就联系到 Day 3 学过的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如网站程序只需要：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SELECT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;INSERT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;UPDATE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;那就没必要额外给它整个数据库的超级管理员权限。&lt;/p&gt;
+&lt;p&gt;原因很简单：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;权限越大，账户失陷后的损失通常越大。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="三数据库常见权限"&gt;三、数据库常见权限
+&lt;/h4&gt;&lt;p&gt;先认识几个非常常见的 SQL 操作。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SELECT&lt;/td&gt;
+&lt;td&gt;查询&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;INSERT&lt;/td&gt;
+&lt;td&gt;插入数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UPDATE&lt;/td&gt;
+&lt;td&gt;修改数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DELETE&lt;/td&gt;
+&lt;td&gt;删除数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;非常好记：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;查 SELECT
+增 INSERT
+改 UPDATE
+删 DELETE&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;假设小王只能查看员工信息。&lt;/p&gt;
+&lt;p&gt;那么应该只给：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SELECT&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而不应该给：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UPDATE、DELETE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这体现的还是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="四权限为什么要细分"&gt;四、权限为什么要细分
+&lt;/h4&gt;&lt;p&gt;假设有一个公司财务系统。&lt;/p&gt;
+&lt;p&gt;普通员工只能：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看自己的工资。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;财务人员可以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查询和修改工资信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据库管理员可以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理账户、权限、数据库结构等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此数据库不能简单设计成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“登录成功以后什么都能干。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;应该根据不同用户的职责控制权限。&lt;/p&gt;
+&lt;p&gt;考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“仅允许用户访问完成工作所需要的数据”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一反应：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最小权限原则。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="五数据库安全审计"&gt;五、数据库安全审计
+&lt;/h4&gt;&lt;p&gt;数据库每天可能发生大量操作：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;19:01 用户A登录
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;19:02 用户A查询订单
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;19:04 用户B修改账户资料
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;19:08 管理员删除一条记录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;把这些操作记录下来，可以用于：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;安全审计&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据库审计主要可以记录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;谁登录了&lt;/li&gt;
+&lt;li&gt;什么时间登录&lt;/li&gt;
+&lt;li&gt;查询了什么&lt;/li&gt;
+&lt;li&gt;修改了什么&lt;/li&gt;
+&lt;li&gt;删除了什么&lt;/li&gt;
+&lt;li&gt;登录是否失败&lt;/li&gt;
+&lt;li&gt;权限是否发生变化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;发生安全事件以后，就能回答：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;谁，在什么时候，对什么数据，进行了什么操作？&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;数据库审计 = 记录 + 检查 + 追踪。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="六数据库备份"&gt;六、数据库备份
+&lt;/h4&gt;&lt;p&gt;假设数据库硬盘突然损坏。&lt;/p&gt;
+&lt;p&gt;如果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没有备份&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可能意味着大量数据永久丢失。&lt;/p&gt;
+&lt;p&gt;如果：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有近期备份&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就可以把数据库恢复到某个时间点。&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;备份的重要作用之一，就是提高数据的可恢复能力和系统可用性。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;考试看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“系统故障以后恢复数据”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;优先想到：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;备份与恢复。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="七常见备份类型"&gt;七、常见备份类型
+&lt;/h4&gt;&lt;p&gt;三级阶段先掌握最基本的三个概念。&lt;/p&gt;
+&lt;h5 id="完全备份"&gt;完全备份
+&lt;/h5&gt;&lt;p&gt;把需要备份的数据：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;全部备份一次。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;p&gt;恢复简单。&lt;/p&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;p&gt;需要的时间和存储空间通常比较多。&lt;/p&gt;
+&lt;p&gt;记忆：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;完全备份 = 全部复制。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id="增量备份"&gt;增量备份
+&lt;/h5&gt;&lt;p&gt;只备份：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;自上一次备份以来发生变化的数据。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;星期一完全备份。&lt;/p&gt;
+&lt;p&gt;星期二只保存星期一以后变化的部分。&lt;/p&gt;
+&lt;p&gt;星期三只保存星期二备份以后变化的部分。&lt;/p&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备份速度快、占用空间较少。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但恢复时可能需要多个备份。&lt;/p&gt;
+&lt;h5 id="差异备份"&gt;差异备份
+&lt;/h5&gt;&lt;p&gt;只备份：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;自最近一次完全备份以后发生变化的数据。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;星期一完全备份。&lt;/p&gt;
+&lt;p&gt;星期二保存星期一以后的变化。&lt;/p&gt;
+&lt;p&gt;星期三还是保存：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;星期一完全备份以后所有的变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以记住区别：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;增量：看上一次备份。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;差异：看上一次完全备份。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这两个以后很容易出选择题。&lt;/p&gt;
+&lt;h4 id="八数据库恢复"&gt;八、数据库恢复
+&lt;/h4&gt;&lt;p&gt;备份不是最终目的。&lt;/p&gt;
+&lt;p&gt;最终目的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;发生故障后能够恢复。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此一个安全系统不仅应该：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;做备份&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;还应该：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;验证备份能不能正常恢复。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为如果备份文件已经损坏，等真正出事以后才发现，就来不及了。&lt;/p&gt;
+&lt;h4 id="九数据库中的敏感数据"&gt;九、数据库中的敏感数据
+&lt;/h4&gt;&lt;p&gt;数据库可能保存：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;身份证号&lt;/li&gt;
+&lt;li&gt;手机号码&lt;/li&gt;
+&lt;li&gt;银行卡信息&lt;/li&gt;
+&lt;li&gt;密码相关信息&lt;/li&gt;
+&lt;li&gt;商业机密&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些内容不能毫无保护地存储。&lt;/p&gt;
+&lt;p&gt;常见思路：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;加密、Hash、访问控制、脱敏。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但不同数据采用的方法不一样。&lt;/p&gt;
+&lt;p&gt;例如需要以后恢复原文的数据，可以考虑：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;加密&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而用户登录密码一般不应该简单保存明文密码。&lt;/p&gt;
+&lt;p&gt;更合理的是保存经过专门密码 Hash 方案处理的结果。&lt;/p&gt;
+&lt;p&gt;三级考试阶段先记：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;敏感数据需要受到加密或其他安全保护。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十加密和-hash-再复习一次"&gt;十、加密和 Hash 再复习一次
+&lt;/h4&gt;&lt;p&gt;Day 1 学过：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;加密可以解密恢复原文。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Hash 主要生成单向摘要。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此：&lt;/p&gt;
+&lt;p&gt;数据库里的某些敏感信息需要以后读取原文：&lt;/p&gt;
+&lt;p&gt;→ &lt;strong&gt;加密&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;验证数据是否发生变化：&lt;/p&gt;
+&lt;p&gt;→ &lt;strong&gt;Hash&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不要混淆。&lt;/p&gt;
+&lt;h4 id="十一什么是-sql-注入"&gt;十一、什么是 SQL 注入
+&lt;/h4&gt;&lt;p&gt;SQL 是数据库查询语言。&lt;/p&gt;
+&lt;p&gt;假设程序接收到用户输入：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用户名
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后程序自己拼成一条 SQL：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SELECT * FROM users WHERE username = &amp;#39;用户输入&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果程序：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;没有正确区分“用户输入的数据”和“SQL 指令”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;攻击者构造的输入就可能改变原来的 SQL 语义。&lt;/p&gt;
+&lt;p&gt;这就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SQL Injection，SQL 注入。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;考试最重要的是理解根源：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;用户可控输入被直接拼接进 SQL 语句。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十二sql-注入的本质"&gt;十二、SQL 注入的本质
+&lt;/h4&gt;&lt;p&gt;不要把 SQL 注入理解成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“数据库密码太简单。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它真正的问题是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;程序把外部输入当成了 SQL 语法的一部分。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以把它理解成：&lt;/p&gt;
+&lt;p&gt;原本开发者希望：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用户输入 = 数据
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果程序拼接以后变成：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用户输入 = SQL 指令的一部分
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所以导致漏洞。&lt;/p&gt;
+&lt;p&gt;一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SQL 注入 = 数据和代码的边界被破坏。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十三怎么防-sql-注入"&gt;十三、怎么防 SQL 注入
+&lt;/h4&gt;&lt;p&gt;考试中非常重要。&lt;/p&gt;
+&lt;p&gt;最核心措施：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数化查询 / 预编译语句&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;英文经常看到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Prepared Statement&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它的核心思想是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SQL 结构提前确定，用户输入只作为数据传入。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样数据库不会轻易把用户输入解释成新的 SQL 指令。&lt;/p&gt;
+&lt;h4 id="十四错误方式和正确思路"&gt;十四、错误方式和正确思路
+&lt;/h4&gt;&lt;p&gt;危险思想：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SQL语句 + 用户输入 + SQL语句
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;也就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;字符串拼接 SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安全得多的思想：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SQL结构固定
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用户输入作为参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;数据库分别处理
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;也就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数化查询&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以考试遇到：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“防止 SQL 注入最有效/主要的编程措施是什么？”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;优先寻找：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数化查询 / 预编译语句&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而不是只选择：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“安装杀毒软件”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十五输入检查有没有用"&gt;十五、输入检查有没有用
+&lt;/h4&gt;&lt;p&gt;有用。&lt;/p&gt;
+&lt;p&gt;例如程序可以检查：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据类型&lt;/li&gt;
+&lt;li&gt;长度&lt;/li&gt;
+&lt;li&gt;输入范围&lt;/li&gt;
+&lt;li&gt;格式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这属于：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;输入验证&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是考试一定要分清：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入验证可以辅助防护。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而从数据库编程角度，防 SQL 注入非常重要的核心措施仍然是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数化查询。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="十六权限也能降低-sql-注入危害"&gt;十六、权限也能降低 SQL 注入危害
+&lt;/h4&gt;&lt;p&gt;假设一个 Web 程序连接数据库时直接使用：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据库最高权限管理员账户。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果应用被利用，危害可能很严重。&lt;/p&gt;
+&lt;p&gt;如果应用账户只拥有：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工作所需的最小权限&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即使出现问题，也可能限制危害范围。&lt;/p&gt;
+&lt;p&gt;所以 SQL 注入防御可以形成：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数化查询 + 输入验证 + 最小权限&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这三个一起记。&lt;/p&gt;
+&lt;h4 id="十七数据库安全一句话总结"&gt;十七、数据库安全一句话总结
+&lt;/h4&gt;&lt;p&gt;把今天全部内容压成一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;权限要最小，操作要审计，数据要备份，敏感要保护，SQL 不直接拼接。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这句话非常值得背。&lt;/p&gt;</description></item></channel></rss>
