@@ -1,8 +1,8 @@
 ---
-title: "CTFshow"
-date: 2026-08-27
+title: "CTFshow-web入门"
+date: 2026-11-04
 draft: false
-categories: ["webWP"]
+categories: ["web"]
 ---
 
 ## 信息搜集
@@ -711,5 +711,13 @@ Payload 示例：
 
 3. **查看结果**：页面上会直接喷出 `flag.php` 的源代码（通常带有语法高亮）。
 
-### web41
+### web171
+
+```
+1' or 1=1 --+
+```
+
+ ` --+`是注释符号，将后面内容注释掉不执行
+
+### web172
 
