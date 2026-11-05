@@ -1,11 +1,9 @@
 ---
-title: "30小时教你玩转CTF"
+title: "简单的sql注入和php反序列化"
 date: 2026-08-17
 draft: false
-categories: ["CTF"]
+categories: ["web"]
 ---
-# web
-
 ## SQL注入
 
 ### SQL注入的起因

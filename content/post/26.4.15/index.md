@@ -2,7 +2,7 @@
 title: "Data URI Scheme (data: 协议)"
 date: 2026-04-15
 draft: false
-categories: ["web笔记"]
+categories: ["web"]
 ---
 
 ## 1. 协议概述
